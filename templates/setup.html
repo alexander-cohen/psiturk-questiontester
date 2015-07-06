@@ -1,0 +1,76 @@
+<div id="container-exp">
+	<div style="margin-left:100px; margin-top:40px">
+	<h3>Great job! Now that you are in the mode of playing 20 questions, you will answer a specific task. 
+		For each of the following questions, reveal the answer and try to act as if you are playing a real game.</h3>
+		<div id="block1" class="question-block" style="opacity: 1">
+			<h2>Is it mechanical?</h2>
+			<h2 id="answer1"><a id="link1">Click to reveal answer</a></h2>
+			<script>
+				$("#answer1").mouseup(function() {
+					if($("#block1").css('opacity') == '1') {
+			  			$("#link1").fadeTo('slow', 0.0, function() {
+			  				document.getElementById("answer1").innerHTML = images[question_answer_pairs[0][1]];
+			  				setTimeout(function(){$("#block2").fadeTo('slow', 1.0);}, 1000);
+			  			});
+		  			}
+				});
+			</script>
+			<hr>
+		</div>
+		
+		<div id="block2" class="question-block">
+			<h2>Is it mechanical?</h2>
+			<h2 id="answer2"><a id="link2">Click to reveal answer</a></h2>
+			<script>
+				$("#answer2").mouseup(function() {
+					if($("#block2").css('opacity') == '1') {
+			  			$("#link2").fadeTo('slow', 0.0, function() {
+			  				document.getElementById("answer2").innerHTML = images[question_answer_pairs[1][1]];
+			  				setTimeout(function(){$("#block3").fadeTo('slow', 1.0);}, 1000);
+			  			});
+		  			}
+				});
+			</script>
+			<hr>
+		</div>
+		
+		<div id="block3" class="question-block">
+			<h2>Is it mechanical?</h2>
+			<h2 id="answer3"><a id="link3">Click to reveal answer</a></h2>
+			<script>
+				$("#answer3").mouseup(function() {
+					if($("#block3").css('opacity') == '1') {
+			  			$("#link3").fadeTo('slow', 0.0, function() {
+			  				document.getElementById("answer3").innerHTML = images[question_answer_pairs[2][1]];
+			  				setTimeout(function(){$("#block4").fadeTo('slow', 1.0);}, 1000);
+			  			});
+		  			}
+				});
+			</script>
+			<hr>
+		</div>
+		
+		<div id="block4" class="question-block">
+			<h2>Is it mechanical?</h2>
+			<h2 id="answer4"><a id="link4">Click to reveal answer</a></h2>
+			<script>
+				$("#answer4").mouseup(function() {
+					if($("#block4").css('opacity') == '1') {
+						$("#link4").fadeTo('slow', 0.0, function() {
+			  				document.getElementById("answer4").innerHTML = images[question_answer_pairs[3][1]];
+			  				setTimeout(function(){$("#next-button").fadeTo('slow', 1.0);}, 1000);
+		  				});
+					}
+				});
+			</script>
+			<hr>
+		</div>
+		
+		<div class="col-xs-2" id="next-button" style="opacity: 0">
+                <button type="button" onclick="do_quiz();" id="next" value="next" class="btn btn-primary btn-lg continue">
+                Next <span class="glyphicon glyphicon-arrow-right"></span>
+                </button>
+        </div>
+
+	</div>
+</div>
