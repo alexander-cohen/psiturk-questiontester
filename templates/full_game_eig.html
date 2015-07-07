@@ -1,39 +1,49 @@
 <div id="container-exp">
 	<div id="question-chooser">
-		<div class="form-group" style="margin-left:50px; margin-top:50px; margin-right:50px; margin-bottom:200px">
+		<div class="form-group" style="margin-left:25px; margin-top:50px; margin-right:25px; margin-bottom:200px; float: left">
+			<h3 id="bonus"></h3>
 			<h4 id="question-number"></h4>
-		  	<form style="margin-bottom:-35px">
-		  		<label for="answers" id="question-label"><h2>Pick your favorite question</h2></label>
-				<ul class="answers">
-		      		<div class="radio-question">
-		      			<input type="radio" name="q1" value="a" id="q0">
-		      			<label style="margin:0.5em" for="q0"></label>
-		      		</div>
 
-		      		<div class="radio-question">
-		      			<input type="radio" name="q1" value="b" id="q1">
-		      			<label style="margin:0.5em" for="q1"></label>
-		      		</div>
+		  	<div id="questions">
+		  		<form style="margin-bottom:-35px">
+			  		<label for="answers" id="question-label"><h2>Pick your favorite question</h2></label>
+					<ul class="answers">
+			      		<div class="radio-question">
+			      			<input type="radio" name="q1" value="a" id="q0">
+			      			<label style="margin:0.5em" for="q0"></label>
+			      		</div>
 
-		      		<div class="radio-question">
-		      			<input type="radio" name="q1" value="c" id="q2">
-		      			<label style="margin:0.5em" for="q2"></label>
-		      		</div>
+			      		<div class="radio-question">
+			      			<input type="radio" name="q1" value="b" id="q1">
+			      			<label style="margin:0.5em" for="q1"></label>
+			      		</div>
 
-		      		<div class="radio-question">
-		      			<input type="radio" name="q1" value="d" id="q3">
-		      			<label style="margin:0.5em" for="q3"></label>
-		      		</div>
-		      	</ul>
-				<br><br>
-			</form>
-			<div id="answer" style="opacity:0"></div>
-			<button onclick="choicecomplete();" type="button" class="btn btn-success" id="submit-button" style="margin-top:15px">Submit</button>
-			<br><br><br>
+			      		<div class="radio-question">
+			      			<input type="radio" name="q1" value="c" id="q2">
+			      			<label style="margin:0.5em" for="q2"></label>
+			      		</div>
+
+			      		<div class="radio-question">
+			      			<input type="radio" name="q1" value="d" id="q3">
+			      			<label style="margin:0.5em" for="q3"></label>
+			      		</div>
+			      	</ul>
+					<br><br>
+				</form>
+				<div id="answer" style="opacity:0"></div>
+				<button onclick="choicecomplete();" type="button" class="btn btn-success" id="submit-button" style="margin-top:15px">Submit</button>
+				<br><br><br>
+		  	</div>
+		  	
 			<form>
 				Guess: <input type="text" name="guess" id="guess-box">
 				<button onclick="guess_submitted();" type="button" class="btn btn-success" id="submit-button">Submit</button>
+				<br><br>
+				Keep in mind, you only get 1 guess! Try to use it wisely!
 			</form>
+		</div>
+		<div id="prev-questions" style="margin-left:25px; margin-top:50px; margin-right:25px; margin-bottom:200px; float: left">
+			
 		</div>
 	</div>
 </div>

@@ -52,45 +52,79 @@ images = { 'y':'<div style="margin-left:-136px"><img src="/static/images/slider_
 *
 ********************/
 var question_answer_pairs = [["Is it mechanical?", "y"], ["Is it large?", "n"], ["Can you hold it?", "py"], ["Do you like it?", "y"]];
-var quizquestions = [["Is it alive?", 'n'], ['Is it small?', 'y'], ['Could I hold it?', 'u']];
+var quizquestions = [["Is it mechanical?", 'y'], ['Can you hold it?', 'y'], ['Is it large?', 'u']];
 var quizquestion_on = 0;
 var knowledge = "";
 var item = "computer";
 var iterations = 1;
 var max_iterations = 5;
+var num_games = 4;
+var game_on = 0;
+
+var bonus = function() {
+	return 1.0 - (iterations) * 0.05;
+}
 
 function shuffle(o){
     for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
     return o;
 }
 
+var start_game = function() {
+	psiTurk.showPage("full_game_eig.html");
+	iterations = 0;
+	pre_20q();
+}
+
 var pre_20q = function() {
 	psiTurk.showPage("full_game_eig.html");
-	$("#question-number").html("Question number: " + iterations.toString());
-	$.ajax({
-		url: "/get_good_questions",
-		type: "GET",
-		data: {"knowledge":knowledge},
-		success: function(data) {
-				new_questions = data.split(',')[0].split(":");
-				info_gains = data.split(',')[1].split(":");
-				console.log(new_questions);
-				var questions_to_ask = shuffle([[new_questions[0], info_gains[0]],
-												[new_questions[3], info_gains[3]], 
-												[new_questions[6], info_gains[6]],
-												[new_questions[9], info_gains[9]]]);
-				for(var i = 0; i < 4; i++) {
-					$('#q'+ i.toString()).next('label').html(questions_to_ask[i][0]);
-					$('#q'+ i.toString()).next('label').attr("info-gain", questions_to_ask[i][1]);
-				}
-			}
 
-	});
+	var knowledge_arr = knowledge.split(",");
+	if(knowledge != "") {
+		for(var k = 0; k < knowledge_arr.length; k++) {
+			var knowledge_piece = knowledge_arr[k].split(":");
+			$("#prev-questions").append("<h3>" + knowledge_piece[0] + "</h3>" + 
+										images[knowledge_piece[1]] + "<hr>");
+		}
+	}
+
+	$("#prev-questions").find( $("img") ).attr("width", 600);
+	$("#prev-questions").find( $("div") ).css("margin-left", -103);
+	
+
+	if(iterations >= max_iterations) {
+		$("#question-number").html("You have used up all your questions, now you must guess an object");
+		$("#questions").html("<br><br>");
+	}
+
+	else {
+		$("#question-number").html("Question number: " + iterations.toString());
+		if(game_on > 0) $("#bonus").html("Bonus: $" + bonus().toFixed(2));
+		$.ajax({
+			url: "/get_good_questions",
+			type: "GET",
+			data: {"knowledge":knowledge},
+			success: function(data) {
+					new_questions = data.split(',')[0].split(":");
+					info_gains = data.split(',')[1].split(":");
+					console.log(new_questions);
+					var questions_to_ask = shuffle([[new_questions[0], info_gains[0]],
+													[new_questions[10], info_gains[10]], 
+													[new_questions[20], info_gains[20]],
+													[new_questions[30], info_gains[30]]]);
+					for(var i = 0; i < 4; i++) {
+						$('#q'+ i.toString()).next('label').html(questions_to_ask[i][0]);
+						$('#q'+ i.toString()).next('label').attr("info-gain", questions_to_ask[i][1]);
+					}
+				}
+
+		});
+	}
+	
 	
 }
 
 var choicecomplete = function() {
-	
 	
 	if($("#submit-button").html() == "Submit") {
 		var choice = $("input[name=q1]:checked").next('label').html();
@@ -119,24 +153,53 @@ var choicecomplete = function() {
 
 	else {
 		iterations++;
-		if(iterations >= max_iterations) {
-			show_questions();
-			return;
-		}
 		pre_20q();
 	}
 	
 }
 
 var guess_submitted = function() {
+	var choice = $("#guess-box").val().toUpperCase();
+	$.ajax({
+		url: "/get_similar_objects",
+		type: "GET",
+		data: {"object": choice},
+		success: function(data) {
+			var correct = false;
+			var error = parseInt(data, 10);
+			if(error <= 1) {
+				correct = true;
+			}
+			if(correct) {
+				if(game_on == 0) alert("Correct! Good job!");
+				else alert("Correct! Good guess! You will recieve a bonus of $" + bonus().toFixes(2));
+			}
+			else {
+				if(game_on == 0) alert("Incorrect, sorry");
+				else {
+					if(confirm("Incorrect, I am sorry but you do not recieve a bonus. Go to next game. If you think you got it right and would like to contest this, your complaint will be recorded and your response will be reviewed. If it is deemed correct, you will recieve your bonus."))
+					{
+						psiTurk.recordUnstructuredData("complaint", $("#guess-box").val().toUpperCase() + ":" + item.toUpperCase());
+					}
+					
+				} 
+			}
+
+			if(game_on == 0) {
+				alert("Now you will do the same thing, but if you do well, you will recieve a bonus. You start with $1 of bonus, and after each question it goes down by $.05. If you guess the object correctly, you collect whatever the current bonus is. Good luck!");
+			}
+
+			if(game_on == num_games) {
+				show_questions();
+			}
+
+			else {
+				game_on++;
+				start_game();
+			}
+		}
+	})
 	
-	if($("#guess-box").val().toUpperCase() == item.toUpperCase()) {
-		alert("Correct! Good guess!");
-		show_questions();
-	}
-	else {
-		alert("Incorrect, guess again or ask more questions");
-	}
 }
 
 var show_questions = function() {
@@ -167,6 +230,7 @@ var quizcomplete = function() {
 	psiTurk.recordUnstructuredData("quiz-response", quizquestion_on.toString() + "," + 
 				quizquestions[quizquestion_on][0] + "," + quizquestions[quizquestion_on][1] + "," + $("input[name=q1]:checked").val());
 	quizquestion_on += 1;
+
 	if (correct) {
 		alert("Correct! Please proceed");
 		get_data();
@@ -195,7 +259,7 @@ $(window).load( function(){
     psiTurk.doInstructions(
     	instructionPages, // a list of pages you want to display in sequence
     	function() { 
-    		currentview = pre_20q();    		
+    		currentview = start_game();    		
     	} // what you want to do when you are done with instructions
     );
 });

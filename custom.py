@@ -18,6 +18,8 @@ from json import dumps, loads
 from player import Player, items, data_matrix, features
 from similarities import *
 
+import editdistance
+
 # load the configuration options
 config = PsiturkConfig()
 config.load_config()
@@ -89,3 +91,15 @@ def get_good_questions():
 
 
 
+
+#----------------------------------------------
+# Get if is similar object
+#----------------------------------------------
+@custom_code.route('/get_similar_objects', methods=['GET'])
+def get_similar_objects():
+    try:
+        obj = str(request.args['object'])
+        return str( min( [ editdistance.eval(obj, o.upper()) for o in items ] ) )
+      
+    except TemplateNotFound:
+        abort(404)
