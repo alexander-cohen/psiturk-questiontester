@@ -56,8 +56,8 @@ var quizquestions = [["Is it alive?", 'n'], ['Is it small?', 'y'], ['Could I hol
 var quizquestion_on = 0;
 var knowledge = "";
 var item = "computer";
-var iterations = 0;
-var max_iterations = 20;
+var iterations = 1;
+var max_iterations = 5;
 
 function shuffle(o){
     for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
@@ -91,7 +91,7 @@ var pre_20q = function() {
 
 var choicecomplete = function() {
 	
-	iterations++;
+	
 	if($("#submit-button").html() == "Submit") {
 		var choice = $("input[name=q1]:checked").next('label').html();
 		var info_gain = $("input[name=q1]:checked").next('label').attr("info-gain");
@@ -115,12 +115,14 @@ var choicecomplete = function() {
 					
 				}
 			})
-			
-		
 	}
 
 	else {
-		if(iterations == max_iterations) show_questions();
+		iterations++;
+		if(iterations >= max_iterations) {
+			show_questions();
+			return;
+		}
 		pre_20q();
 	}
 	
@@ -154,7 +156,7 @@ var get_data = function() {
 }
 
 var answer_chosen = function() {
-	psiTurk.recordTrialData(["Final choice", question_answer_pairs, $("input[name=q1]:checked").next().htmle()]);
+	psiTurk.recordTrialData(["Final choice", question_answer_pairs, $("input[name=q1]:checked").next().html()]);
 
 	setTimeout(function(){psiTurk.showPage('postquestionnaire.html')}, 500);
 }
