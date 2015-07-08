@@ -14,6 +14,9 @@ var mycounterbalance = counterbalance;  // they tell you which condition you hav
 // All pages to be loaded
 var pages = [
 	"instructions/instruct-1.html",
+	"instructions/instruct-2.html",
+	"instructions/instruct-3.html",
+	"instructions/instruct-4.html",
 	"instructions/instruct-ready.html",
 	"quiz.html",
 	"stage.html",
@@ -27,6 +30,8 @@ psiTurk.preloadPages(pages);
 
 var instructionPages = [ // add as a list as many pages as you like
 	"instructions/instruct-1.html",
+	"instructions/instruct-2.html",
+	"instructions/instruct-3.html",
 ];
 
 images = { 'y':'<div style="margin-left:-109px"><img src="/static/images/slider_y.png"  alt="Definitely Yes" width=650></div>',
@@ -103,14 +108,14 @@ var pre_20q = function() {
 	psiTurk.showPage("full_game_eig.html");
 
 	load_knowledge();
-
+	$("#game-on").html("Game on: " + game_on.toString() + " / " + num_games.toString());
 	if(iterations >= max_iterations) {
 		$("#question-number").html("You have used up all your questions,<br>now you must guess an object");
 		$("#questions").html("<br><br>");
 	}
 
 	else {
-		$("#question-number").html("Question number: " + iterations.toString());
+		$("#question-number").html("Question number: " + iterations.toString() + "/" + max_iterations.toString());
 		if(game_on > 0) $("#bonus").html("Bonus: $" + bonus().toFixed(2));
 		$.ajax({
 			url: "/get_good_questions",
@@ -170,54 +175,102 @@ var choicecomplete = function() {
 	
 }
 
+var make_alert = function(message, onclose) {
+	$("<p>" + message + "</p>").dialog(
+	    {
+	    	dialogClass: "no-close",
+	        modal: true, //Not necessary but dims the page background
+	        width: 400,
+	        buttons:{
+	            'Close':function() {
+	            	event.preventDefault();
+	             	onclose();
+	             }
+	             
+	        },
+	        close: function(event, ui) {
+	        	event.preventDefault();
+	        	onclose();
+	        }
+	    }
+	);
+}
+
 var guess_submitted = function() {
-	alert("Message recieved!");
 	knowledge = ""
 	var choice = $("#guess-box").val().toUpperCase();
 	$.ajax({
-		url: "/get_similar_objects",
+		url: "/get_similarity",
 		type: "GET",
-		data: {"object": choice},
+		data: {"object": choice.toUpperCase(), 'item':item.toUpperCase()},
 		success: function(data) {
 			var correct = false;
 			var error = parseInt(data, 10);
+			alert(error);
 			if(error <= 1) {
 				correct = true;
 			}
 			if(correct) {
-				if(game_on == 0) alert("Correct! Good job!");
+				if(game_on == 0) make_alert("Correct! Good job!", finish_guess_submitted);
 				else {
-					alert("Correct! Good guess! You will recieve a bonus of $" + bonus().toFixed(2));
-					psiTurk.computeBonus(bonus());
+					make_alert("Correct! Good guess! You will recieve a bonus of $" + bonus().toFixed(2), finish_guess_submitted);
 				}
 			}
 			else {
-				if(game_on == 0) alert("Incorrect, sorry. It was a " + item);
+				if(game_on == 0) {
+					make_alert("Incorrect, sorry. The object is a " + item + ".", finish_guess_submitted);
+				}
 				else {
-					if(confirm("Incorrect, I am sorry but you do not recieve a bonus. It was a " + item + " Go to next game. If you think you got it right and would like to contest this, your complaint will be recorded and your response will be reviewed. If it is deemed correct, you will recieve your bonus."))
-					{
-						psiTurk.recordUnstructuredData("complaint", $("#guess-box").val().toUpperCase() + ":" + item.toUpperCase());
-					}
 					
+					$("<p>Incorrect, I am sorry but you do not recieve a bonus. The object a " + item + ". Go to next game. If you think you got it right and would like to contest this, your complaint will be recorded and your response will be reviewed. If it is deemed correct, you will recieve your bonus.</p>").dialog(
+					    {
+					    	dialogClass: "no-close",
+					        modal:true, //Not necessary but dims the page background
+					        width: 400,
+					        buttons:{
+					        	'Continue':function() {
+					             	finish_guess_submitted();
+					             },
+					            'Complain':function() {
+					                psiTurk.recordUnstructuredData("complaint", $("#guess-box").val().toUpperCase() + ":" + item.toUpperCase());
+					             	finish_guess_submitted();
+					             }
+					             
+					        },
+					        close: function(event, ui) {
+					        	finish_guess_submitted();
+					        }
+					    }
+					);
 				} 
 			}
 
-			if(game_on == 0) {
-				alert("Now you will do the same thing, but if you do well, you will recieve a bonus. You start with $1 of bonus, and after each question it goes down by $.05. If you guess the object correctly, you collect whatever the current bonus is. Good luck!");
-			}
-
-			if(game_on == num_games) {
-				show_questions();
-			}
-
-			else {
-				game_on++;
-				start_game();
-			}
+			
 		}
 	})
 	
 }
+
+var finish_guess_submitted = function() {
+	if(game_on == 0) {
+		make_alert("Now you will do the same thing, but if you do well, you will recieve a bonus. You start with $1 of bonus, and after each question it goes down by $.05. If you guess the object correctly, you collect whatever the current bonus is. Good luck!", function() {game_on++; start_game();});
+	}
+
+	else if(game_on == num_games) {
+		show_questions_instructs();
+	}
+
+	else {
+		game_on++;
+		start_game();
+	}
+}
+
+
+var show_questions_instructs = function() {
+	psiTurk.showPage("instruct-4.html");
+}
+
 
 var show_questions = function() {
 	psiTurk.showPage('setup.html');
@@ -262,12 +315,11 @@ var quizcomplete = function() {
 	quizquestion_on += 1;
 
 	if (correct) {
-		alert("Correct! Please proceed");
-		get_data();
+		make_alert("Correct! Please proceed", get_data);
+
 	}
 	else {
-		alert("Incorrect, please go back and try again");
-		show_questions();
+		make_alert("Incorrect, please go back and try again. Really pay attention this time!", show_questions);
 	}
 }
 

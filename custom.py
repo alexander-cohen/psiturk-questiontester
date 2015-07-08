@@ -97,11 +97,12 @@ def get_good_questions():
 #----------------------------------------------
 # Get if is similar object
 #----------------------------------------------
-@custom_code.route('/get_similar_objects', methods=['GET'])
-def get_similar_objects():
+@custom_code.route('/get_similarity', methods=['GET'])
+def get_similarity():
     try:
         obj = str(request.args['object'])
-        return str( min( [ editdistance.eval(obj, o.upper()) for o in items ] ) )
+        the_item = str(request.args['item'])
+        return str( editdistance.eval(obj, the_item) )
       
     except TemplateNotFound:
         abort(404)

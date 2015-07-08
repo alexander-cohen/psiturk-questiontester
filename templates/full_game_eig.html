@@ -1,6 +1,7 @@
 <div>
 	<div id="question-chooser">
 		<div class="form-group" style="margin-left:25px; margin-top:50px; margin-right:0px; margin-bottom:200px; float: left">
+			<h3 id="game-on"></h3>
 			<h3 id="bonus"></h3>
 			<h4 id="question-number"></h4>
 
@@ -35,15 +36,21 @@
 				<br><br><br>
 		  	</div>
 		  	
-			<form>
+			<form id="guess-form">
 				Guess: <input type="text" name="guess" id="guess-box">
-				<button onclick="guess_submitted();" type="button" class="btn btn-success" id="submit-button">Submit</button>
+				<input type="submit" class="btn btn-success" id="submit-button">
 				<br><br>
 				Keep in mind, you only get 1 guess! Try to use it wisely!
 			</form>
+			<script>
+			$('#guess-form').submit(function(event) {
+			    event.preventDefault();
+			    guess_submitted();
+		    }); 
+			</script>
 		</div>
 		<div id="prev-questions" style="margin-left:0px; margin-top:50px; margin-right:25px; margin-bottom:200px; float: left">
-			
+		
 		</div>
 	</div>
 </div>

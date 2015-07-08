@@ -7,11 +7,9 @@
     <div class="instructions well">
 
         <p>
-            At each junction there will be a series of possible questions, but you also have a choice.
-            You get one chance to guess an object, and you have to decide when to stop asking your questions
-            and guess your object. The first round is for practice, but after that you will be playing for a bonus!
-            You will start with $X, and each question you ask the bonus will go down by $X. But be careful, because 
-            if you guess incorrectly you dont win anything!
+            Great job with that section! Now you will go onto the second part of this hit. This section
+            will be very similar to the previous one, except for that the first part of the game will be decided for you.
+            You will play through the first part of the game, and then have to rank 4 questions in order from best to worst.
         </p>
 
 
@@ -44,7 +42,7 @@
             <div class="col-xs-8">
             </div>
             <div class="col-xs-2">
-                <button type="button" id="next" value="next" class="btn btn-primary btn-lg continue">
+                <button type="button" id="next" value="next" class="btn btn-primary btn-lg continue" onclick="show_questions();">
                 Next <span class="glyphicon glyphicon-arrow-right"></span>
                 </button>
             </div>

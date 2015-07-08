@@ -7,7 +7,11 @@
 	<div class="instructions well">
 
 	    <p>
-		    In this task you will be asked to choose your favorite question from a list in a 20 questions scenario. The first thing you will do is play through the beginning of the game. Try to act like you are just playing another game of 20 questions, and you are going through what has happened so far. Although you are interfacing with a machine, these questions and answers were aggregated from human data, so play like you would against a human. You will be quizzed, so pay attention!
+		    In this task you will be asked to play 20 questions. The way it will work is you are asked to choose your favorite question
+            between 4 options. When you submit this question, you will recieve an answer based on the item the computer is thinking of. 
+            The answers are on a scale from Definitely Not to Definitely Yes, meaning that if it is all the way to one end it is certain,
+            if it is in the middle it is either unapplicable or uncertain, and if it is leaning towards one end it means that the answer is
+            leaning toward that answer, but is not completely certain. This could mean the answer is something like "Probably" or "Sometimes".
 	    </p>
 
 	    <script type="text/javascript">
@@ -18,6 +22,16 @@
 
 	<hr>
 
+    <style>
+        #next {
+            opacity: 0;
+        }
+    </style>
+    <script>
+        setTimeout(function() {
+            $("#next").fadeTo('slow', 1.0);
+        }, 1000)
+    </script>
 
     <div class="instructionsnav">
         <div class="row">
