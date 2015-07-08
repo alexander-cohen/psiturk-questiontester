@@ -1,15 +1,15 @@
 <div id="container-exp">
   	<div id="questions">
       <h2>Questions: </h2>
-      <h5>Question1</h5>
-      <h5>Question2</h5>
-      <h5>Question3</h5>
-      <h5>Question4</h5>
+      <h3>Question1</h3>
+      <h3>Question2</h3>
+      <h3>Question3</h3>
+      <h3>Question4</h3>
     </div>
-    <div style="margin-left:25px; margin-top:50px; margin-right:0px; margin-bottom:200px; float: left">
+    <div style="margin-left:25px; margin-top:50px; margin-right:0px; margin-bottom:50px; float: left">
       Please select your rankings. If you want to change the order, just 
       put the value one of the ones you want to change back to default, change
-      the other one, and then change the original.
+      the other one, and then change the first.
       <table>
 
       <tr><td>1). </td><td><select id="1" name="1"> 
@@ -29,6 +29,7 @@
       </select></td></tr>
       </table>
     </div>
+    <button onclick="answer_chosen();" type="button" class="btn btn-success" id="submit-button" style="margin-top:15px">Submit</button>
 </div>
 
 <style>
@@ -64,23 +65,24 @@
         // Store the current value on focus and on change
         previous = this.value;
     }).change(function() {
-        alert(previous);
         var sId = this.id; // store off the changed element id
         var vId = this.value; // store off the changed element value 
 
         $('select').each( function(){ // this loops across the same set of elements
             if(this.id != sId && vId != "#") {
               $(this).find("[value="+vId+"]").remove();
-              var num = 0;
-              $(this).find("[value="+previous+"]").each(function(){
-                num++;
-              })
-              if(num == 0) {
-                alert("<option value=" + previous + ">" + previous + "</option>");
-                $(this).append("<option value=" + previous + ">" + previous + "</option>");
-              }
             }
         });
+
+        $('select').each( function() {
+           var num = 0;
+            $(this).find("[value="+previous+"]").each(function(){
+              num++;
+            })
+            if(num == 0) {
+              $(this).append("<option value=" + previous + ">" + previous + "</option>");
+            }
+        })
 
     });
   })();

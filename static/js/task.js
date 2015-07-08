@@ -184,8 +184,8 @@ var make_alert = function(message, onclose) {
 	        width: 400,
 	        buttons:{
 	            'Close':function() {
-	            	event.preventDefault();
 	             	onclose();
+	             	close();
 	             }
 	             
 	        },
@@ -302,9 +302,17 @@ var get_data = function() {
 }
 
 var answer_chosen = function() {
-	psiTurk.recordTrialData(["Final choice", question_answer_pairs, $("input[name=q1]:checked").next().html()]);
+	if($("#1").val() == "#" ||
+		$("#2").val() == "#" ||
+		$("#3").val() == "#" ||
+		$("#4").val() == "#") make_alert("Please choose a question for each rank", function(){});
 
-	setTimeout(function(){psiTurk.showPage('postquestionnaire.html')}, 500);
+
+	else {
+		psiTurk.recordTrialData(["Final choice", question_answer_pairs, [$("#1").val(), $("#2").val(), $("#3").val(), $("#4").val()] ] );
+		setTimeout(function(){psiTurk.showPage('postquestionnaire.html')}, 500);
+	}
+	
 }
 
 var quizcomplete = function() {
@@ -341,7 +349,7 @@ $(window).load( function(){
     psiTurk.doInstructions(
     	instructionPages, // a list of pages you want to display in sequence
     	function() { 
-    		currentview = get_data();    		
+    		currentview = start_game();    		
     	} // what you want to do when you are done with instructions
     );
 });
