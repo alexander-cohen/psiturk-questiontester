@@ -29,16 +29,16 @@ var instructionPages = [ // add as a list as many pages as you like
 	"instructions/instruct-1.html",
 ];
 
-images = { 'y':'<div style="margin-left:-136px"><img src="/static/images/slider_y.png"  alt="Definitely Yes"></div>',
-		  'py':'<div style="margin-left:-136px"><img src="/static/images/slider_py.png" alt="Probably/Sometimes"></div>',
-		   'u':'<div style="margin-left:-136px"><img src="/static/images/slider_u.png"  alt="Unknown/Not applicable"></div>',
-		  'pn':'<div style="margin-left:-136px"><img src="/static/images/slider_pn.png" alt="Probably not/Rarely"></div>',
-		   'n':'<div style="margin-left:-136px"><img src="/static/images/slider_n.png"  alt="Definitely No"></div>',
-		 '1.0':'<div style="margin-left:-136px"><img src="/static/images/slider_y.png"  alt="Definitely Yes"></div>',
-		 '0.5':'<div style="margin-left:-136px"><img src="/static/images/slider_py.png" alt="Probably/Sometimes"></div>',
-		 '0.0':'<div style="margin-left:-136px"><img src="/static/images/slider_u.png"  alt="Unknown/Not applicable"></div>',
-		'-0.5':'<div style="margin-left:-136px"><img src="/static/images/slider_pn.png" alt="Probably not/Rarely"></div>',
-		'-1.0':'<div style="margin-left:-136px"><img src="/static/images/slider_n.png"  alt="Definitely No"></div>'};
+images = { 'y':'<div style="margin-left:-109px"><img src="/static/images/slider_y.png"  alt="Definitely Yes" width=650></div>',
+		  'py':'<div style="margin-left:-109px"><img src="/static/images/slider_py.png" alt="Probably/Sometimes" width=650></div>',
+		   'u':'<div style="margin-left:-109px"><img src="/static/images/slider_u.png"  alt="Unknown/Not applicable" width=650></div>',
+		  'pn':'<div style="margin-left:-109px"><img src="/static/images/slider_pn.png" alt="Probably not/Rarely" width=650></div>',
+		   'n':'<div style="margin-left:-109px"><img src="/static/images/slider_n.png"  alt="Definitely No" width=650></div>',
+		 '1.0':'<div style="margin-left:-109px"><img src="/static/images/slider_y.png"  alt="Definitely Yes" width=650></div>',
+		 '0.5':'<div style="margin-left:-109px"><img src="/static/images/slider_py.png" alt="Probably/Sometimes" width=650></div>',
+		 '0.0':'<div style="margin-left:-109px"><img src="/static/images/slider_u.png"  alt="Unknown/Not applicable" width=650></div>',
+		'-0.5':'<div style="margin-left:-109px"><img src="/static/images/slider_pn.png" alt="Probably not/Rarely" width=650></div>',
+		'-1.0':'<div style="margin-left:-109px"><img src="/static/images/slider_n.png"  alt="Definitely No" width=650></div>'};
 
 
 
@@ -57,7 +57,7 @@ var quizquestion_on = 0;
 var knowledge = "";
 var item = "computer";
 var iterations = 1;
-var max_iterations = 5;
+var max_iterations = 20;
 var num_games = 4;
 var game_on = 0;
 
@@ -73,27 +73,39 @@ function shuffle(o){
 var start_game = function() {
 	psiTurk.showPage("full_game_eig.html");
 	iterations = 0;
-	pre_20q();
+	$.ajax({
+		url: "/get_rand_object",
+		type: "GET",
+		success: function(data) {
+			item = data;
+			pre_20q();
+		}
+	})
+}
+
+var load_knowledge = function() {
+	var knowledge_arr = knowledge.split(",");
+	$("#prev-questions").html("");
+	if(knowledge != "") {
+		for(var k = 0; k < knowledge_arr.length; k++) {
+			var knowledge_piece = knowledge_arr[k].split(":");
+			$("#prev-questions").append("<h4>" + knowledge_piece[0] + "</h4>" + 
+										images[knowledge_piece[1]] + "<hr>");
+		}
+	}
+	$("#prev-questions").find( $("img") ).attr("width", 600);
+	$("#prev-questions").find( $("div") ).css("margin-left", -103);
+	$("#prev-questions").css("margin-left", "50px");
+	$("#prev-questions").find( $("div") ).css("margin-right", -103);
 }
 
 var pre_20q = function() {
 	psiTurk.showPage("full_game_eig.html");
 
-	var knowledge_arr = knowledge.split(",");
-	if(knowledge != "") {
-		for(var k = 0; k < knowledge_arr.length; k++) {
-			var knowledge_piece = knowledge_arr[k].split(":");
-			$("#prev-questions").append("<h3>" + knowledge_piece[0] + "</h3>" + 
-										images[knowledge_piece[1]] + "<hr>");
-		}
-	}
-
-	$("#prev-questions").find( $("img") ).attr("width", 600);
-	$("#prev-questions").find( $("div") ).css("margin-left", -103);
-	
+	load_knowledge();
 
 	if(iterations >= max_iterations) {
-		$("#question-number").html("You have used up all your questions, now you must guess an object");
+		$("#question-number").html("You have used up all your questions,<br>now you must guess an object");
 		$("#questions").html("<br><br>");
 	}
 
@@ -140,7 +152,7 @@ var choicecomplete = function() {
 
 					if(knowledge == "") knowledge += choice + ":" + data;
 					else knowledge += "," + choice + ":" + data;
-
+					$("#prev-questions").css("margin-left", "0px");
 					$("#answer").html(images[data]);
 					$("#answer").fadeTo('slow', 1.0);
 					$("#submit-button").html("Next");
@@ -159,6 +171,8 @@ var choicecomplete = function() {
 }
 
 var guess_submitted = function() {
+	alert("Message recieved!");
+	knowledge = ""
 	var choice = $("#guess-box").val().toUpperCase();
 	$.ajax({
 		url: "/get_similar_objects",
@@ -172,12 +186,15 @@ var guess_submitted = function() {
 			}
 			if(correct) {
 				if(game_on == 0) alert("Correct! Good job!");
-				else alert("Correct! Good guess! You will recieve a bonus of $" + bonus().toFixes(2));
+				else {
+					alert("Correct! Good guess! You will recieve a bonus of $" + bonus().toFixed(2));
+					psiTurk.computeBonus(bonus());
+				}
 			}
 			else {
-				if(game_on == 0) alert("Incorrect, sorry");
+				if(game_on == 0) alert("Incorrect, sorry. It was a " + item);
 				else {
-					if(confirm("Incorrect, I am sorry but you do not recieve a bonus. Go to next game. If you think you got it right and would like to contest this, your complaint will be recorded and your response will be reviewed. If it is deemed correct, you will recieve your bonus."))
+					if(confirm("Incorrect, I am sorry but you do not recieve a bonus. It was a " + item + " Go to next game. If you think you got it right and would like to contest this, your complaint will be recorded and your response will be reviewed. If it is deemed correct, you will recieve your bonus."))
 					{
 						psiTurk.recordUnstructuredData("complaint", $("#guess-box").val().toUpperCase() + ":" + item.toUpperCase());
 					}
@@ -216,6 +233,19 @@ var do_quiz = function() {
 
 var get_data = function() {
 	psiTurk.showPage('stage.html');
+	var knowledge_arr = question_answer_pairs;
+	$("#prev-questions").html("");
+	if(knowledge != "") {
+		for(var k = 0; k < knowledge_arr.length; k++) {
+			var knowledge_piece = knowledge_arr[k].split(":");
+			$("#prev-questions").append("<h4>" + knowledge_piece[0] + "</h4>" + 
+										images[knowledge_piece[1]] + "<hr>");
+		}
+	}
+	$("#prev-questions").find( $("img") ).attr("width", 600);
+	$("#prev-questions").find( $("div") ).css("margin-left", -103);
+	$("#prev-questions").css("margin-left", "50px");
+	$("#prev-questions").find( $("div") ).css("margin-right", -103);
 }
 
 var answer_chosen = function() {

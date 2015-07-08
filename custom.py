@@ -20,6 +20,8 @@ from similarities import *
 
 import editdistance
 
+from random import randint
+
 # load the configuration options
 config = PsiturkConfig()
 config.load_config()
@@ -100,6 +102,18 @@ def get_similar_objects():
     try:
         obj = str(request.args['object'])
         return str( min( [ editdistance.eval(obj, o.upper()) for o in items ] ) )
+      
+    except TemplateNotFound:
+        abort(404)
+
+
+#----------------------------------------------
+# get random object
+#----------------------------------------------
+@custom_code.route('/get_rand_object', methods=['GET'])
+def get_rand_object():
+    try:
+        return str(items[randint(0, 1000)])
       
     except TemplateNotFound:
         abort(404)
