@@ -63,7 +63,7 @@ var knowledge = "";
 var item = "computer";
 var iterations = 1;
 var max_iterations = 20;
-var num_games = 1;
+var num_games = 4;
 var game_on = 0;
 
 var bonus = function() {
@@ -206,7 +206,6 @@ var guess_submitted = function() {
 		success: function(data) {
 			var correct = false;
 			var error = parseInt(data, 10);
-			alert(error);
 			if(error <= 1) {
 				correct = true;
 			}
@@ -268,7 +267,7 @@ var finish_guess_submitted = function() {
 
 
 var show_questions_instructs = function() {
-	psiTurk.showPage("instruct-4.html");
+	psiTurk.showPage("instruct-2.html");
 }
 
 
