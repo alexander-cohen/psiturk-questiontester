@@ -1,7 +1,16 @@
 <div id="container-exp">
-  	<div style="margin-left:25px; margin-top:50px; margin-right:0px; margin-bottom:200px; float: left">
+  	<div id="questions">
+      <h2>Questions: </h2>
+      <h5>Question1</h5>
+      <h5>Question2</h5>
+      <h5>Question3</h5>
+      <h5>Question4</h5>
+    </div>
+    <div style="margin-left:25px; margin-top:50px; margin-right:0px; margin-bottom:200px; float: left">
+      Please select your rankings. If you want to change the order, just 
+      put the value one of the ones you want to change back to default, change
+      the other one, and then change the original.
       <table>
-      <tr><td>Ranking</td><td>Item</td></tr>
 
       <tr><td>1). </td><td><select id="1" name="1"> 
           
@@ -18,30 +27,65 @@
       <tr><td>4). </td><td><select id="4" name="4"> 
      
       </select></td></tr>
-
-
+      </table>
     </div>
-    <div id="prev-questions" style="margin-left:25px; margin-top:50px; margin-right:0px; margin-bottom:200px; float: left">
-    </div>
-	<button onclick="answer_chosen();" type="button" class="btn btn-success">Submit</button>
 </div>
 
+<style>
+  table {
+    border-collapse: collapse;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+
+  td {
+      padding-top: .5em;
+      padding-bottom: .5em;
+      padding-left: 1.0em;
+  }
+
+</style>
+
 <script>
-  options = '<option value="#" selected="selected">Question...</option>'+
-            '<option value="Question1">Question2</option>'+
+  options = '<option value="#" selected="selected">Pick a question</option>'+
+            '<option value="Question1fh43uhgriuebgijdsbfnajkc">Question1fh43uhgriuebgijdsbfnajkc</option>'+
             '<option value="Question2">Question2</option>'+
             '<option value="Question3">Question3</option>'+
             '<option value="Question4">Question4</option>';
 
   $("select").html(options);
 
-  $('select').on('change', function(event){ // This binds listeners to the change event on all the select elements
+  (function () {
+    var previous;
+
+    $("select").on('focus', function () {
+        // Store the current value on focus and on change
+        previous = this.value;
+    }).change(function() {
+        alert(previous);
         var sId = this.id; // store off the changed element id
         var vId = this.value; // store off the changed element value 
+
         $('select').each( function(){ // this loops across the same set of elements
-            if(this.id != sId && this.value == vId) { // If it is not the triggering element and the value is the same, do something
-                this.options.selectedIndex = 0; // reset the value to 'rank' 
+            if(this.id != sId && vId != "#") {
+              $(this).find("[value="+vId+"]").remove();
+              var num = 0;
+              $(this).find("[value="+previous+"]").each(function(){
+                num++;
+              })
+              if(num == 0) {
+                alert("<option value=" + previous + ">" + previous + "</option>");
+                $(this).append("<option value=" + previous + ">" + previous + "</option>");
+              }
             }
         });
+
+    });
+  })();
+
+  $('select').on('change', function(event){ // This binds listeners to the change event on all the select elements
+        
     });
 </script>

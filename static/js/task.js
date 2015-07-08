@@ -63,7 +63,7 @@ var knowledge = "";
 var item = "computer";
 var iterations = 1;
 var max_iterations = 20;
-var num_games = 4;
+var num_games = 1;
 var game_on = 0;
 
 var bonus = function() {
@@ -94,7 +94,7 @@ var load_knowledge = function() {
 	if(knowledge != "") {
 		for(var k = 0; k < knowledge_arr.length; k++) {
 			var knowledge_piece = knowledge_arr[k].split(":");
-			$("#prev-questions").append("<h4>" + knowledge_piece[0] + "</h4>" + 
+			$("#prev-questions").prepend("<h4>" + knowledge_piece[0] + "</h4>" + 
 										images[knowledge_piece[1]] + "<hr>");
 		}
 	}
@@ -163,6 +163,7 @@ var choicecomplete = function() {
 					$("#submit-button").html("Next");
 					$("#submit-button").removeClass('btn-success');
 					$("#submit-button").addClass("btn-primary");
+					$("#question-form").html("<h3 style='margin-bottom: 40px'>"+choice+"</h3>");
 					
 				}
 			})
@@ -217,11 +218,11 @@ var guess_submitted = function() {
 			}
 			else {
 				if(game_on == 0) {
-					make_alert("Incorrect, sorry. The object is a " + item + ".", finish_guess_submitted);
+					make_alert("Incorrect, sorry. The object is <strong>" + item + "</strong>.", finish_guess_submitted);
 				}
 				else {
 					
-					$("<p>Incorrect, I am sorry but you do not recieve a bonus. The object a " + item + ". Go to next game. If you think you got it right and would like to contest this, your complaint will be recorded and your response will be reviewed. If it is deemed correct, you will recieve your bonus.</p>").dialog(
+					$("<p>Incorrect, I am sorry but you do not recieve a bonus. The object is <strong>" + item + "</strong>. Go to next game. If you think you got it right and would like to contest this, your complaint will be recorded and your response will be reviewed. If it is deemed correct, you will recieve your bonus.</p>").dialog(
 					    {
 					    	dialogClass: "no-close",
 					        modal:true, //Not necessary but dims the page background
@@ -255,7 +256,7 @@ var finish_guess_submitted = function() {
 		make_alert("Now you will do the same thing, but if you do well, you will recieve a bonus. You start with $1 of bonus, and after each question it goes down by $.05. If you guess the object correctly, you collect whatever the current bonus is. Good luck!", function() {game_on++; start_game();});
 	}
 
-	else if(game_on == num_games) {
+	else if(game_on >= num_games) {
 		show_questions_instructs();
 	}
 
@@ -267,7 +268,7 @@ var finish_guess_submitted = function() {
 
 
 var show_questions_instructs = function() {
-	psiTurk.showPage("instruct-2.html");
+	psiTurk.showPage("instructions/instruct-4.html");
 }
 
 
@@ -290,7 +291,7 @@ var get_data = function() {
 	if(knowledge != "") {
 		for(var k = 0; k < knowledge_arr.length; k++) {
 			var knowledge_piece = knowledge_arr[k].split(":");
-			$("#prev-questions").append("<h4>" + knowledge_piece[0] + "</h4>" + 
+			$("#prev-questions").prepend("<h4>" + knowledge_piece[0] + "</h4>" + 
 										images[knowledge_piece[1]] + "<hr>");
 		}
 	}
@@ -340,7 +341,7 @@ $(window).load( function(){
     psiTurk.doInstructions(
     	instructionPages, // a list of pages you want to display in sequence
     	function() { 
-    		currentview = start_game();    		
+    		currentview = get_data();    		
     	} // what you want to do when you are done with instructions
     );
 });
