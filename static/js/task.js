@@ -63,7 +63,7 @@ var knowledge = "";
 var item = "computer";
 var iterations = 1;
 var max_iterations = 20;
-var num_games = 4;
+var num_games = 1;
 var game_on = 0;
 
 var bonus = function() {

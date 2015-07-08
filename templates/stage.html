@@ -1,17 +1,47 @@
 <div id="container-exp">
   	<div style="margin-left:25px; margin-top:50px; margin-right:0px; margin-bottom:200px; float: left">
-      <form>
-    		<label for="answers" id="question-label"><h2>Choose you favorite question</h2></label>
-  		  <ul class="answers">
-        		<div class="radio-question"><input type="radio" name="q1" value="a" id="q1a"><label style="margin:0.5em" for="q1a">Question1</label></div>
-        		<div class="radio-question"><input type="radio" name="q1" value="b" id="q1b"><label style="margin:0.5em" for="q1b">Question2</label></div>
-        		<div class="radio-question"><input type="radio" name="q1" value="c" id="q1c"><label style="margin:0.5em" for="q1c">Question3</label></div>
-        		<div class="radio-question"><input type="radio" name="q1" value="d" id="q1d"><label style="margin:0.5em" for="q1d">Question4</label></div>
-        </ul>
-  		<br><br>
-      </form>
+      <table>
+      <tr><td>Ranking</td><td>Item</td></tr>
+
+      <tr><td>1). </td><td><select id="1" name="1"> 
+          
+      </select></td></tr>
+
+      <tr><td>2). </td><td><select id="2" name="2"> 
+        
+      </select></td></tr>
+
+      <tr><td>3). </td><td><select id="3" name="3"> 
+
+      </select></td></tr>
+
+      <tr><td>4). </td><td><select id="4" name="4"> 
+     
+      </select></td></tr>
+
+
     </div>
     <div id="prev-questions" style="margin-left:25px; margin-top:50px; margin-right:0px; margin-bottom:200px; float: left">
     </div>
 	<button onclick="answer_chosen();" type="button" class="btn btn-success">Submit</button>
 </div>
+
+<script>
+  options = '<option value="#" selected="selected">Question...</option>'+
+            '<option value="Question1">Question2</option>'+
+            '<option value="Question2">Question2</option>'+
+            '<option value="Question3">Question3</option>'+
+            '<option value="Question4">Question4</option>';
+
+  $("select").html(options);
+
+  $('select').on('change', function(event){ // This binds listeners to the change event on all the select elements
+        var sId = this.id; // store off the changed element id
+        var vId = this.value; // store off the changed element value 
+        $('select').each( function(){ // this loops across the same set of elements
+            if(this.id != sId && this.value == vId) { // If it is not the triggering element and the value is the same, do something
+                this.options.selectedIndex = 0; // reset the value to 'rank' 
+            }
+        });
+    });
+</script>
