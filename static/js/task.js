@@ -29,8 +29,8 @@ var pages = [
 psiTurk.preloadPages(pages);
 
 var instructionPages = [ // add as a list as many pages as you like
-	"instructions/instruct-1.html",
-	"instructions/instruct-2.html",
+	// "instructions/instruct-1.html",
+	// "instructions/instruct-2.html",
 	"instructions/instruct-3.html",
 ];
 
@@ -125,11 +125,15 @@ var pre_20q = function() {
 					new_questions = data.split(',')[0].split(":");
 					info_gains = data.split(',')[1].split(":");
 					console.log(new_questions);
-					var questions_to_ask = shuffle([[new_questions[0], info_gains[0]],
-													[new_questions[10], info_gains[10]], 
+					var questions_to_ask = shuffle([[new_questions[2], info_gains[2]],
+													[new_questions[5], info_gains[5]], 
+													[new_questions[8], info_gains[8]],
+													[new_questions[11], info_gains[11]],
+													[new_questions[14], info_gains[14]],
+													[new_questions[17], info_gains[17]],
 													[new_questions[20], info_gains[20]],
-													[new_questions[30], info_gains[30]]]);
-					for(var i = 0; i < 4; i++) {
+													[new_questions[23], info_gains[23]]]);
+					for(var i = 0; i < 8; i++) {
 						$('#q'+ i.toString()).next('label').html(questions_to_ask[i][0]);
 						$('#q'+ i.toString()).next('label').attr("info-gain", questions_to_ask[i][1]);
 					}

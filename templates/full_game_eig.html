@@ -3,11 +3,16 @@
 		<div class="form-group" style="margin-left:25px; margin-top:50px; margin-right:0px; margin-bottom:200px; float: left">
 			<h3 id="game-on"></h3>
 			<h3 id="bonus"></h3>
-			<h4 id="question-number"></h4>
+			<h4 id="question-number" style="margin-bottom:15px"></h4>
 
 		  	<div id="questions">
 		  		<form style="margin-bottom:-35px" id="question-form">
-			  		<label for="answers" id="question-label"><h2>Pick your favorite question</h2></label>
+			  		<label for="answers" id="question-label">
+			  			<h2 style="margin-top:5px; float:left">Pick your favorite question</h2>
+			  			<a href="#" data-toggle="tooltip" title="the tooltip">
+			  				<span class="glyphicon glyphicon-info-sign" style="float:left"></span>
+			  			</a>
+			  		</label>
 					<ul class="answers">
 			      		<div class="radio-question">
 			      			<input type="radio" name="q1" value="a" id="q0">
@@ -25,9 +30,31 @@
 			      		</div>
 
 			      		<div class="radio-question">
-			      			<input type="radio" name="q1" value="d" id="q3">
+			      			<input type="radio" name="q1" value="i" id="q3">
 			      			<label style="margin:0.5em" for="q3"></label>
 			      		</div>
+
+			      		<div class="radio-question">
+			      			<input type="radio" name="q1" value="d" id="q4">
+			      			<label style="margin:0.5em" for="q4"></label>
+			      		</div>
+
+			      		<div class="radio-question">
+			      			<input type="radio" name="q1" value="e" id="q5">
+			      			<label style="margin:0.5em" for="q5"></label>
+			      		</div>
+
+			      		<div class="radio-question">
+			      			<input type="radio" name="q1" value="f" id="q6">
+			      			<label style="margin:0.5em" for="q6"></label>
+			      		</div>
+
+			      		<div class="radio-question">
+			      			<input type="radio" name="q1" value="g" id="q7">
+			      			<label style="margin:0.5em" for="q7"></label>
+			      		</div>
+
+			      		
 			      	</ul>
 					<br><br>
 				</form>
@@ -48,6 +75,26 @@
 			    guess_submitted();
 		    }); 
 			</script>
+
+			<table style="border-collapse: separate; border-spacing: 10px">
+				<tr>
+					<td>
+						<li>Dress</li>
+		                <li>Dress</li>
+		                <li>Computer</li>
+		                <li>Ant</li>
+		                <li>Train</li>
+					</td>
+					<td>
+					 	<li>Car</li>
+		                <li>Dog</li>
+		                <li>Bear</li>
+		                <li>Lettuce</li>
+		                <li>Tomato</li>
+					</td>
+				</tr>
+			</table>
+
 		</div>
 		<div id="prev-questions" style="margin-left:0px; margin-top:50px; margin-right:25px; margin-bottom:200px; float: left">
 		
