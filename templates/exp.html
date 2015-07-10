@@ -14,20 +14,25 @@
 
         <!-- libraries used in your experiment 
 			psiturk specifically depends on underscore.js, backbone.js and jquery
-    	-->
+		    	-->
+		<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+
+		<script>
+			/*** Handle jQuery plugin naming conflict between jQuery UI and Bootstrap ***/
+			$.widget.bridge('uibutton', $.ui.button);
+			$.widget.bridge('uitooltip', $.ui.tooltip);
+		</script>
+
 		<script src="/static/lib/jquery-min.js" type="text/javascript"> </script>
 		<script src="/static/lib/underscore-min.js" type="text/javascript"> </script>
 		<script src="/static/lib/backbone-min.js" type="text/javascript"> </script>
 		<script src="/static/lib/d3.v3.min.js" type="text/javascript"> </script>
 
       	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-  		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-		<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+		
 		<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" />
-
-
 
       	<style>
          .ui-widget-header,.ui-state-default, ui-button{

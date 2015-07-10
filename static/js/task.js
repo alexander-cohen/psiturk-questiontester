@@ -171,7 +171,6 @@ var show_info_gain = function() {
 var choicecomplete = function() {
 	if($("#submit-button").html() == "Submit") {
 		var choice = $("input[name=q1]:checked").next('label').find('.question-text').html();
-		alert(choice);
 		var info_gain = $("input[name=q1]:checked").next('label').attr("info-gain");
 		psiTurk.recordTrialData(["Prelim choice", iterations, choice, info_gain])
 		$.ajax({

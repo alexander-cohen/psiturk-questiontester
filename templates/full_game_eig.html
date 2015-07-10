@@ -9,9 +9,25 @@
 		  		<form style="margin-bottom:-35px" id="question-form">
 			  		<label for="answers" id="question-label">
 			  			<h2 style="margin-top:5px; float:left">Pick your favorite question</h2>
-			  			<a href="#" data-toggle="tooltip" title="the tooltip">
-			  				<span class="glyphicon glyphicon-info-sign" style="float:left"></span>
+
+			  			<a href="#" id="animal-popover" class="btn"
+			  				rel="popover" data-placement="right" data-original-title="Animal List">
+			  					<span class="glyphicon glyphicon-info-sign" style="float:left"></span>
 			  			</a>
+
+			  			<script>
+							$(document).ready(function(){
+
+							   $("#animal-popover").popover({ 
+									trigger: "hover",
+									html: true,
+									content: function() {
+										return $("#animal-list").html();
+									}
+							   });
+							});
+						</script>
+
 			  		</label>
 					<ul class="answers" id="answers">
 			      		<div class="radio-question">
@@ -95,25 +111,26 @@
 					
 			</script>
 
-			<table style="border-collapse: separate; border-spacing: 10px">
-				<tr>
-					<td>
-						<li>Dress</li>
-		                <li>Dress</li>
-		                <li>Computer</li>
-		                <li>Ant</li>
-		                <li>Train</li>
-					</td>
-					<td>
-					 	<li>Car</li>
-		                <li>Dog</li>
-		                <li>Bear</li>
-		                <li>Lettuce</li>
-		                <li>Tomato</li>
-					</td>
-				</tr>
-			</table>
-
+			<div id="animal-list">
+				<table style="border-collapse: separate; border-spacing: 10px">
+					<tr>
+						<td>
+							<li>Dress</li>
+			                <li>Dress</li>
+			                <li>Computer</li>
+			                <li>Ant</li>
+			                <li>Train</li>
+						</td>
+						<td>
+						 	<li>Car</li>
+			                <li>Dog</li>
+			                <li>Bear</li>
+			                <li>Lettuce</li>
+			                <li>Tomato</li>
+						</td>
+					</tr>
+				</table>
+			</div>
 		</div>
 		<div id="prev-questions" style="margin-left:0px; margin-top:50px; margin-right:25px; margin-bottom:200px; float: left">
 		
