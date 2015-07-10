@@ -63,7 +63,7 @@ var knowledge = "";
 var item = "computer";
 var iterations = 1;
 var max_iterations = 20;
-var num_games = 1;
+var num_games = 2;
 var game_on = 0;
 
 var bonus = function() {
@@ -134,7 +134,7 @@ var pre_20q = function() {
 													[new_questions[20], info_gains[20]],
 													[new_questions[23], info_gains[23]]]);
 					for(var i = 0; i < 8; i++) {
-						$('#q'+ i.toString()).next('label').html(questions_to_ask[i][0]);
+						$('#q'+ i.toString()).next('label').html('<span class="question-text">' + questions_to_ask[i][0] + '</span>');
 						$('#q'+ i.toString()).next('label').attr("info-gain", questions_to_ask[i][1]);
 					}
 				}
@@ -145,10 +145,33 @@ var pre_20q = function() {
 	
 }
 
+var hide_info_gain = function() {
+	$("#answers").find("label").each(function() {
+						$(this).find('span').each(function() {
+							if(!$(this).hasClass('question-text')) {
+								$(this).remove();
+							}
+						});
+					});
+}
+
+var show_info_gain = function() {
+	$("#answers").find("label").each(function() {
+						var num_spans = 0;
+						$(this).find("span").each(function() {
+							num_spans++;
+						})
+						if(num_spans == 1) {
+							var info_gain = $(this).attr("info-gain");
+							$(this).append('<span>, info gain: ' + parseFloat(info_gain).toFixed(3) + "</span>");
+						}
+					});
+}
+
 var choicecomplete = function() {
-	
 	if($("#submit-button").html() == "Submit") {
-		var choice = $("input[name=q1]:checked").next('label').html();
+		var choice = $("input[name=q1]:checked").next('label').find('.question-text').html();
+		alert(choice);
 		var info_gain = $("input[name=q1]:checked").next('label').attr("info-gain");
 		psiTurk.recordTrialData(["Prelim choice", iterations, choice, info_gain])
 		$.ajax({
@@ -158,7 +181,6 @@ var choicecomplete = function() {
 				data: {'question': choice, 'item': item},
 				success: function(data) {
 					console.log(data);
-
 					if(knowledge == "") knowledge += choice + ":" + data;
 					else knowledge += "," + choice + ":" + data;
 					$("#prev-questions").css("margin-left", "0px");
@@ -167,8 +189,8 @@ var choicecomplete = function() {
 					$("#submit-button").html("Next");
 					$("#submit-button").removeClass('btn-success');
 					$("#submit-button").addClass("btn-primary");
-					$("#question-form").html("<h3 style='margin-bottom: 40px'>"+choice+"</h3>");
-					
+					//$("#question-form").html("<h3 style='margin-bottom: 40px'>"+choice+"</h3>");
+					show_info_gain();
 				}
 			})
 	}
@@ -189,7 +211,6 @@ var make_alert = function(message, onclose) {
 	        buttons:{
 	            'Close':function() {
 	             	onclose();
-	             	close();
 	             }
 	             
 	        },
@@ -199,6 +220,19 @@ var make_alert = function(message, onclose) {
 	        }
 	    }
 	);
+}
+
+function check_correct_color() {
+	if($("#guess-box").val() == '') {
+		$("#submit-button-guess").attr('class', '');
+		$("#submit-button-guess").addClass('btn');
+		$("#submit-button-guess").addClass('btn-continue');
+	}
+	else {
+		$("#submit-button-guess").attr('class', '');
+		$("#submit-button-guess").addClass('btn');
+		$("#submit-button-guess").addClass('btn-primary');
+	}
 }
 
 var guess_submitted = function() {
@@ -257,7 +291,10 @@ var guess_submitted = function() {
 
 var finish_guess_submitted = function() {
 	if(game_on == 0) {
-		make_alert("Now you will do the same thing, but if you do well, you will recieve a bonus. You start with $1 of bonus, and after each question it goes down by $.05. If you guess the object correctly, you collect whatever the current bonus is. Good luck!", function() {game_on++; start_game();});
+		make_alert("Now you will do the same thing, but if you do well, you will recieve a bonus." +
+					"You start with $1 of bonus, and after each question it goes down by $.05. " +
+					"If you guess the object correctly, you collect whatever the current bonus is. Good luck!", 
+						function() {game_on++; start_game();});
 	}
 
 	else if(game_on >= num_games) {
