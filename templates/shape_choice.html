@@ -3,6 +3,15 @@
   <div id="shapes" style="margin-left:100px; margin-top:50px; margin-right:25px; margin-bottom:200px; float: left">
     <style>
       th, td { padding: 5px; }
+      img {
+        opacity: 0.7;
+        filter: alpha(opacity=70); /* For IE8 and earlier */
+      }
+
+      img:hover {
+          opacity: 1.0;
+          filter: alpha(opacity=100); /* For IE8 and earlier */
+      }
     </style>
     <table>
       <tr>
@@ -33,6 +42,8 @@
         <td> <div id="shape16"></div> </td>
       </tr>
     </table>
+
+
   </div>
 
 </div>

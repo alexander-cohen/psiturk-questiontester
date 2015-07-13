@@ -18,7 +18,7 @@
 			  			<script>
 							$(document).ready(function(){
 
-							   $("#animal-popover").popover({ 
+							   $("#animal-popover").popover({
 									trigger: "hover",
 									html: true,
 									content: function() {
@@ -70,7 +70,7 @@
 			      			<label style="margin:0.5em" for="q7"></label>
 			      		</div>
 
-			      		
+
 			      	</ul>
 					<br><br>
 				</form>
@@ -85,7 +85,7 @@
 					$('#infogain-checkbox').change(function() {
 				        if($(this).is(":checked")) {
 				            show_info_gain();
-				        } 
+				        }
 				        else {
 				        	hide_info_gain();
 				        }
@@ -93,9 +93,9 @@
 				</script>
 
 		  	</div>
-		  	
+
 			<form id="guess-form">
-				Guess: <input type="text" name="guess" id="guess-box" 
+				Guess: <input type="text" name="guess" id="guess-box"
 					onkeydown = "check_correct_color();" onkeyup = "check_correct_color();">
 				<input type="submit" class="btn btn-continue" id="submit-button-guess" title="Next">
 
@@ -107,8 +107,8 @@
 					$('#guess-form').submit(function(event) {
 					    event.preventDefault();
 					    if($("#guess-box").val() != '') guess_submitted();
-				    }); 
-					
+				    });
+
 			</script>
 
 			<div id="animal-list">
@@ -133,7 +133,7 @@
 			</div>
 		</div>
 		<div id="prev-questions" style="margin-left:0px; margin-top:50px; margin-right:25px; margin-bottom:200px; float: left">
-		
+
 		</div>
 	</div>
 </div>

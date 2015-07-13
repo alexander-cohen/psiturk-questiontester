@@ -141,12 +141,13 @@ var complete = function() {
 var make_alert = function(message, onclose) {
 	$("<p>" + message + "</p>").dialog(
 	    {
-	    	dialogClass: "no-close",
+				  dialogClass: 'no-close',
 	        modal: true, //Not necessary but dims the page background
 	        width: 400,
 	        buttons:{
-	            'Close':function() {
-	             	onclose();
+	            'Close': function() {
+	            	onclose();
+								$(this).parent().remove();
 	             }
 
 	        },
@@ -156,6 +157,7 @@ var make_alert = function(message, onclose) {
 	        }
 	    }
 	);
+	$('.no-close').find('.ui-dialog-titlebar-close').css('display','none');
 }
 
 

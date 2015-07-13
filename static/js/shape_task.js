@@ -19,8 +19,8 @@ var possible_questions = [  [
                             ],
 
                             [
-                              ['Does it have a dot?', [3, 0]],
-                              ['Does it have a dot?', [3, 0]],
+                              ['Does it have a dot?', [3, 1]],
+                              ['Does it have a dot?', [3, 1]],
                             ]
                           ];
 
@@ -70,7 +70,6 @@ function load_img_names() {
 function start_shapegame() {
   shape_imgs = load_img_names();
   shape_choice = base2str(rand_num_incl(0, 15));
-  alert(shape_choice);
 
   give_question_options();
 }
@@ -82,13 +81,19 @@ function let_them_choose() {
   $("td").each(function() {
     var inner = $(this).html();
     var shape_bin = $(this).find('div').find('img').attr('bin_rep');
-    $(this).html('<a href="javascript:shape_chosen(\'' + shape_bin + '\')">' + inner + '</a>')
+    $(this).html('<a href="javascript:shape_chosen(\'' +
+                  shape_bin + '\')">' + inner + '</a>')
   })
 }
 
 function shape_chosen(obj) {
-  alert(obj + ', ' + shape_choice);
-  console.log(obj.toString() + ", " + shape_choice + ", " + (obj.toString() == shape_choice));
+  var correct = obj == shape_choice;
+  make_alert((obj == correct ?
+              'Correct! Great Job! Now move on to Part II of this HIT' :
+              'Incorrect, sorry'), function(){
+                                    if(correct) show_question_instructs();
+                                    else start_shapegame();
+                                  });
 }
 
 function load_shape_imgs() {
@@ -118,10 +123,8 @@ function give_question_options() {
     let_them_choose();
     return;
   }
-  alert(possible_questions.toString());
 
   var q1cat = rand_num_incl(0, possible_questions.length - 1);
-  alert('q1cat: ' + q1cat);
   if(possible_questions.length > 1) {
     var q2cat = rand_num_incl(0, possible_questions.length - 1);
 
@@ -174,6 +177,8 @@ var choicecomplete = function() {
 		$("#submit-button").html("Next");
 		$("#submit-button").removeClass('btn-success');
 		$("#submit-button").addClass("btn-primary");
+    $("#answers").remove();
+    $("#form-label").html(choice);
 	}
 
 	else {
