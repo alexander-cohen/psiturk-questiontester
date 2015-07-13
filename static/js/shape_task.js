@@ -9,8 +9,8 @@ var possible_questions = [  [
                             ],
 
                             [
-                              ['Does it have a red outline?', [1, 1]],
-                              ['Does it have a black outline?', [1, 0]]
+                              ['Does it have a black outline?', [1, 0]],
+                              ['Does it have a red outline?', [1, 1]]
                             ],
 
                             [
@@ -20,7 +20,7 @@ var possible_questions = [  [
 
                             [
                               ['Does it have a dot?', [3, 0]],
-                              ['Does it have an empty fill? (no dot)', [3, 1]]
+                              ['Does it have a dot?', [3, 0]],
                             ]
                           ];
 
@@ -77,15 +77,22 @@ function start_shapegame() {
 
 function let_them_choose() {
   psiTurk.showPage('shape_choice.html');
+  load_shape_imgs();
   $("#question-form").html('');
   $("td").each(function() {
     var inner = $(this).html();
-    $(this).html('<a href="javascript:">' + inner + '</a>')
+    var shape_bin = $(this).find('div').find('img').attr('bin_rep');
+    $(this).html('<a href="javascript:shape_chosen(\'' + shape_bin + '\')">' + inner + '</a>')
   })
 }
 
+function shape_chosen(obj) {
+  alert(obj + ', ' + shape_choice);
+  console.log(obj.toString() + ", " + shape_choice + ", " + (obj.toString() == shape_choice));
+}
+
 function load_shape_imgs() {
-  for(var i = 0; i <= 15; i++) {
+  for(var i = 0; i < 16; i++) {
 
     /* removes inconsistent shapes
     var consistent_with_knowledge = true;
@@ -106,24 +113,35 @@ function load_shape_imgs() {
   }
 }
 
-function object_chosen(obj) {
-
-}
-
 function give_question_options() {
-  if(iterations == 4) let_them_choose();
-  var q1cat = rand_num_incl(0, possible_questions.length - 1);
-  var q2cat = rand_num_incl(0, possible_questions.length - 1);
+  if(possible_questions.length == 0) {
+    let_them_choose();
+    return;
+  }
+  alert(possible_questions.toString());
 
-  while (q2cat == q1cat) {
-    q2cat = rand_num_incl(0, possible_questions.length - 1);
+  var q1cat = rand_num_incl(0, possible_questions.length - 1);
+  alert('q1cat: ' + q1cat);
+  if(possible_questions.length > 1) {
+    var q2cat = rand_num_incl(0, possible_questions.length - 1);
+
+    while (q2cat == q1cat) {
+      q2cat = rand_num_incl(0, possible_questions.length - 1);
+    }
+  }
+
+  else {
+    var q2cat = q1cat;
   }
 
   var question1 = possible_questions[q1cat][rand_num_incl(0, 1)];
   var question2 = possible_questions[q2cat][rand_num_incl(0, 1)];
 
-
   psiTurk.showPage('shape_game.html');
+
+  if(possible_questions.length == 1) {
+    $("#q1").parent().html('');
+  }
 
   load_shape_imgs();
 
@@ -139,19 +157,15 @@ var choicecomplete = function() {
 		var choice = $("input[name=q1]:checked").next('label').html();
     var knowledge_val = $("input[name=q1]:checked").next('label').attr('knowledge_val').split(',');
 
-    alert('pq before: ' + possible_questions);
     for(var i = 0; i < possible_questions.length; i++) {
       if(possible_questions[i][0][1][0] == knowledge_val[0]) {
-        alert('removing possible question');
         possible_questions = removeArrValue(possible_questions, i);
         break;
       }
     }
-    alert('pq after: ' + possible_questions);
 
     var true_val = shape_choice.charAt(knowledge_val);
     var resp = true_val == knowledge_val[1] ? 'Yes' : 'No';
-    alert('Going to push to knowledge: ' + [[knowledge_val[0], true_val]]);
     knowledge_arr.push([knowledge_val[0], true_val]);
 
 		$("#prev-questions").css("margin-left", "0px");
