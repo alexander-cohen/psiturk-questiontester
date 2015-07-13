@@ -3,7 +3,7 @@ var img_attr_choies = [ ['Rectangle', 'Triangle'],
                         ['Green', 'Grey'],
                         ['Dot', 'NoDot'] ]
 
-var possible_questions = [  [
+var possible_questions_full = [  [
                               ['Is it a rectangle?', [0, 0]],
                               ['Is it a triangle?', [0, 1]]
                             ],
@@ -19,11 +19,11 @@ var possible_questions = [  [
                             ],
 
                             [
-                              ['Does it have a dot?', [3, 1]],
-                              ['Does it have a dot?', [3, 1]],
+                              ['Does it have a dot?', [3, 0]],
+                              ['Does it have a dot?', [3, 0]],
                             ]
                           ];
-
+var possible_questions = possible_questions_full.slice()
 var shape_imgs = []
 var shape_choice = '';
 var knowledge_arr = [];
@@ -70,7 +70,7 @@ function load_img_names() {
 function start_shapegame() {
   shape_imgs = load_img_names();
   shape_choice = base2str(rand_num_incl(0, 15));
-
+  possible_questions = possible_questions_full.slice();
   give_question_options();
 }
 
@@ -88,10 +88,10 @@ function let_them_choose() {
 
 function shape_chosen(obj) {
   var correct = obj == shape_choice;
-  make_alert((obj == correct ?
+  make_alert((correct ?
               'Correct! Great Job! Now move on to Part II of this HIT' :
               'Incorrect, sorry'), function(){
-                                    if(correct) show_question_instructs();
+                                    if(correct) show_questions_instructs();
                                     else start_shapegame();
                                   });
 }
@@ -167,7 +167,8 @@ var choicecomplete = function() {
       }
     }
 
-    var true_val = shape_choice.charAt(knowledge_val);
+    var true_val = shape_choice.charAt(knowledge_val[0]);
+    console.log(knowledge_val[0] + ':' + true_val + ':' + knowledge_val[1])
     var resp = true_val == knowledge_val[1] ? 'Yes' : 'No';
     knowledge_arr.push([knowledge_val[0], true_val]);
 

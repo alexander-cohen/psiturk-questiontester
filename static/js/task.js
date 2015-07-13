@@ -31,8 +31,8 @@ var pages = [
 psiTurk.preloadPages(pages);
 
 var instructionPages = [ // add as a list as many pages as you like
-	// "instructions/instruct-1.html",
-	// "instructions/instruct-2.html",
+	"instructions/instruct-1.html",
+	"instructions/instruct-2.html",
 	"instructions/instruct-3.html",
 ];
 

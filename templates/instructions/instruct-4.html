@@ -26,10 +26,12 @@
             opacity: 0;
         }
     </style>
+
     <script>
         setTimeout(function() {
-            $("#next").fadeTo('slow', 1.0);
-            $("#next").removeAttr('disabled')
+            $("#next").fadeTo('slow', 1.0, function(){
+							$("#next").removeAttr('disabled')
+						});
         }, 1000)
     </script>
 
