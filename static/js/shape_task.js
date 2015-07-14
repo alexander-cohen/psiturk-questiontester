@@ -101,6 +101,7 @@ function start_shapegame() {
 
 function let_them_choose() {
   psiTurk.showPage('shape_choice.html');
+  load_cur_knowledge();
   load_shape_imgs();
   $("#question-form").html('');
   $("td").each(function() {
@@ -165,9 +166,10 @@ var choicecomplete = function() {
 
     //removeArrValue(good_questions, q_indx);
 
-    var true_val = shape_choice.charAt(knowledge_val);
+    var true_val = shape_choice.charAt(knowledge_val[0]);
 
     var resp = true_val == knowledge_val[1] ? 'Yes' : 'No';
+
     knowledge_arr.push([knowledge_val[0], true_val, choice, resp]);
 
 		$("#prev-questions").css("margin-left", "0px");
