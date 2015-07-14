@@ -15,7 +15,7 @@ var possible_questions_full = [  [
 
                                   [
                                     ['Does it have a green fill?', [2, 0]],
-                                    ['Does is have a gray fill?', [2, 1]]
+                                    ['Does it have a gray fill?', [2, 1]]
                                   ],
 
                                   [
@@ -28,7 +28,7 @@ var good_questions_full =  [  ['Is it a rectangle?', [0, 0]],
                               ['Is it a triangle?', [0, 1]],
                               ['Does it have a black outline?', [1, 0]],
                               ['Does it have a red outline?', [1, 1]],
-                              ['Does is have a gray fill?', [2, 1]],
+                              ['Does it have a gray fill?', [2, 1]],
                               ['Does it have a dot?', [3, 0]] ];
 
 var possible_questions = possible_questions_full.slice();
@@ -37,7 +37,7 @@ var good_questions = good_questions_full.slice();
 var shape_imgs = [];
 var shape_choice = '';
 var knowledge_arr = [];
-var iterations = 0;
+var question_on = 0;
 var game_on = 0;
 
 function pad(num, size) {
@@ -81,7 +81,8 @@ function add_option(q_num, q) {
   $("#answers").append(
     '<div class="radio-question" id = "radio-question-1">' +
       '<input type="radio" name="q1" value="a" id="q' + q_num.toString() + '">' +
-      '<label style="margin:0.5em" for="q' + q_num.toString() + '">' + q + '</label>' +
+      '<label style="margin:0.5em" knowledge_val="' + q[1].join() + '"' +
+      'for="q' + q_num.toString() + '">' + q[0] + '</label>' +
     '</div>'
   );
 
@@ -92,7 +93,10 @@ function start_shapegame() {
   shape_imgs = load_img_names();
   shape_choice = base2str(rand_num_incl(0, 15));
   possible_questions = possible_questions_full.slice();
-  give_question_options();)
+  good_questions = shuffle(good_questions_full);
+  question_on = 0;
+  knowledge_arr = [];
+  give_question_options();
 }
 
 function let_them_choose() {
@@ -111,7 +115,7 @@ function shape_chosen(obj) {
   var correct = obj == shape_choice;
   make_alert((correct ?
               'Correct! Great Job! Now move on to Part II of this HIT' :
-              'Incorrect, sorry'), function(){
+              'Incorrect, sorry. You must now redo the task.'), function(){
                                     if(correct) show_questions_instructs();
                                     else start_shapegame();
                                   });
@@ -123,43 +127,61 @@ function load_shape_imgs() {
   }
 }
 
-function give_question_options_old() {
-  if(possible_questions.length == 0) {
+function load_cur_knowledge() {
+  for(var i = 0; i < knowledge_arr.length; i++) {
+    q = knowledge_arr[i][2];
+    resp = knowledge_arr[i][3];
+    $("#prev-questions").append('<div class="prev-info" style="margin-bottom:30px">' +
+                                    '<h3>' + q + '</h3>' +
+                                    '<h4>' + resp + '</h4></div>');
+  }
+}
+
+
+function give_question_options() {
+  good_questions = shuffle(good_questions);
+
+  if(question_on >= 4) {
     let_them_choose();
     return;
   }
 
-  var q1cat = rand_num_incl(0, possible_questions.length - 1);
-  if(possible_questions.length > 1) {
-    var q2cat = rand_num_incl(0, possible_questions.length - 1);
-
-    while (q2cat == q1cat) {
-      q2cat = rand_num_incl(0, possible_questions.length - 1);
-    }
-  }
-
-  else {
-    var q2cat = q1cat;
-  }
-
-  var question1 = possible_questions[q1cat][rand_num_incl(0, 1)];
-  var question2 = possible_questions[q2cat][rand_num_incl(0, 1)];
-
   psiTurk.showPage('shape_game.html');
-
-  if(possible_questions.length == 1) {
-    $("#q1").parent().html('');
-  }
-
+  $("#question-number").html('Question on: ' + (question_on+1));
   load_shape_imgs();
-
-  $("#q0").next('label').html(question1[0]);
-  $("#q1").next('label').html(question2[0]);
-
-  $("#q0").next('label').attr('knowledge_val', question1[1].join());
-  $("#q1").next('label').attr('knowledge_val', question2[1].join());
+  load_cur_knowledge();
+  for(var i = 0; i < good_questions.length; i++) {
+    add_option(i, good_questions[i]);
+  }
+	question_on++;
 }
 
-function give_question_options() {
+var choicecomplete = function() {
+	if($("#submit-button").html() == "Submit") {
+		var choice = $("input[name=q1]:checked").next('label').html();
+    var knowledge_val = $("input[name=q1]:checked").next('label').attr('knowledge_val').split(',');
+
+    var q_indx = parseInt($("input[name=q1]:checked").attr('id').charAt(1));
+
+    //removeArrValue(good_questions, q_indx);
+
+    var true_val = shape_choice.charAt(knowledge_val);
+
+    var resp = true_val == knowledge_val[1] ? 'Yes' : 'No';
+    knowledge_arr.push([knowledge_val[0], true_val, choice, resp]);
+
+		$("#prev-questions").css("margin-left", "0px");
+		$("#answer").html('<h1 style="margin-top: 0">' + resp + '</h1>');
+		$("#answer").fadeTo('slow', 1.0);
+		$("#submit-button").html("Next");
+		$("#submit-button").removeClass('btn-success');
+		$("#submit-button").addClass("btn-primary");
+    $("#answers").remove();
+    $("#form-label").html(choice);
+	}
+
+	else {
+		give_question_options();
+	}
 
 }
