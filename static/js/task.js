@@ -13,10 +13,11 @@ var mycounterbalance = counterbalance;  // they tell you which condition you hav
 
 // All pages to be loaded
 var pages = [
+	"instructions/instruct_oneshot-1.html",
+	"instructions/instruct_oneshot-2.html",
+	"instructions/instruct_oneshot-3.html",
 	"instructions/instruct-1.html",
 	"instructions/instruct-2.html",
-	"instructions/instruct-3.html",
-	"instructions/instruct-4.html",
 	"instructions/instruct-ready.html",
 	"quiz.html",
 	"stage.html",
@@ -47,7 +48,9 @@ images = { 'y':'<div style="margin-left:-109px"><img src="/static/images/slider_
 		'-0.5':'<div style="margin-left:-109px"><img src="/static/images/slider_pn.png" alt="Probably not/Rarely" width=650></div>',
 		'-1.0':'<div style="margin-left:-109px"><img src="/static/images/slider_n.png"  alt="Definitely No" width=650></div>'};
 
-
+var question_answer_pairs = [["Is it mechanical?", "y"], ["Is it large?", "n"], ["Can you hold it?", "py"], ["Do you like it?", "y"]];
+var quizquestions = question_answer_pairs.slice();
+var quizquestion_on = 0;
 
 /********************
 * HTML manipulation
@@ -70,11 +73,36 @@ var show_questions_instructs = function() {
 }
 
 
+var get_setup_q_div = function(blocknum, q) {
+	var blocknum_str = blocknum.toString();
+	return '<div id="block' + blocknum_str +  '" class="question-block">' +
+						'<h2>' + q + '</h2>' +
+						'<h2 id="answer' + blocknum_str + '"><a id="link' +
+								blocknum_str + '">Click to reveal answer</a></h2>' +
+						'<script>' +
+							'$("#answer' + blocknum_str + '").mouseup(function() {' +
+								'if($("#block'+ blocknum_str + '").css("opacity") == "1") {' +
+										'$("#link' + blocknum_str + '").fadeTo("slow", 0.0, function() {' +
+											'document.getElementById("answer' + blocknum_str + '").innerHTML = ' +
+											 		'images[question_answer_pairs[' + (blocknum - 1).toString() + '][1]];' +
+											'setTimeout(function(){$("#block' + (blocknum + 1) +
+													'").fadeTo("slow", 1.0);}, 1000);' +
+										'});' +
+									'}' +
+							'});' +
+						'</script>' +
+						'<hr>' +
+					'</div>'
+}
+
 var show_questions = function() {
 	psiTurk.showPage('setup.html');
+	$("#next-button").attr('id', 'block' + (question_answer_pairs.length+1).toString());
 	for(var i = 0; i < question_answer_pairs.length; i++) {
-		document.getElementById("block" + (i+1).toString()).getElementsByTagName('h2')[0].innerHTML = question_answer_pairs[i][0];
+		//document.getElementById("block" + (i+1).toString()).getElementsByTagName('h2')[0].innerHTML = question_answer_pairs[i][0];
+		$("#questions").append(get_setup_q_div((i+1), question_answer_pairs[i][0]))
 	}
+	$("#block1").css('opacity', '1.0');
 }
 
 var do_quiz = function() {

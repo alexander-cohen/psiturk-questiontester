@@ -14,9 +14,7 @@
 * insert them into the document.
 *
 ********************/
-var question_answer_pairs = [["Is it mechanical?", "y"], ["Is it large?", "n"], ["Can you hold it?", "py"], ["Do you like it?", "y"]];
-var quizquestions = [["Is it mechanical?", 'y'], ['Can you hold it?', 'y'], ['Is it large?', 'u']];
-var quizquestion_on = 0;
+
 var knowledge = "";
 var item = "computer";
 var iterations = 1;
