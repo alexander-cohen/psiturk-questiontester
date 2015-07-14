@@ -61,8 +61,9 @@ function removeArrValue(arr,index) {
     return arr;
 }
 
-function load_img_names() {
-  shape_imgs = [];
+
+function load_img_names_noshuffle() {
+  var shape_imgs = [];
   for(var i = 0; i < 16; i++) {
     var base2 = base2str(i);
 
@@ -74,8 +75,13 @@ function load_img_names() {
     shape_imgs.push('<img src="/static/images/shapes/' + choice_str + '.png"  alt=' +
                       choice_str + ' width=150 bin_rep=' + base2 + '>');
   }
-  return shuffle(shape_imgs);
+  return shape_imgs;
 }
+
+function load_img_names() {
+  return shuffle(load_img_names_noshuffle());
+}
+
 
 function add_option(q_num, q) {
   $("#answers").append(
@@ -148,7 +154,7 @@ function give_question_options() {
   }
 
   psiTurk.showPage('shape_game.html');
-  $("#question-number").html('Question on: ' + (question_on+1));
+  $("#question-number").html('Question on: ' + (question_on+1) + '/ 4');
   load_shape_imgs();
   load_cur_knowledge();
   for(var i = 0; i < good_questions.length; i++) {

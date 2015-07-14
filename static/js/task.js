@@ -70,7 +70,7 @@ function shuffle(o){
 
 
 var show_questions_instructs = function() {
-	psiTurk.showPage("instructions/instruct-4.html");
+	progress_oneshot_instructs();
 }
 
 
@@ -223,7 +223,7 @@ $(window).load( function(){
     	instructionPages, // a list of pages you want to display in sequence
     	function() {
     		//currentview = show_questions();
-				currentview = progress_oneshot_instructs();
+				currentview = start_shapegame();
     	} // what you want to do when you are done with instructions
     );
 });

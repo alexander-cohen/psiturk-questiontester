@@ -1,0 +1,48 @@
+<div id="container-instructions">
+
+      <h1>Instructions</h1>
+
+      <hr>
+
+      <div class="instructions well">
+
+          <p>
+            There are a bunch of possible questions you can choose from.
+            Be careful, because you only get to ask 4 questions!
+          </p>
+
+      </div>
+
+      <hr>
+
+      <style>
+        #next {
+            opacity: 0;
+        }
+      </style>
+      <script>
+          setTimeout(function() {
+              $("#next").fadeTo('slow', 1.0, function(){
+  							$("#next").removeAttr('disabled')
+  						});
+          }, 1000)
+      </script>
+
+    <div class="instructionsnav">
+        <div class="row">
+            <div class="col-xs-2">
+                <button type="button" id="previous" value="next" class="btn btn-primary btn-lg previous">
+                <span class="glyphicon glyphicon-arrow-left"></span> Previous
+                </button>
+            </div>
+            <div class="col-xs-8">
+            </div>
+            <div class="col-xs-2">
+                <button type="button" id="next" value="next" class="btn btn-primary btn-lg continue" disabled>
+                Next <span class="glyphicon glyphicon-arrow-right"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>

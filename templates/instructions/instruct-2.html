@@ -7,10 +7,50 @@
       <div class="instructions well">
 
           <p>These are the shapes:</p>
-          
+          <style>
+      			th, td { padding: 5px; }
+      		</style>
+          <div id="shape-table" align='center'>
+            <table>
+      				<tr>
+      					<td> <div id="shape1"></div> </td>
+      					<td> <div id="shape2"></div> </td>
+      					<td> <div id="shape3"></div> </td>
+      					<td> <div id="shape4"></div> </td>
+      				</tr>
+
+      				<tr>
+      					<td> <div id="shape5"></div> </td>
+      					<td> <div id="shape6"></div> </td>
+      					<td> <div id="shape7"></div> </td>
+      					<td> <div id="shape8"></div> </td>
+      				</tr>
+
+      				<tr>
+      					<td> <div id="shape9"></div> </td>
+      					<td> <div id="shape10"></div> </td>
+      					<td> <div id="shape11"></div> </td>
+      					<td> <div id="shape12"></div> </td>
+      				</tr>
+
+      				<tr>
+      					<td> <div id="shape13"></div> </td>
+      					<td> <div id="shape14"></div> </td>
+      					<td> <div id="shape15"></div> </td>
+      					<td> <div id="shape16"></div> </td>
+      				</tr>
+      			</table>
+          </div>
+
 
           <script type="text/javascript">
-          //console.log(psiTurk.getInstructionIndicator())
+            $(document).ready(function() {
+              shape_imgs = load_img_names_noshuffle();
+              load_shape_imgs();
+              $('img').each(function() {
+                $(this).attr('width', 115);
+              });
+            });
           </script>
 
       </div>
