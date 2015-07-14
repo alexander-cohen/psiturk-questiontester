@@ -33,7 +33,7 @@ psiTurk.preloadPages(pages);
 var instructionPages = [ // add as a list as many pages as you like
 	"instructions/instruct-1.html",
 	"instructions/instruct-2.html",
-	"instructions/instruct-3.html",
+	// "instructions/instruct-3.html",
 ];
 
 images = { 'y':'<div style="margin-left:-109px"><img src="/static/images/slider_y.png"  alt="Definitely Yes" width=650></div>',
@@ -171,7 +171,7 @@ $(window).load( function(){
     psiTurk.doInstructions(
     	instructionPages, // a list of pages you want to display in sequence
     	function() {
-    		currentview = start_shapegame();
+    		currentview = show_questions();
     	} // what you want to do when you are done with instructions
     );
 });

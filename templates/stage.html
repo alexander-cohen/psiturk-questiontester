@@ -1,35 +1,43 @@
 <div id="container-exp">
-  	<div id="questions">
-      <h2>Questions: </h2>
-      <h3>Question1</h3>
-      <h3>Question2</h3>
-      <h3>Question3</h3>
-      <h3>Question4</h3>
-    </div>
-    <div style="margin-left:25px; margin-top:50px; margin-right:0px; margin-bottom:50px; float: left">
-      Please select your rankings. If you want to change the order, just 
-      put the value one of the ones you want to change back to default, change
-      the other one, and then change the first.
+
+    <div style="margin-left:25px; margin-top:50px; margin-right:0px; margin-bottom:50px; float: left; width: 400px">
+      <p>
+        Please select your rankings. If you want to change the order, just
+        put the value one of the ones you want to change back to default, change
+        the other one, and then change the first.
+      <p>
+      <div id="questions" style="margin-top: 25px">
+        <h2>Questions: </h2>
+        <h3>Question1</h3>
+        <h3>Question2</h3>
+        <h3>Question3</h3>
+        <h3>Question4</h3>
+      </div>
+
       <table>
 
-      <tr><td>1). </td><td><select id="1" name="1"> 
-          
-      </select></td></tr>
-
-      <tr><td>2). </td><td><select id="2" name="2"> 
-        
-      </select></td></tr>
-
-      <tr><td>3). </td><td><select id="3" name="3"> 
+      <tr><td>1). </td><td><select id="1" name="1">
 
       </select></td></tr>
 
-      <tr><td>4). </td><td><select id="4" name="4"> 
-     
+      <tr><td>2). </td><td><select id="2" name="2">
+
+      </select></td></tr>
+
+      <tr><td>3). </td><td><select id="3" name="3">
+
+      </select></td></tr>
+
+      <tr><td>4). </td><td><select id="4" name="4">
+
       </select></td></tr>
       </table>
+      <button onclick="answer_chosen();" type="button" class="btn btn-success" id="submit-button" style="margin-top:15px">Submit</button>
     </div>
-    <button onclick="answer_chosen();" type="button" class="btn btn-success" id="submit-button" style="margin-top:15px">Submit</button>
+
+    <div id="prev-questions" style="float: left">
+    </div>
+
 </div>
 
 <style>
@@ -66,7 +74,7 @@
         previous = this.value;
     }).change(function() {
         var sId = this.id; // store off the changed element id
-        var vId = this.value; // store off the changed element value 
+        var vId = this.value; // store off the changed element value
 
         $('select').each( function(){ // this loops across the same set of elements
             if(this.id != sId && vId != "#") {
@@ -88,6 +96,6 @@
   })();
 
   $('select').on('change', function(event){ // This binds listeners to the change event on all the select elements
-        
+
     });
 </script>
