@@ -39031,3 +39031,277 @@ IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: turkdemo.uniq
 2015-07-13 14:05:21,343 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
 2015-07-13 14:05:21,372 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
 2015-07-13 14:05:21,471 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-07-13 19:15:43 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:8424)
+[2015-07-13 19:15:43 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:8425)
+[2015-07-13 19:15:43 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:8426)
+[2015-07-13 19:15:43 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:8427)
+[2015-07-13 19:15:43 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:8429)
+[2015-07-13 19:15:43 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:8430)
+[2015-07-13 19:15:43 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:8431)
+[2015-07-13 19:15:43 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:8432)
+[2015-07-13 19:15:43 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:8433)
+2015-07-13 19:15:56,294 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-13 19:15:57,967 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-13 19:15:58,147 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-13 19:15:58,157 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-13 19:15:58,213 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-13 19:15:58,217 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-13 19:15:58,253 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-13 19:15:58,394 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-13 19:15:58,485 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-07-13 20:51:31 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:11698)
+[2015-07-13 20:51:31 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:11699)
+[2015-07-13 20:51:31 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:11700)
+[2015-07-13 20:51:31 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:11701)
+[2015-07-13 20:51:31 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:11702)
+[2015-07-13 20:51:31 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:11703)
+[2015-07-13 20:51:31 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:11704)
+[2015-07-13 20:51:31 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:11705)
+[2015-07-13 20:51:31 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:11706)
+2015-07-13 20:51:47,766 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-13 20:51:49,634 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-13 20:51:49,788 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-13 20:51:49,945 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-13 20:51:50,007 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-13 20:51:50,193 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-13 20:51:50,213 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-13 20:51:50,254 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-13 20:51:50,264 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-07-13 21:34:43 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:11940)
+[2015-07-13 21:34:43 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:11943)
+2015-07-13 21:34:50,733 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-13 21:34:50,733 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-07-14 00:28:33 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:12259)
+[2015-07-14 00:28:33 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:12260)
+[2015-07-14 00:28:33 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:11941)
+[2015-07-14 00:28:33 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:11945)
+[2015-07-14 00:28:33 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:11946)
+[2015-07-14 00:28:33 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:11947)
+[2015-07-14 00:28:33 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:11949)
+[2015-07-14 00:28:33 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:11950)
+[2015-07-14 00:28:33 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:11951)
+2015-07-14 00:28:56,180 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 00:29:00,219 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 00:29:00,723 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 00:29:00,996 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 00:29:01,082 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 00:29:01,221 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 00:29:01,248 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 00:29:01,295 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 00:29:01,438 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-07-14 00:58:21 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:13129)
+[2015-07-14 00:58:21 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:13131)
+[2015-07-14 00:58:21 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:13132)
+[2015-07-14 00:58:21 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:13133)
+[2015-07-14 00:58:21 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:13135)
+[2015-07-14 00:58:21 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:13136)
+[2015-07-14 00:58:21 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:13138)
+[2015-07-14 00:58:21 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:13139)
+[2015-07-14 00:58:21 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:13141)
+2015-07-14 00:58:38,563 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 00:58:40,627 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 00:58:41,111 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 00:58:41,220 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 00:58:41,306 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 00:58:41,303 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 00:58:41,571 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 00:58:41,758 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 00:58:41,854 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-07-14 01:18:18 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:13504)
+[2015-07-14 01:18:18 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:13505)
+[2015-07-14 01:18:18 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:13507)
+[2015-07-14 01:18:18 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:13508)
+[2015-07-14 01:18:18 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:13509)
+[2015-07-14 01:18:18 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:13510)
+[2015-07-14 01:18:18 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:13511)
+[2015-07-14 01:18:18 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:13512)
+[2015-07-14 01:18:18 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:13513)
+2015-07-14 01:18:35,159 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 01:18:37,198 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 01:18:37,346 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 01:18:37,413 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 01:18:38,060 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 01:18:38,099 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 01:18:38,237 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 01:18:38,489 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 01:18:38,637 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-07-14 03:03:26 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:13925)
+[2015-07-14 03:03:26 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:13926)
+[2015-07-14 03:03:26 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:13927)
+[2015-07-14 03:03:26 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:13928)
+[2015-07-14 03:03:26 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:13930)
+[2015-07-14 03:03:26 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:13931)
+[2015-07-14 03:03:26 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:13932)
+[2015-07-14 03:03:26 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:13933)
+[2015-07-14 03:03:26 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:13934)
+2015-07-14 03:03:40,644 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 03:03:41,747 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 03:03:41,767 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 03:03:41,860 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 03:03:41,930 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 03:03:41,979 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 03:03:42,052 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 03:03:42,094 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 03:03:42,099 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-07-14 04:04:11 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:14534)
+[2015-07-14 04:04:11 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:14535)
+[2015-07-14 04:04:11 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:14536)
+[2015-07-14 04:04:11 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:14537)
+[2015-07-14 04:04:11 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:14538)
+[2015-07-14 04:04:11 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:14539)
+[2015-07-14 04:04:11 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:14540)
+[2015-07-14 04:04:11 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:14541)
+[2015-07-14 04:04:11 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:14542)
+2015-07-14 04:04:23,739 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 04:04:24,835 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 04:04:25,101 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 04:04:25,142 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 04:04:25,220 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 04:04:25,249 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 04:04:25,312 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 04:04:25,345 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 04:04:25,385 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-07-14 05:04:57 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:14808)
+[2015-07-14 05:04:57 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:14809)
+[2015-07-14 05:04:57 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:14810)
+[2015-07-14 05:04:57 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:14811)
+[2015-07-14 05:04:57 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:14812)
+[2015-07-14 05:04:57 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:14813)
+[2015-07-14 05:04:57 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:14814)
+[2015-07-14 05:04:57 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:14815)
+[2015-07-14 05:04:57 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:14816)
+2015-07-14 05:05:10,064 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 05:05:11,543 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 05:05:11,578 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 05:05:11,608 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 05:05:11,628 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 05:05:11,629 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 05:05:11,689 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 05:05:11,736 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 05:05:11,767 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-07-14 06:05:43 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:15058)
+[2015-07-14 06:05:43 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:15059)
+[2015-07-14 06:05:43 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:15060)
+[2015-07-14 06:05:43 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:15061)
+[2015-07-14 06:05:43 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:15062)
+[2015-07-14 06:05:43 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:15063)
+[2015-07-14 06:05:43 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:15064)
+[2015-07-14 06:05:43 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:15065)
+[2015-07-14 06:05:43 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:15066)
+2015-07-14 06:05:54,556 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 06:05:56,433 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 06:05:56,498 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 06:05:56,888 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 06:05:56,943 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 06:05:57,163 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 06:05:57,223 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 06:05:57,225 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 06:05:57,316 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-07-14 07:06:29 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:15304)
+[2015-07-14 07:06:29 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:15305)
+[2015-07-14 07:06:29 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:15306)
+[2015-07-14 07:06:29 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:15307)
+[2015-07-14 07:06:29 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:15308)
+[2015-07-14 07:06:29 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:15309)
+[2015-07-14 07:06:29 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:15310)
+[2015-07-14 07:06:29 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:15311)
+[2015-07-14 07:06:30 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:15312)
+2015-07-14 07:06:41,416 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 07:06:42,703 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 07:06:42,849 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 07:06:43,011 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 07:06:43,144 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 07:06:43,196 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 07:06:43,301 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 07:06:43,318 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 07:06:43,359 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-07-14 08:07:15 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:15552)
+[2015-07-14 08:07:16 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:15553)
+[2015-07-14 08:07:16 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:15554)
+[2015-07-14 08:07:16 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:15555)
+[2015-07-14 08:07:16 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:15556)
+[2015-07-14 08:07:16 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:15557)
+[2015-07-14 08:07:16 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:15558)
+[2015-07-14 08:07:16 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:15550)
+[2015-07-14 08:07:16 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:15551)
+2015-07-14 08:07:27,898 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 08:07:29,441 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 08:07:29,456 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 08:07:29,502 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 08:07:29,639 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 08:07:29,656 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 08:07:29,685 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 08:07:29,734 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 08:07:29,736 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-07-14 09:08:01 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:15797)
+[2015-07-14 09:08:01 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:15798)
+[2015-07-14 09:08:01 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:15799)
+[2015-07-14 09:08:01 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:15800)
+[2015-07-14 09:08:01 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:15801)
+[2015-07-14 09:08:01 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:15802)
+[2015-07-14 09:08:01 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:15803)
+[2015-07-14 09:08:01 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:15804)
+[2015-07-14 09:08:01 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:15805)
+2015-07-14 09:08:13,091 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 09:08:14,425 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 09:08:14,504 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 09:08:14,559 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 09:08:14,724 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 09:08:14,769 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 09:08:14,786 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 09:08:14,893 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 09:08:14,974 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-07-14 09:22:37 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:16043)
+[2015-07-14 09:22:37 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:16044)
+[2015-07-14 09:22:38 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:16045)
+[2015-07-14 09:22:38 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:16046)
+[2015-07-14 09:22:38 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:16047)
+[2015-07-14 09:22:38 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:16048)
+[2015-07-14 09:22:38 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:16049)
+[2015-07-14 09:22:38 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:16050)
+[2015-07-14 09:22:38 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:16051)
+2015-07-14 09:22:51,521 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 09:22:53,014 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 09:22:53,411 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 09:22:53,413 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 09:22:53,454 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 09:22:53,690 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 09:22:53,692 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 09:22:53,716 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 09:22:53,722 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-07-14 09:29:25 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:16291)
+[2015-07-14 09:29:25 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:16292)
+[2015-07-14 09:29:25 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:16293)
+[2015-07-14 09:29:25 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:16294)
+[2015-07-14 09:29:25 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:16295)
+[2015-07-14 09:29:25 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:16296)
+[2015-07-14 09:29:25 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:16297)
+[2015-07-14 09:29:25 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:16298)
+[2015-07-14 09:29:25 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:16299)
+2015-07-14 09:29:37,042 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 09:29:38,593 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 09:29:38,804 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 09:29:38,979 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 09:29:39,037 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 09:29:39,131 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 09:29:39,210 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 09:29:39,220 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 09:29:39,275 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-07-14 10:17:20 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:16547)
+[2015-07-14 10:17:20 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:16548)
+[2015-07-14 10:17:20 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:16549)
+[2015-07-14 10:17:20 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:16550)
+[2015-07-14 10:17:20 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:16551)
+[2015-07-14 10:17:20 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:16552)
+[2015-07-14 10:17:20 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:16553)
+[2015-07-14 10:17:20 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:16554)
+[2015-07-14 10:17:20 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:16555)
+2015-07-14 10:17:34,438 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 10:17:35,543 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 10:17:35,554 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 10:17:35,585 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 10:17:35,785 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 10:17:35,849 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 10:17:35,979 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 10:17:36,004 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 10:17:36,073 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
