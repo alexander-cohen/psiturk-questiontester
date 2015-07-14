@@ -51,6 +51,7 @@ images = { 'y':'<div style="margin-left:-109px"><img src="/static/images/slider_
 var question_answer_pairs = [["Is it mechanical?", "y"], ["Is it large?", "n"], ["Can you hold it?", "py"], ["Do you like it?", "y"]];
 var quizquestions = question_answer_pairs.slice();
 var quizquestion_on = 0;
+var oneshot_instruct_on = 1;
 
 /********************
 * HTML manipulation
@@ -97,11 +98,25 @@ var get_setup_q_div = function(blocknum, q) {
 
 var show_questions = function() {
 	psiTurk.showPage('setup.html');
-	$("#next-button").attr('id', 'block' + (question_answer_pairs.length+1).toString());
+	var len_str = question_answer_pairs.length.toString();
 	for(var i = 0; i < question_answer_pairs.length; i++) {
-		//document.getElementById("block" + (i+1).toString()).getElementsByTagName('h2')[0].innerHTML = question_answer_pairs[i][0];
 		$("#questions").append(get_setup_q_div((i+1), question_answer_pairs[i][0]))
 	}
+	$("#block" + len_str).find('script').remove();
+	$("#block" + len_str).append(
+		'<script>' +
+			'$("#answer' + len_str + '").mouseup(function() {' +
+			'if($("#block' + len_str + '").css("opacity") == "1") {' +
+				'$("#link' + len_str + '").fadeTo("slow", 0.0, function() {' +
+						'document.getElementById("answer' + len_str + '").innerHTML = images[question_answer_pairs[3][1]];' +
+						'setTimeout(function(){$("#next-button").fadeTo("slow", 1.0,' +
+						'function(){$("#next").removeAttr("disabled")});}, 1000);' +
+					'});' +
+			'}' +
+		'});' +
+		'</script>'
+	)
+
 	$("#block1").css('opacity', '1.0');
 }
 
@@ -114,13 +129,13 @@ var get_data = function() {
 	psiTurk.showPage('stage.html');
 	var knowledge_arr = question_answer_pairs;
 	$("#prev-questions").html("");
-	if(knowledge != "") {
-		for(var k = 0; k < knowledge_arr.length; k++) {
-			var knowledge_piece = knowledge_arr[k].split(":");
-			$("#prev-questions").prepend("<h4>" + knowledge_piece[0] + "</h4>" +
-										images[knowledge_piece[1]] + "<hr>");
-		}
+
+	for(var k = 0; k < knowledge_arr.length; k++) {
+		var knowledge_piece = knowledge_arr[k]
+		$("#prev-questions").prepend("<h4>" + knowledge_piece[0] + "</h4>" +
+									images[knowledge_piece[1]] + "<hr>");
 	}
+
 	$("#prev-questions").find( $("img") ).attr("width", 600);
 	$("#prev-questions").find( $("div") ).css("margin-left", -103);
 	$("#prev-questions").css("margin-left", "50px");
@@ -188,6 +203,14 @@ var make_alert = function(message, onclose) {
 	$('.no-close').find('.ui-dialog-titlebar-close').css('display','none');
 }
 
+var progress_oneshot_instructs = function(){
+	if(oneshot_instruct_on >= 4) {
+		show_questions();
+		return;
+	}
+	psiTurk.showPage('instructions/instruct_oneshot-' + oneshot_instruct_on.toString() + '.html');
+	oneshot_instruct_on++;
+}
 
 // Task object to keep track of the current phase
 var currentview;
@@ -199,7 +222,8 @@ $(window).load( function(){
     psiTurk.doInstructions(
     	instructionPages, // a list of pages you want to display in sequence
     	function() {
-    		currentview = show_questions();
+    		//currentview = show_questions();
+				currentview = progress_oneshot_instructs();
     	} // what you want to do when you are done with instructions
     );
 });

@@ -39341,3 +39341,19 @@ IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: turkdemo.uniq
 2015-07-14 12:35:43,399 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
 2015-07-14 12:35:43,418 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
 2015-07-14 12:35:43,638 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-07-14 14:27:07 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:19283)
+[2015-07-14 14:27:07 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:19284)
+[2015-07-14 14:27:07 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:19285)
+[2015-07-14 14:27:07 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:19286)
+[2015-07-14 14:27:07 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:19287)
+[2015-07-14 14:27:07 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:19288)
+[2015-07-14 14:27:07 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:19289)
+[2015-07-14 14:27:07 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:19290)
+2015-07-14 14:27:24,202 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 14:27:24,847 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 14:27:25,235 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 14:27:25,280 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 14:27:25,480 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 14:27:25,620 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 14:27:25,723 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 14:27:25,761 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
