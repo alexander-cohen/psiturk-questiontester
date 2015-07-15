@@ -171,6 +171,7 @@ function pageScroll(times, max) {
 
 var show_questions = function() {
 	question_answer_pairs = question_answer_pairs_indx[rand_num_incl(0, question_answer_pairs_indx.length - 1)].slice(0, 10);
+	quizquestions = shuffle(question_answer_pairs.slice());
 	psiTurk.showPage('setup.html');
 	var len_str = question_answer_pairs.length.toString();
 	for(var i = 0; i < 1; i++) {
@@ -311,9 +312,9 @@ $(window).load( function(){
     	instructionPages, // a list of pages you want to display in sequence
     	function() {
     		//currentview = show_questions();
-				//currentview = start_shapegame();
+				currentview = start_shapegame();
 				//currentview = start_20q_game();
-				currentview = show_questions();
+				//currentview = show_questions();
     	} // what you want to do when you are done with instructions
     );
 });
