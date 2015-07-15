@@ -115,10 +115,10 @@ var get_setup_q_div = function(blocknum, q) {
 										'$("#link' + blocknum_str + '").fadeTo("slow", 0.0, function() {' +
 											'document.getElementById("answer' + blocknum_str + '").innerHTML = ' +
 											 		'images[question_answer_pairs[' + (blocknum - 1).toString() + '][1]];' +
-											'setTimeout(function(){$("#block' + (blocknum + 1) +
-													'").fadeTo("slow", 1.0, function() {' +
-														(blocknum >= 4 ? 'pageScroll(0, 115)': '') + 
-													'});}, 1000);' +
+											'setTimeout(function(){'+
+											(blocknum >= 4 ? 'pageScroll(0, 135);': '') +
+											'$("#block' + (blocknum + 1) +
+													'").fadeTo("slow", 1.0);}, 1000);' +
 										'});' +
 									'}' +
 							'});' +
@@ -134,7 +134,7 @@ function pageScroll(times, max) {
 }
 
 var show_questions = function() {
-	question_answer_pairs = question_answer_pairs_indx[rand_num_incl(0, question_answer_pairs_indx.length - 1)];
+	question_answer_pairs = question_answer_pairs_indx[rand_num_incl(0, question_answer_pairs_indx.length - 1)].slice(0, 10);
 	psiTurk.showPage('setup.html');
 	var len_str = question_answer_pairs.length.toString();
 	for(var i = 0; i < question_answer_pairs.length; i++) {
@@ -146,9 +146,11 @@ var show_questions = function() {
 			'$("#answer' + len_str + '").mouseup(function() {' +
 			'if($("#block' + len_str + '").css("opacity") == "1") {' +
 				'$("#link' + len_str + '").fadeTo("slow", 0.0, function() {' +
-						'document.getElementById("answer' + len_str + '").innerHTML = images[question_answer_pairs[' + len_str + '][1]];' +
+						'document.getElementById("answer' + len_str + '").innerHTML =' +
+								'images[question_answer_pairs[' +
+								(question_answer_pairs.length - 1).toString() + '][1]];' +
 						'setTimeout(function(){$("#next-button").fadeTo("slow", 1.0,' +
-						'function(){$("#next").removeAttr("disabled")});}, 1000);' +
+							'function(){$("#next").removeAttr("disabled")});}, 1000);' +
 					'});' +
 			'}' +
 		'});' +
@@ -199,7 +201,9 @@ var answer_chosen = function() {
 
 	else {
 		psiTurk.recordTrialData(["Final choice", question_answer_pairs, [$("#1").val(), $("#2").val(), $("#3").val(), $("#4").val()] ] );
-		setTimeout(function(){psiTurk.showPage('postquestionnaire.html')}, 500);
+		show_questions();
+		//setTimeout(function(){psiTurk.showPage('postquestionnaire.html')}, 500);
+
 	}
 
 }
@@ -273,7 +277,7 @@ $(window).load( function(){
     		//currentview = show_questions();
 				//currentview = start_shapegame();
 				//currentview = start_20q_game();
-				currentview = progress_oneshot_instructs();
+				currentview = show_questions();
     	} // what you want to do when you are done with instructions
     );
 });
