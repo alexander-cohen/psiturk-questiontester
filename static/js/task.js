@@ -102,6 +102,42 @@ var show_questions_instructs = function() {
 	progress_oneshot_instructs();
 }
 
+var block_clicked = function(blocknum) {
+	blocknum_str = blocknum.toString();
+	if($("#block"+ blocknum.toString()).css("opacity") == "1") {
+		$("#link"+blocknum_str).fadeTo('slow', 0.0, function() {
+			$("#answer"+blocknum_str).html(images[question_answer_pairs[(blocknum - 1).toString()][1]]);
+			setTimeout(function() {
+				if(blocknum >= question_answer_pairs.length) {
+					$("#next-button").fadeTo("slow", 1.0,
+							function(){
+								$("#next").removeAttr("disabled");
+							});
+				}
+				else {
+					$("#questions").append(get_quest_ans_pair(blocknum+1, features[question_answer_pairs[blocknum][0]]));
+					pageScroll(0, 1000);
+					$("#block" + (blocknum+1).toString()).fadeTo('slow', 1.0);
+				}
+
+			}, 1000);
+		});
+	}
+}
+
+var get_quest_ans_pair = function(blocknum, q) {
+	blocknum_str = blocknum.toString();
+	return '<div id="block' + blocknum_str +  '" class="question-block">' +
+						'<h2>' + q + '</h2>' +
+				  	'<h2 id="answer' + blocknum_str + '">' +
+							'<a id="link' +blocknum_str + '">Click to reveal answer</a>' +
+						'</h2>' +
+						'<script>' +
+
+							'$("#answer' + blocknum_str + '").mouseup(function(){block_clicked(' + blocknum.toString() + ')});' +
+						'</script>' +
+					'</div>';
+}
 
 var get_setup_q_div = function(blocknum, q) {
 	var blocknum_str = blocknum.toString();
@@ -118,7 +154,7 @@ var get_setup_q_div = function(blocknum, q) {
 											'setTimeout(function(){'+
 											(blocknum >= 4 ? 'pageScroll(0, 135);': '') +
 											'$("#block' + (blocknum + 1) +
-													'").fadeTo("slow", 1.0);}, 1000);' +
+													'").fadeTo("slow", 1.0)});}, 1000);' +
 										'});' +
 									'}' +
 							'});' +
@@ -137,8 +173,8 @@ var show_questions = function() {
 	question_answer_pairs = question_answer_pairs_indx[rand_num_incl(0, question_answer_pairs_indx.length - 1)].slice(0, 10);
 	psiTurk.showPage('setup.html');
 	var len_str = question_answer_pairs.length.toString();
-	for(var i = 0; i < question_answer_pairs.length; i++) {
-		$("#questions").append(get_setup_q_div((i+1), features[question_answer_pairs[i][0]]))
+	for(var i = 0; i < 1; i++) {
+		$("#questions").append(get_quest_ans_pair((i+1), features[question_answer_pairs[i][0]]))
 	}
 	$("#block" + len_str).find('script').remove();
 	$("#block" + len_str).append(
