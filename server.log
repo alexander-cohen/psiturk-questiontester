@@ -39357,3 +39357,1132 @@ IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: turkdemo.uniq
 2015-07-14 14:27:25,620 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
 2015-07-14 14:27:25,723 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
 2015-07-14 14:27:25,761 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-07-14 15:16:39 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:20417)
+[2015-07-14 15:16:39 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:20418)
+[2015-07-14 15:16:39 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:20419)
+[2015-07-14 15:16:39 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:20420)
+[2015-07-14 15:16:39 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:20421)
+[2015-07-14 15:16:39 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:20422)
+[2015-07-14 15:16:39 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:20423)
+[2015-07-14 15:16:39 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:20424)
+[2015-07-14 15:16:39 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:19291)
+2015-07-14 15:16:52,358 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 15:16:53,430 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 15:16:53,877 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 15:16:53,897 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 15:16:53,923 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 15:16:53,941 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 15:16:54,100 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 15:16:54,141 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 15:16:54,154 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-07-14 15:23:10 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:21724)
+[2015-07-14 15:23:11 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:21725)
+[2015-07-14 15:23:11 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:21726)
+[2015-07-14 15:23:11 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:21728)
+[2015-07-14 15:23:11 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:21729)
+[2015-07-14 15:23:11 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:21730)
+[2015-07-14 15:23:11 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:21731)
+[2015-07-14 15:23:11 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:21732)
+[2015-07-14 15:23:11 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:21733)
+2015-07-14 15:23:27,467 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 15:23:29,206 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 15:23:29,214 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 15:23:29,268 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 15:23:29,300 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 15:23:29,318 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 15:23:29,321 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 15:23:29,363 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 15:23:29,390 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-07-14 19:37:39 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:21992)
+[2015-07-14 19:37:39 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:21993)
+[2015-07-14 19:37:39 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:21994)
+[2015-07-14 19:37:39 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:21995)
+[2015-07-14 19:37:39 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:21996)
+[2015-07-14 19:37:39 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:21998)
+[2015-07-14 19:37:39 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:22000)
+[2015-07-14 19:37:39 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:22001)
+[2015-07-14 19:37:39 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:22002)
+2015-07-14 19:37:55,920 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 19:37:57,615 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 19:37:57,728 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 19:37:57,939 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 19:37:58,058 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 19:37:58,081 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 19:37:58,203 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 19:37:58,422 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 19:37:58,489 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-07-14 19:42:10 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:22581)
+[2015-07-14 19:42:12 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:22573)
+[2015-07-14 19:42:12 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:22575)
+[2015-07-14 19:42:12 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:22583)
+2015-07-14 19:42:17,715 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 19:42:18,049 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 19:42:18,054 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 19:42:18,093 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-07-14 19:53:20 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:22576)
+[2015-07-14 19:53:20 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:22574)
+[2015-07-14 19:53:20 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:22896)
+[2015-07-14 19:53:20 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:22577)
+[2015-07-14 19:53:20 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:22578)
+[2015-07-14 19:53:20 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:22580)
+[2015-07-14 19:53:20 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:22904)
+[2015-07-14 19:53:20 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:22905)
+[2015-07-14 19:53:20 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:22906)
+2015-07-14 19:53:32,863 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 19:53:36,106 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 19:53:36,277 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 19:53:36,365 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 19:53:36,812 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 19:53:36,854 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 19:53:37,061 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 19:53:37,136 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 19:53:37,486 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-07-14 20:55:48 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:23008)
+[2015-07-14 20:55:48 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:23009)
+[2015-07-14 20:55:48 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:23010)
+[2015-07-14 20:55:48 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:23011)
+[2015-07-14 20:55:48 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:23012)
+[2015-07-14 20:55:48 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:23013)
+[2015-07-14 20:55:48 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:23014)
+[2015-07-14 20:55:48 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:23015)
+[2015-07-14 20:55:48 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:23016)
+2015-07-14 20:56:01,972 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 20:56:04,287 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 20:56:04,378 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 20:56:04,389 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 20:56:04,316 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 20:56:04,460 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 20:56:04,460 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 20:56:04,488 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 20:56:04,590 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 21:28:08,255 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-07-14 21:28:10 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:24000)
+[2015-07-14 21:28:10 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:24001)
+[2015-07-14 21:28:10 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:24002)
+[2015-07-14 21:28:10 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:24003)
+[2015-07-14 21:28:10 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:24004)
+[2015-07-14 21:28:10 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:24006)
+[2015-07-14 21:28:10 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:24007)
+[2015-07-14 21:28:10 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:24008)
+[2015-07-14 21:28:11 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:24009)
+[2015-07-14 21:28:11 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:24010)
+[2015-07-14 21:28:11 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:24011)
+[2015-07-14 21:28:11 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:24012)
+[2015-07-14 21:28:11 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:24013)
+[2015-07-14 21:28:11 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:24014)
+[2015-07-14 21:28:11 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:24015)
+[2015-07-14 21:28:11 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:24016)
+[2015-07-14 21:28:11 -0400] [3750] [CRITICAL] WORKER TIMEOUT (pid:24017)
+2015-07-14 21:28:28,101 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 21:28:28,261 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 21:28:28,269 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 21:28:28,288 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 21:28:28,293 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 21:28:28,448 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 21:28:28,488 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 21:28:28,490 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-14 21:28:28,537 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 00:02:03,879 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 00:02:06,208 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 00:02:06,219 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 00:02:06,247 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 00:02:06,391 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 00:02:06,438 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 00:02:06,461 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 00:02:06,483 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 00:02:06,502 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-07-15 01:49:01 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:1156)
+[2015-07-15 01:49:01 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:1157)
+[2015-07-15 01:49:01 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:1158)
+[2015-07-15 01:49:01 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:1159)
+[2015-07-15 01:49:01 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:1160)
+[2015-07-15 01:49:01 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:1162)
+[2015-07-15 01:49:01 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:1163)
+[2015-07-15 01:49:01 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:1164)
+2015-07-15 01:49:13,297 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 01:49:14,382 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 01:49:14,393 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 01:49:14,463 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 01:49:14,526 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 01:49:14,527 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 01:49:14,538 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 01:49:14,575 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-07-15 03:04:42 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:1707)
+[2015-07-15 03:04:43 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:1704)
+[2015-07-15 03:04:43 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:1161)
+[2015-07-15 03:04:43 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:1703)
+[2015-07-15 03:04:43 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:1708)
+[2015-07-15 03:04:43 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:1709)
+[2015-07-15 03:04:43 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:1710)
+[2015-07-15 03:04:43 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:1711)
+[2015-07-15 03:04:43 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:1705)
+2015-07-15 03:04:55,169 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 03:04:56,567 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 03:04:56,583 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 03:04:56,592 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 03:04:56,634 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 03:04:56,668 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 03:04:56,672 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 03:04:56,692 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 03:04:56,710 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-07-15 04:24:43 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:1952)
+[2015-07-15 04:24:44 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:1953)
+[2015-07-15 04:24:44 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:1954)
+[2015-07-15 04:24:44 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:1955)
+[2015-07-15 04:24:44 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:1956)
+[2015-07-15 04:24:44 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:1957)
+[2015-07-15 04:24:44 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:1958)
+[2015-07-15 04:24:44 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:1950)
+[2015-07-15 04:24:44 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:1951)
+2015-07-15 04:24:56,344 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 04:24:57,919 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 04:24:57,941 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 04:24:57,949 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 04:24:57,955 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 04:24:58,025 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 04:24:58,069 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 04:24:58,070 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 04:24:58,103 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-07-15 05:43:34 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:2227)
+[2015-07-15 05:43:35 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:2229)
+[2015-07-15 05:43:35 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:2230)
+[2015-07-15 05:43:35 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:2231)
+[2015-07-15 05:43:35 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:2232)
+[2015-07-15 05:43:35 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:2233)
+[2015-07-15 05:43:35 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:2234)
+[2015-07-15 05:43:35 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:2235)
+2015-07-15 05:43:46,152 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 05:43:47,252 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 05:43:47,264 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 05:43:47,267 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 05:43:47,308 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 05:43:47,422 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 05:43:47,447 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 05:43:47,486 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-07-15 07:33:17 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:2484)
+[2015-07-15 07:33:18 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:2228)
+[2015-07-15 07:33:18 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:2485)
+[2015-07-15 07:33:18 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:2486)
+[2015-07-15 07:33:18 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:2487)
+[2015-07-15 07:33:18 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:2488)
+[2015-07-15 07:33:18 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:2489)
+[2015-07-15 07:33:18 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:2490)
+[2015-07-15 07:33:18 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:2491)
+2015-07-15 09:28:53,025 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 09:28:54,515 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 09:28:54,535 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 09:28:54,542 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 09:28:54,554 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 09:28:54,558 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 09:28:54,572 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 09:28:54,574 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 09:28:54,594 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-07-15 10:06:43 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:2697)
+[2015-07-15 10:06:43 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:2698)
+[2015-07-15 10:06:43 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:2699)
+[2015-07-15 10:06:43 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:2700)
+[2015-07-15 10:06:43 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:2701)
+[2015-07-15 10:06:43 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:2702)
+[2015-07-15 10:06:43 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:2703)
+[2015-07-15 10:06:43 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:2704)
+[2015-07-15 10:06:43 -0400] [1152] [CRITICAL] WORKER TIMEOUT (pid:2705)
+2015-07-15 10:06:57,780 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 10:07:00,063 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 10:07:00,153 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 10:07:00,154 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 10:07:00,181 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 10:07:00,241 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 10:07:00,262 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 10:07:00,277 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 10:07:00,312 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 11:03:48,232 There is custom code (custom.py) associated with this                     project but it doesn't import cleanly. Raising exception,
+[2015-07-15 11:03:48 -0400] [27553] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 18, in <module>
+    from player import Player, items, data_matrix, features
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/player.py", line 2, in <module>
+    import numpy as np
+ImportError: No module named numpy
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 18, in <module>
+    from player import Player, items, data_matrix, features
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/player.py", line 2, in <module>
+    import numpy as np
+ImportError: No module named numpy
+2015-07-15 11:03:48,288 There is custom code (custom.py) associated with this                     project but it doesn't import cleanly. Raising exception,
+[2015-07-15 11:03:48 -0400] [27554] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 18, in <module>
+    from player import Player, items, data_matrix, features
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/player.py", line 2, in <module>
+    import numpy as np
+ImportError: No module named numpy
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 18, in <module>
+    from player import Player, items, data_matrix, features
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/player.py", line 2, in <module>
+    import numpy as np
+ImportError: No module named numpy
+2015-07-15 11:03:48,460 There is custom code (custom.py) associated with this                     project but it doesn't import cleanly. Raising exception,
+[2015-07-15 11:03:48 -0400] [27555] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 18, in <module>
+    from player import Player, items, data_matrix, features
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/player.py", line 2, in <module>
+    import numpy as np
+ImportError: No module named numpy
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 18, in <module>
+    from player import Player, items, data_matrix, features
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/player.py", line 2, in <module>
+    import numpy as np
+ImportError: No module named numpy
+2015-07-15 11:03:48,578 There is custom code (custom.py) associated with this                     project but it doesn't import cleanly. Raising exception,
+[2015-07-15 11:03:48 -0400] [27556] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 18, in <module>
+    from player import Player, items, data_matrix, features
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/player.py", line 2, in <module>
+    import numpy as np
+ImportError: No module named numpy
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 18, in <module>
+    from player import Player, items, data_matrix, features
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/player.py", line 2, in <module>
+    import numpy as np
+ImportError: No module named numpy
+2015-07-15 11:03:48,673 There is custom code (custom.py) associated with this                     project but it doesn't import cleanly. Raising exception,
+[2015-07-15 11:03:48 -0400] [27557] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 18, in <module>
+    from player import Player, items, data_matrix, features
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/player.py", line 2, in <module>
+    import numpy as np
+ImportError: No module named numpy
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 18, in <module>
+    from player import Player, items, data_matrix, features
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/player.py", line 2, in <module>
+    import numpy as np
+ImportError: No module named numpy
+2015-07-15 11:03:48,737 There is custom code (custom.py) associated with this                     project but it doesn't import cleanly. Raising exception,
+[2015-07-15 11:03:48 -0400] [27558] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 18, in <module>
+    from player import Player, items, data_matrix, features
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/player.py", line 2, in <module>
+    import numpy as np
+ImportError: No module named numpy
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 18, in <module>
+    from player import Player, items, data_matrix, features
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/player.py", line 2, in <module>
+    import numpy as np
+ImportError: No module named numpy
+2015-07-15 11:03:48,785 There is custom code (custom.py) associated with this                     project but it doesn't import cleanly. Raising exception,
+[2015-07-15 11:03:48 -0400] [27559] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 18, in <module>
+    from player import Player, items, data_matrix, features
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/player.py", line 2, in <module>
+    import numpy as np
+ImportError: No module named numpy
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 18, in <module>
+    from player import Player, items, data_matrix, features
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/player.py", line 2, in <module>
+    import numpy as np
+ImportError: No module named numpy
+2015-07-15 11:03:48,809 There is custom code (custom.py) associated with this                     project but it doesn't import cleanly. Raising exception,
+[2015-07-15 11:03:48 -0400] [27560] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 18, in <module>
+    from player import Player, items, data_matrix, features
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/player.py", line 2, in <module>
+    import numpy as np
+ImportError: No module named numpy
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 18, in <module>
+    from player import Player, items, data_matrix, features
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/player.py", line 2, in <module>
+    import numpy as np
+ImportError: No module named numpy
+2015-07-15 11:03:48,848 There is custom code (custom.py) associated with this                     project but it doesn't import cleanly. Raising exception,
+[2015-07-15 11:03:48 -0400] [27561] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 18, in <module>
+    from player import Player, items, data_matrix, features
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/player.py", line 2, in <module>
+    import numpy as np
+ImportError: No module named numpy
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 18, in <module>
+    from player import Player, items, data_matrix, features
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/player.py", line 2, in <module>
+    import numpy as np
+ImportError: No module named numpy
+2015-07-15 11:15:14,759 There is custom code (custom.py) associated with this                     project but it doesn't import cleanly. Raising exception,
+[2015-07-15 11:15:14 -0400] [32094] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+ImportError: cannot import name custom_code
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+ImportError: cannot import name custom_code
+2015-07-15 11:15:14,813 There is custom code (custom.py) associated with this                     project but it doesn't import cleanly. Raising exception,
+[2015-07-15 11:15:14 -0400] [32093] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+ImportError: cannot import name custom_code
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+ImportError: cannot import name custom_code
+2015-07-15 11:15:15,102 There is custom code (custom.py) associated with this                     project but it doesn't import cleanly. Raising exception,
+2015-07-15 11:15:15,106 There is custom code (custom.py) associated with this                     project but it doesn't import cleanly. Raising exception,
+[2015-07-15 11:15:15 -0400] [32097] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+ImportError: cannot import name custom_code
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+ImportError: cannot import name custom_code
+[2015-07-15 11:15:15 -0400] [32095] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+ImportError: cannot import name custom_code
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+ImportError: cannot import name custom_code
+2015-07-15 11:15:15,134 There is custom code (custom.py) associated with this                     project but it doesn't import cleanly. Raising exception,
+[2015-07-15 11:15:15 -0400] [32098] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+ImportError: cannot import name custom_code
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+ImportError: cannot import name custom_code
+2015-07-15 11:15:15,141 There is custom code (custom.py) associated with this                     project but it doesn't import cleanly. Raising exception,
+[2015-07-15 11:15:15 -0400] [32099] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+ImportError: cannot import name custom_code
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+ImportError: cannot import name custom_code
+2015-07-15 11:15:15,193 There is custom code (custom.py) associated with this                     project but it doesn't import cleanly. Raising exception,
+[2015-07-15 11:15:15 -0400] [32100] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+ImportError: cannot import name custom_code
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+ImportError: cannot import name custom_code
+2015-07-15 11:15:15,225 There is custom code (custom.py) associated with this                     project but it doesn't import cleanly. Raising exception,
+[2015-07-15 11:15:15 -0400] [32101] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+ImportError: cannot import name custom_code
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+ImportError: cannot import name custom_code
+2015-07-15 11:15:15,259 There is custom code (custom.py) associated with this                     project but it doesn't import cleanly. Raising exception,
+[2015-07-15 11:15:15 -0400] [32102] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+ImportError: cannot import name custom_code
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+ImportError: cannot import name custom_code
+2015-07-15 12:35:55,190 There is custom code (custom.py) associated with this                     project but it doesn't import cleanly. Raising exception,
+[2015-07-15 12:35:55 -0400] [61565] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+ImportError: cannot import name custom_code
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+ImportError: cannot import name custom_code
+2015-07-15 12:35:55,810 There is custom code (custom.py) associated with this                     project but it doesn't import cleanly. Raising exception,
+[2015-07-15 12:35:55 -0400] [61566] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+ImportError: cannot import name custom_code
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+ImportError: cannot import name custom_code
+2015-07-15 12:35:55,869 There is custom code (custom.py) associated with this                     project but it doesn't import cleanly. Raising exception,
+[2015-07-15 12:35:55 -0400] [61567] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+ImportError: cannot import name custom_code
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+ImportError: cannot import name custom_code
+2015-07-15 12:35:56,033 There is custom code (custom.py) associated with this                     project but it doesn't import cleanly. Raising exception,
+[2015-07-15 12:35:56 -0400] [61568] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+ImportError: cannot import name custom_code
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+ImportError: cannot import name custom_code
+2015-07-15 12:35:56,044 There is custom code (custom.py) associated with this                     project but it doesn't import cleanly. Raising exception,
+[2015-07-15 12:35:56 -0400] [61569] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+ImportError: cannot import name custom_code
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+ImportError: cannot import name custom_code
+2015-07-15 12:35:56,051 There is custom code (custom.py) associated with this                     project but it doesn't import cleanly. Raising exception,
+[2015-07-15 12:35:56 -0400] [61570] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+ImportError: cannot import name custom_code
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+ImportError: cannot import name custom_code
+2015-07-15 12:35:56,129 There is custom code (custom.py) associated with this                     project but it doesn't import cleanly. Raising exception,
+[2015-07-15 12:35:56 -0400] [61571] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+ImportError: cannot import name custom_code
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+ImportError: cannot import name custom_code
+2015-07-15 12:35:56,207 There is custom code (custom.py) associated with this                     project but it doesn't import cleanly. Raising exception,
+2015-07-15 12:35:56,209 There is custom code (custom.py) associated with this                     project but it doesn't import cleanly. Raising exception,
+[2015-07-15 12:35:56 -0400] [61572] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+ImportError: cannot import name custom_code
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+ImportError: cannot import name custom_code
+[2015-07-15 12:35:56 -0400] [61573] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+ImportError: cannot import name custom_code
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 71, in <module>
+    from custom import custom_code
+ImportError: cannot import name custom_code
+2015-07-15 13:04:34,338 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 13:04:34,390 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 13:04:34,552 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 13:04:34,557 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 13:04:34,570 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 13:04:34,625 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 13:04:34,654 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 13:04:34,657 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 13:04:34,675 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js

@@ -40,27 +40,10 @@ var knowledge_arr = [];
 var question_on = 0;
 var game_on = 0;
 
-function pad(num, size) {
-  var s = num+"";
-  while (s.length < size) s = "0" + s;
-  return s;
-}
-
-function rand_num_incl(min, max) {
-  return parseInt((Math.random() * (max - min + 1)), 10) + min;
-}
 
 function base2str(num) {
   return pad(num.toString(2), 4);
 }
-
-function removeArrValue(arr,index) {
-    if (index > -1) {
-        arr.splice(index, 1);
-    }
-    return arr;
-}
-
 
 function load_img_names_noshuffle() {
   var shape_imgs = [];

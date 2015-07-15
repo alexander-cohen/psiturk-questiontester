@@ -48,8 +48,13 @@ images = { 'y':'<div style="margin-left:-109px"><img src="/static/images/slider_
 		'-0.5':'<div style="margin-left:-109px"><img src="/static/images/slider_pn.png" alt="Probably not/Rarely" width=650></div>',
 		'-1.0':'<div style="margin-left:-109px"><img src="/static/images/slider_n.png"  alt="Definitely No" width=650></div>'};
 
-var question_answer_pairs = [["Is it mechanical?", "y"], ["Is it large?", "n"], ["Can you hold it?", "py"], ["Do you like it?", "y"]];
-var quizquestions = question_answer_pairs.slice();
+var question_answer_pairs = [ ["Is it mechanical?", "1.0"],
+															["Is it large?", "-1.0"],
+															["Can you hold it?", "0.5"],
+															["Do you like it?", "1.0"] ];
+
+var quizquestions = shuffle(question_answer_pairs.slice());
+
 var quizquestion_on = 0;
 var oneshot_instruct_on = 1;
 
@@ -68,6 +73,22 @@ function shuffle(o){
     return o;
 }
 
+function pad(num, size) {
+  var s = num+"";
+  while (s.length < size) s = "0" + s;
+  return s;
+}
+
+function rand_num_incl(min, max) {
+  return parseInt((Math.random() * (max - min + 1)), 10) + min;
+}
+
+function removeArrValue(arr,index) {
+    if (index > -1) {
+        arr.splice(index, 1);
+    }
+    return arr;
+}
 
 var show_questions_instructs = function() {
 	progress_oneshot_instructs();
@@ -122,7 +143,16 @@ var show_questions = function() {
 
 var do_quiz = function() {
 	psiTurk.showPage('quiz.html');
-	document.getElementById("question-label").innerHTML = quizquestions[quizquestion_on][0];
+	$('#question-label').html(quizquestions[0][0]);
+
+	if(parseInt(quizquestions[0][1]) > 0)
+		$('#question-label').attr('correct', 'y');
+	else if(parseInt(quizquestions[0][1]) < 0)
+		$('#question-label').attr('correct', 'n');
+	else
+		$('#question-label').attr('correct', 'u');
+
+	quizquestions = removeArrValue(quizquestions, 0);
 }
 
 var get_data = function() {
@@ -158,7 +188,7 @@ var answer_chosen = function() {
 
 var quizcomplete = function() {
 	if (quizquestion_on == quizquestions.length) quizquestion_on = 0;
-	var correct = ($("input[name=q1]:checked").val() == quizquestions[quizquestion_on][1]);
+	var correct = ($("input[name=q1]:checked").val() == $("#question-label").attr('correct'));
 	psiTurk.recordUnstructuredData("quiz-response", quizquestion_on.toString() + "," +
 				quizquestions[quizquestion_on][0] + "," + quizquestions[quizquestion_on][1] + "," + $("input[name=q1]:checked").val());
 	quizquestion_on += 1;
