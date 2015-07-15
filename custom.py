@@ -1,6 +1,8 @@
 # this file imports custom routes into the experiment server
+import sys
+sys.path.append("/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages")
 
-from flask import Blueprint, render_template, request, jsonify, Response, abort, current_app
+from flask import Blueprint, render_template, request, jsonify, Response, abort, current_app, session
 from jinja2 import TemplateNotFound
 from functools import wraps
 from sqlalchemy import or_
@@ -8,11 +10,17 @@ from sqlalchemy import or_
 from psiturk.psiturk_config import PsiturkConfig
 from psiturk.experiment_errors import ExperimentError
 from psiturk.user_utils import PsiTurkAuthorization, nocache
-
 # # Database setup
 from psiturk.db import db_session, init_db
 from psiturk.models import Participant
 from json import dumps, loads
+
+from player import Player, items, data_matrix, features
+from similarities import *
+
+import editdistance
+
+from random import randint
 
 # load the configuration options
 config = PsiturkConfig()
@@ -29,72 +37,84 @@ custom_code = Blueprint('custom_code', __name__, template_folder='templates', st
 #  add them here
 ###########################################################
 
-#----------------------------------------------
-# example custom route
-#----------------------------------------------
-@custom_code.route('/my_custom_view')
-def my_custom_view():
-	current_app.logger.info("Reached /my_custom_view")  # Print message to server.log for debugging 
-	try:
-		return render_template('custom.html')
-	except TemplateNotFound:
-		abort(404)
 
 #----------------------------------------------
-# example using HTTP authentication
-#----------------------------------------------
-@custom_code.route('/my_password_protected_route')
-@myauth.requires_auth
-def my_password_protected_route():
-	try:
-		return render_template('custom.html')
-	except TemplateNotFound:
-		abort(404)
-
-#----------------------------------------------
-# example accessing data
-#----------------------------------------------
-@custom_code.route('/view_data')
-@myauth.requires_auth
-def list_my_data():
-        users = Participant.query.all()
-	try:
-		return render_template('list.html', participants=users)
-	except TemplateNotFound:
-		abort(404)
-
-#----------------------------------------------
-# example computing bonus
+# Start Player
 #----------------------------------------------
 
-@custom_code.route('/compute_bonus', methods=['GET'])
-def compute_bonus():
-    # check that user provided the correct keys
-    # errors will not be that gracefull here if being
-    # accessed by the Javascrip client
-    if not request.args.has_key('uniqueId'):
-        raise ExperimentError('improper_inputs')  # i don't like returning HTML to JSON requests...  maybe should change this
-    uniqueId = request.args['uniqueId']
 
+#----------------------------------------------
+# Get similar questions
+#----------------------------------------------
+@custom_code.route('/get_similar', methods=['GET'])
+def get_similar():
+    q = request.args['question']
     try:
-        # lookup user in database
-        user = Participant.query.\
-               filter(Participant.uniqueid == uniqueId).\
-               one()
-        user_data = loads(user.datastring) # load datastring from JSON
-        bonus = 0
+        answer = get_ordered_similarities(str(q))
+        str_answer = ",".join([repr(elem) for elem in answer])
+        return str_answer
+    except TemplateNotFound:
+        abort(404)
 
-        for record in user_data['data']: # for line in data file
-            trial = record['trialdata']
-            if trial['phase']=='TEST':
-                if trial['hit']==True:
-                    bonus += 0.02
-        user.bonus = bonus
-        db_session.add(user)
-        db_session.commit()
-        resp = {"bonusComputed": "success"}
-        return jsonify(**resp)
-    except:
-        abort(404)  # again, bad to display HTML, but...
 
-    
+#----------------------------------------------
+# Get answer
+#----------------------------------------------
+@custom_code.route('/get_question_response', methods=['GET'])
+def get_question_response():
+
+    item = str(request.args['item'])
+    item_indx = items.index(item)
+
+    q_indx = features.index(str(request.args['question']))
+    answer = data_matrix[item_indx][q_indx]
+    try:
+        return str(answer)
+    except TemplateNotFound:
+        abort(404)
+
+
+#----------------------------------------------
+# Get ordered info gain
+#----------------------------------------------
+@custom_code.route('/get_good_questions', methods=['GET'])
+def get_good_questions():
+    try:
+        player = Player()
+        knowledge = str(request.args['knowledge']).split(",")
+        for k in knowledge:
+            if k == "": continue
+            parts = k.split(":")
+            player.add_knowledge_name(parts[0], parts[1])
+
+        return player.ordered_features_name_and_gain_str()
+    except TemplateNotFound:
+        abort(404)
+
+
+
+
+#----------------------------------------------
+# Get if is similar object
+#----------------------------------------------
+@custom_code.route('/get_similarity', methods=['GET'])
+def get_similarity():
+    try:
+        obj = str(request.args['object'])
+        the_item = str(request.args['item'])
+        return str( editdistance.eval(obj, the_item) )
+
+    except TemplateNotFound:
+        abort(404)
+
+
+#----------------------------------------------
+# get random object
+#----------------------------------------------
+@custom_code.route('/get_rand_object', methods=['GET'])
+def get_rand_object():
+    try:
+        return str(items[randint(0, 1000)])
+
+    except TemplateNotFound:
+        abort(404)

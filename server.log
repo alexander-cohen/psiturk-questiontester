@@ -40486,3 +40486,12 @@ ImportError: cannot import name custom_code
 2015-07-15 13:04:34,654 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
 2015-07-15 13:04:34,657 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
 2015-07-15 13:04:34,675 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 13:39:26,313 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 13:39:27,945 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 13:39:28,083 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 13:39:28,086 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 13:39:28,316 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 13:39:28,334 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 13:39:28,392 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 13:39:28,404 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-15 13:39:28,404 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js

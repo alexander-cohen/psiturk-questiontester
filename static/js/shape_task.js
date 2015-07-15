@@ -146,7 +146,7 @@ function give_question_options() {
 	question_on++;
 }
 
-var choicecomplete = function() {
+var choicecomplete_shape = function() {
 	if($("#submit-button").html() == "Submit") {
 		var choice = $("input[name=q1]:checked").next('label').html();
     var knowledge_val = $("input[name=q1]:checked").next('label').attr('knowledge_val').split(',');

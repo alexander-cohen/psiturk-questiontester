@@ -26,7 +26,7 @@ var bonus = function() {
 	return 1.0 - (iterations) * 0.05;
 }
 
-var start_game = function() {
+var start_20q_game = function() {
 	psiTurk.showPage("full_game_eig.html");
 	iterations = 0;
 	$.ajax({
@@ -119,7 +119,7 @@ var show_info_gain = function() {
 					});
 }
 
-var choicecomplete = function() {
+var choicecomplete_20q = function() {
 	if($("#submit-button").html() == "Submit") {
 		var choice = $("input[name=q1]:checked").next('label').find('.question-text').html();
 		var info_gain = $("input[name=q1]:checked").next('label').attr("info-gain");
@@ -224,7 +224,7 @@ var finish_guess_submitted = function() {
 		make_alert("Now you will do the same thing, but if you do well, you will recieve a bonus." +
 					"You start with $1 of bonus, and after each question it goes down by $.05. " +
 					"If you guess the object correctly, you collect whatever the current bonus is. Good luck!",
-						function() {game_on++; start_game();});
+						function() {game_on++; start_20q_game();});
 	}
 
 	else if(game_on >= num_games) {
@@ -233,6 +233,6 @@ var finish_guess_submitted = function() {
 
 	else {
 		game_on++;
-		start_game();
+		start_20q_game();
 	}
 }
