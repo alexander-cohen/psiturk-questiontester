@@ -1,5 +1,6 @@
 <div class="form-group" style="margin-left:50px; margin-top:50px; margin-right:500px; margin-bottom:200px">
-  	<form>
+  	<!--
+    <form>
   	<label for="answers" id="question-label"><h2>Is it mechanical?</h2></label>
 		<ul class="answers">
       		<div class="radio-question">
@@ -18,7 +19,76 @@
           </div>
       	</ul>
 
-		<br><br>
-	</form>
-	<button onclick="quizcomplete();" type="button" class="btn btn-success">Submit</button>
+		  <br><br>
+	    </form>
+    -->
+    <h2 id='question-label' style='position:absolute; left:0; right:0;' align='center'></h2>
+    <div id='slider' style='position:absolute; left:0; right:0; margin-top: 100px; margin-bottom: 20px' align='center'>
+      <div style="display: inline-block; margin-right: 20px">
+        <h4>Definitely Not</h4>
+      </div>
+
+      <div style="display: inline-block;">
+        <div class="slider slider-horizontal" style="width: 256px;">
+
+          <div class="slider-track">
+           <div class="slider-tick" id="-1.0" style="left: 0%;"></div>
+           <div class="slider-tick" id="-0.5" style="left: 25%;"></div>
+           <div class="slider-tick" id="0.0" style="left: 50%;"></div>
+           <div class="slider-tick" id="0.5" style="left: 75%;"></div>
+           <div class="slider-tick" id="1.0" style="left: 100%;"></div>
+
+           <script>
+            function hasClass(element, cls) {
+              return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+            }
+
+           $(document).ready(function(){
+                $("div").mousedown(function(){
+                    $(this).addClass("mousedown");
+                });
+                $("div").mouseup(function(){
+                    $(this).removeClass("mousedown");
+                });
+
+                $(".slider-tick").hover(
+                    function() {
+                        $(this).addClass("hover");
+                    },
+                    function() {
+                        $(this).removeClass("hover");
+                    }
+                );
+
+                $(".slider-tick").one('click', function(event) {
+                    event.preventDefault();
+                    //if(!hasClass(this, "ischanging"))
+                      quizcomplete(this.id);
+                });
+
+            });
+
+
+           </script>
+
+            <div style="margin-top: 20px; width:1000px">
+              <div class="slider-tick-label-container">
+                <div class="slider-tick-label" style="margin-left: -20px">1</div>
+                <div class="slider-tick-label" style="margin-left: 23px">2</div>
+                <div class="slider-tick-label" style="margin-left: 24px">3</div>
+                <div class="slider-tick-label" style="margin-left: 23px">4</div>
+                <div class="slider-tick-label" style="margin-left: 24px; margin-right: -100px">5</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      <div style="display: inline-block; margin-left: 20px">
+        <h4>Definitely Yes</h4>
+      </div>
+    </div>
+
+	<!--<button onclick="quizcomplete();" type="button" class="btn btn-success">Submit</button>-->
 </div>
