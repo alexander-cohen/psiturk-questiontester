@@ -264,7 +264,9 @@ var answer_chosen = function() {
 
 	else {
 		psiTurk.recordTrialData(["Final choice", question_answer_pairs, [$("#1").val(), $("#2").val(), $("#3").val(), $("#4").val()] ] );
-		show_questions();
+		make_alert("Thank you! You will now go back and do the exact same thing, "+
+								"but with a <strong>different</strong> game. Remember, we are "+
+								"starting completely fresh!", show_questions;
 		//setTimeout(function(){psiTurk.showPage('postquestionnaire.html')}, 500);
 
 	}
@@ -275,7 +277,7 @@ var quizcomplete = function(resp) {
 	if (quizquestions.length == 0) quizquestions = shuffle(question_answer_pairs.slice());
 	var correct_resp = quizquestions[0][1];
 	var correct = parseInt(resp) == correct_resp;
-	
+
 	psiTurk.recordUnstructuredData("quiz-response", quizquestion_on.toString() + "," +
 				quizquestions[0][0] + "," + quizquestions[0][1] + "," + resp + ',' + correct);
 
@@ -293,10 +295,10 @@ var quizcomplete = function(resp) {
 }
 
 var complete = function() {
-    var comments = document.getElementById("comments").value;
+  var comments = document.getElementById("comments").value;
 	psiTurk.showPage('complete.html');
-    psiTurk.recordUnstructuredData('comments', comments);
-    psiTurk.saveData();
+  psiTurk.recordUnstructuredData('comments', comments);
+  psiTurk.saveData();
 	psiTurk.completeHIT();
 }
 
