@@ -1,0 +1,80 @@
+<div id="container-instructions" instruct_num = '2'>
+
+      <h1>Instructions</h1>
+
+      <hr>
+
+      <div class="instructions well">
+
+          <p>
+            All answers on given on a 5 point spectrum, from Definitely Not to
+            Definitely Yes. This is because there are certain questions that can
+            have indefinite responses for certain objects. An uncertain response
+            could be interpreted as "Unknown" or "Inapplicable", whereas a
+            response leaning towards one direction but without being completely certain
+            could mean something such as "Probably" or "Sometimes".
+            <br><br>
+            Here is an example. You are thinking of a house, and I ask you if it
+            is white. Houses in general can be lots of different colors, so you
+            would say that you don't know:
+
+            <br>
+            <div style="margin-left:-109px"><img src="/static/images/slider_u.png"  alt="Unknown/Not applicable" width=650></div>
+            <hr>
+
+            Now I ask you if it is tall. Houses usually are not too tall, but they can be, so you would say probably not:
+
+            <br>
+            <div style="margin-left:-109px"><img src="/static/images/slider_pn.png"  alt="Unknown/Not applicable" width=650></div>
+            <hr>
+
+            Now I ask you if it is alive. Houses are definitely not alive, so you would respond definitely not!
+
+            <br>
+            <div style="margin-left:-109px"><img src="/static/images/slider_n.png"  alt="Unknown/Not applicable" width=650></div>
+            <hr>
+
+            The responses for everything in our dataset was collected from people like this, on these scales.
+            <br><br>
+            You will now proceed to the task. You will play exactly __ games. Good luck!
+          </p>
+
+          <script type="text/javascript">
+          //console.log(psiTurk.getInstructionIndicator())
+          </script>
+
+      </div>
+
+      <hr>
+
+      <style>
+        #next {
+            opacity: 0;
+        }
+      </style>
+      <script>
+          setTimeout(function() {
+              $("#next").fadeTo('slow', 1.0, function(){
+  							$("#next").removeAttr('disabled')
+  						});
+          }, 1000)
+      </script>
+
+    <div class="instructionsnav">
+        <div class="row">
+            <div class="col-xs-2">
+                <button type="button" id="previous" value="next" class="btn btn-primary btn-lg previous">
+                <span class="glyphicon glyphicon-arrow-left"></span> Previous
+                </button>
+            </div>
+            <div class="col-xs-8">
+            </div>
+            <div class="col-xs-2">
+                <button type="button" id="next" value="next" class="btn btn-primary btn-lg continue" onclick="progress_20q_instructs()" disabled>
+                Next <span class="glyphicon glyphicon-arrow-right"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>

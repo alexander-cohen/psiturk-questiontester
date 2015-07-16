@@ -106,7 +106,7 @@ function shape_chosen(obj) {
   make_alert((correct ?
               'Correct! Great Job! Now move on to Part II of this HIT' :
               'Incorrect, sorry. You must now redo the task.'), function(){
-                                    if(correct) show_questions_instructs();
+                                    if(correct) show_fullgame_instructs();
                                     else start_shapegame();
                                   });
 }

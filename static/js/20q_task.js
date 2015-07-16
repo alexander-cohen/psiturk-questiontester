@@ -68,11 +68,16 @@ var pre_20q = function() {
 	else {
 		$("#question-number").html("Question number: " + iterations.toString() + "/" + max_iterations.toString());
 		if(game_on > 0) $("#bonus").html("Bonus: $" + bonus().toFixed(2));
+		$("#submit-button").html(' <span class="glyphicon glyphicon-refresh spinning"></span> Loading...    ');
+		$("#submit-button").attr('disabled')
+		$("#answers").css('opacity', 0);
 		$.ajax({
 			url: "/get_good_questions",
 			type: "GET",
 			data: {"knowledge":knowledge},
 			success: function(data) {
+					$("#submit-button").html('Submit');
+					$("#submit-button").removeAttr('disabled');
 					new_questions = data.split(',')[0].split(":");
 					info_gains = data.split(',')[1].split(":");
 					console.log(new_questions);
@@ -88,6 +93,7 @@ var pre_20q = function() {
 						$('#q'+ i.toString()).next('label').html('<span class="question-text">' + questions_to_ask[i][0] + '</span>');
 						$('#q'+ i.toString()).next('label').attr("info-gain", questions_to_ask[i][1]);
 					}
+					$("#answers").fadeTo("slow", 1.0);
 				}
 
 		});
@@ -228,7 +234,7 @@ var finish_guess_submitted = function() {
 	}
 
 	else if(game_on >= num_games) {
-		show_questions_instructs();
+		make_alert("That was the final game, you will now move onto part 2 of this HIT", show_questions_instructs);
 	}
 
 	else {

@@ -15,7 +15,10 @@ var mycounterbalance = counterbalance;  // they tell you which condition you hav
 var pages = [
 	"instructions/instruct_oneshot-1.html",
 	"instructions/instruct_oneshot-2.html",
-	"instructions/instruct_oneshot-3.html",
+
+	"instructions/instruct_20q-1.html",
+	"instructions/instruct_20q-2.html",
+	"instructions/instruct_20q-3.html",
 
 	"instructions/instruct-1.html",
 	"instructions/instruct-2.html",
@@ -40,20 +43,20 @@ var instructionPages = [ // add as a list as many pages as you like
 ];
 
 images = { 'y':'<div style="margin-left:-109px"><img src="/static/images/slider_y.png"  alt="Definitely Yes" width=650></div>',
-		  'py':'<div style="margin-left:-109px"><img src="/static/images/slider_py.png" alt="Probably/Sometimes" width=650></div>',
-		   'u':'<div style="margin-left:-109px"><img src="/static/images/slider_u.png"  alt="Unknown/Not applicable" width=650></div>',
-		  'pn':'<div style="margin-left:-109px"><img src="/static/images/slider_pn.png" alt="Probably not/Rarely" width=650></div>',
-		   'n':'<div style="margin-left:-109px"><img src="/static/images/slider_n.png"  alt="Definitely No" width=650></div>',
+				  'py':'<div style="margin-left:-109px"><img src="/static/images/slider_py.png" alt="Probably/Sometimes" width=650></div>',
+				   'u':'<div style="margin-left:-109px"><img src="/static/images/slider_u.png"  alt="Unknown/Not applicable" width=650></div>',
+				  'pn':'<div style="margin-left:-109px"><img src="/static/images/slider_pn.png" alt="Probably not/Rarely" width=650></div>',
+				   'n':'<div style="margin-left:-109px"><img src="/static/images/slider_n.png"  alt="Definitely No" width=650></div>',
 
-		 '1.0':'<div style="margin-left:-109px"><img src="/static/images/slider_y.png"  alt="Definitely Yes" width=650></div>',
-		 '0.5':'<div style="margin-left:-109px"><img src="/static/images/slider_py.png" alt="Probably/Sometimes" width=650></div>',
-		 '0.0':'<div style="margin-left:-109px"><img src="/static/images/slider_u.png"  alt="Unknown/Not applicable" width=650></div>',
-		'-0.5':'<div style="margin-left:-109px"><img src="/static/images/slider_pn.png" alt="Probably not/Rarely" width=650></div>',
-		'-1.0':'<div style="margin-left:-109px"><img src="/static/images/slider_n.png"  alt="Definitely No" width=650></div>',
+				 '1.0':'<div style="margin-left:-109px"><img src="/static/images/slider_y.png"  alt="Definitely Yes" width=650></div>',
+				 '0.5':'<div style="margin-left:-109px"><img src="/static/images/slider_py.png" alt="Probably/Sometimes" width=650></div>',
+				 '0.0':'<div style="margin-left:-109px"><img src="/static/images/slider_u.png"  alt="Unknown/Not applicable" width=650></div>',
+				'-0.5':'<div style="margin-left:-109px"><img src="/static/images/slider_pn.png" alt="Probably not/Rarely" width=650></div>',
+				'-1.0':'<div style="margin-left:-109px"><img src="/static/images/slider_n.png"  alt="Definitely No" width=650></div>',
 
-		 '1':'<div style="margin-left:-109px"><img src="/static/images/slider_y.png"  alt="Definitely Yes" width=650></div>',
-		 '0':'<div style="margin-left:-109px"><img src="/static/images/slider_u.png"  alt="Unknown/Not applicable" width=650></div>',
-		 '-1':'<div style="margin-left:-109px"><img src="/static/images/slider_n.png"  alt="Definitely No" width=650></div>'}
+					 '1':'<div style="margin-left:-109px"><img src="/static/images/slider_y.png"  alt="Definitely Yes" width=650></div>',
+					 '0':'<div style="margin-left:-109px"><img src="/static/images/slider_u.png"  alt="Unknown/Not applicable" width=650></div>',
+				 	'-1':'<div style="margin-left:-109px"><img src="/static/images/slider_n.png"  alt="Definitely No" width=650></div>'}
 
 
 // var question_answer_pairs = [ ["Is it mechanical?", "1.0"],
@@ -71,6 +74,8 @@ var oneshot_instruct_on = 1;
 var depth = 4 ;
 var QUIZ_QUESTIONS = 2;
 var quiz_question_itr = 0;
+
+var fullgame_instruct_on = 1;
 /********************
 * HTML manipulation
 *
@@ -101,10 +106,6 @@ function removeArrValue(arr,index) {
         arr.splice(index, 1);
     }
     return arr;
-}
-
-var show_questions_instructs = function() {
-	progress_oneshot_instructs();
 }
 
 var block_clicked = function(blocknum) {
@@ -279,6 +280,7 @@ var answer_chosen = function() {
 
 }
 
+
 var quizcomplete = function(resp) {
 	var correct_resp = quizquestions[0][1];
 	var correct = parseInt(resp) == correct_resp;
@@ -335,14 +337,33 @@ var make_alert = function(message, onclose) {
 	$('.no-close').find('.ui-dialog-titlebar-close').css('display','none');
 }
 
+var show_questions_instructs = function() {
+	progress_oneshot_instructs();
+}
+
+var show_fullgame_instructs = function() {
+	progress_20q_instructs();
+}
+
+
 var progress_oneshot_instructs = function(){
-	if(oneshot_instruct_on >= 4) {
+	if(oneshot_instruct_on >= 3) {
 		show_questions();
 		return;
 	}
 	psiTurk.showPage('instructions/instruct_oneshot-' + oneshot_instruct_on.toString() + '.html');
 	oneshot_instruct_on++;
 }
+
+var progress_20q_instructs = function(){
+	if(fullgame_instruct_on >= 4) {
+		start_20q_game();
+		return;
+	}
+	psiTurk.showPage('instructions/instruct_20q-' + fullgame_instruct_on.toString() + '.html');
+	fullgame_instruct_on++;
+}
+
 
 // Task object to keep track of the current phase
 var currentview;
