@@ -156,10 +156,9 @@ var show_questions = function(first_time) {
 	quiz_question_itr = 0;
 	first_time = typeof first_time !== 'undefined' ? first_time : true;
 
+
 	if(first_time) {
 		question_answer_pairs = question_answer_pairs_indx[rand_num_incl(0, question_answer_pairs_indx.length - 1)].slice(0, 4);
-		quizquestions = shuffle(question_answer_pairs.slice());
-
 		psiTurk.showPage('setup.html');
 
 		for(var i = 0; i < 1; i++) {
@@ -187,13 +186,8 @@ var show_questions = function(first_time) {
 		$("#next").removeAttr('disabled');
 	}
 
-}
+	quizquestions = shuffle(question_answer_pairs.slice());
 
-var do_quiz = function() {
-	if (quizquestions.length == 0) quizquestions = shuffle(question_answer_pairs.slice());
-	psiTurk.showPage('quiz.html');
-	$('#question-label').html(features[quizquestions[0][0]]);
-	$('#question-on').html('Question on: ' + (quiz_question_itr+1) + '/' + 	QUIZ_QUESTIONS);
 }
 
 
@@ -280,6 +274,18 @@ var answer_chosen = function() {
 
 }
 
+var do_quiz = function() {
+	if(quiz_question_itr >= QUIZ_QUESTIONS) {
+		quiz_question_itr = 0;
+		make_alert("Correct! Please proceed", get_data);
+		return;
+	}
+
+	if (quizquestions.length == 0) quizquestions = shuffle(question_answer_pairs.slice());
+	psiTurk.showPage('quiz.html');
+	$('#question-label').html(features[quizquestions[0][0]]);
+	$('#question-on').html('Question on: ' + (quiz_question_itr+1) + '/' + 	QUIZ_QUESTIONS);
+}
 
 var quizcomplete = function(resp) {
 	var correct_resp = quizquestions[0][1];
@@ -296,10 +302,7 @@ var quizcomplete = function(resp) {
 		make_alert("Incorrect, please go back and try again. Really pay attention this time!",
 			function(){show_questions(false);} );
 	}
-	else if(quiz_question_itr >= QUIZ_QUESTIONS+1) {
-		make_alert("Correct! Please proceed", get_data);
-		quiz_question_itr = 0;
-	}
+
 	else {
 		quiz_question_itr++;
 		do_quiz();
@@ -375,8 +378,9 @@ $(window).load( function(){
     psiTurk.doInstructions(
     	instructionPages, // a list of pages you want to display in sequence
     	function() {
-				currentview = start_shapegame();
-    		//currentview = show_questions();
+				//currentview = start_shapegame();
+    		currentview = show_questions();
+				//currentview = show_questions();
 				//currentview = do_quiz();
 				//currentview = start_20q_game();
 				//currentview = show_questions();
