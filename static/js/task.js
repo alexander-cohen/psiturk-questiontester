@@ -137,6 +137,7 @@ var get_quest_ans_pair = function(blocknum, q) {
 				  	'<h4 id="answer' + blocknum_str + '">' +
 							'<a id="link' +blocknum_str + '">Click to reveal answer</a>' +
 						'</h4>' +
+						'<hr>' +
 						'<script>' +
 
 							'$("#answer' + blocknum_str + '").mouseup(function(){block_clicked(' + blocknum.toString() + ')});' +
@@ -188,8 +189,10 @@ var show_questions = function(first_time) {
 }
 
 var do_quiz = function() {
+	if (quizquestions.length == 0) quizquestions = shuffle(question_answer_pairs.slice());
 	psiTurk.showPage('quiz.html');
 	$('#question-label').html(features[quizquestions[0][0]]);
+	$('#question-on').html('Question on: ' + (quiz_question_itr+1) + '/' + 	QUIZ_QUESTIONS);
 }
 
 
@@ -269,7 +272,7 @@ var answer_chosen = function() {
 		psiTurk.recordTrialData(["Final choice", question_answer_pairs, [$("#1").val(), $("#2").val(), $("#3").val(), $("#4").val()] ] );
 		make_alert("Thank you! You will now go back and do the exact same thing, "+
 								"but with a <strong>different</strong> game. Remember, we are "+
-								"starting completely fresh!", show_questions;
+								"starting completely fresh!", show_questions);
 		//setTimeout(function(){psiTurk.showPage('postquestionnaire.html')}, 500);
 
 	}
@@ -277,7 +280,6 @@ var answer_chosen = function() {
 }
 
 var quizcomplete = function(resp) {
-	if (quizquestions.length == 0) quizquestions = shuffle(question_answer_pairs.slice());
 	var correct_resp = quizquestions[0][1];
 	var correct = parseInt(resp) == correct_resp;
 
@@ -292,7 +294,7 @@ var quizcomplete = function(resp) {
 		make_alert("Incorrect, please go back and try again. Really pay attention this time!",
 			function(){show_questions(false);} );
 	}
-	else if(quiz_question_itr >= QUIZ_QUESTIONS) {
+	else if(quiz_question_itr >= QUIZ_QUESTIONS+1) {
 		make_alert("Correct! Please proceed", get_data);
 		quiz_question_itr = 0;
 	}
@@ -352,7 +354,8 @@ $(window).load( function(){
     psiTurk.doInstructions(
     	instructionPages, // a list of pages you want to display in sequence
     	function() {
-    		currentview = show_questions();
+				currentview = start_shapegame();
+    		//currentview = show_questions();
 				//currentview = do_quiz();
 				//currentview = start_20q_game();
 				//currentview = show_questions();
