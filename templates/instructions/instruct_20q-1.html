@@ -1,4 +1,4 @@
-<div id="container-instructions">
+<div id="container-instructions" instruct_num = "1">
 
 	<h1>Instructions</h1>
 
@@ -7,22 +7,16 @@
 	<div class="instructions well">
 
 	    <p>
-		  	The first thing you are going to do in this hit is figure out which shape
-				the computer is thinking of based off of questions that you ask.
-				There are 16 possible shapes, and each one has 4 attributes.
-				The attributes are:
+		    In this task you will be asked to play a much more fleshed out and involved
+				game. It will involve you asking a series of questions, and getting responses
+				from the computer. You will use these responses to try and figure out what
+				object the computer is thinking of. At any point you may guess what the object is,
+				but after ___ questions you will be moved on to the next game.
 	    </p>
-			<ul>
-				<li>Shape</li>
-				<li>Fill color</li>
-				<li>Border color</li>
-				<li>Dot in the center</li>
-			</ul>
 
-			<p>
-				Each attribute can be one of two things, and every possible shape is
-				there. That means there are 16 possible shapes overall.
-			</p>
+	    <script type="text/javascript">
+	    //console.log(psiTurk.getInstructionIndicator())
+	    </script>
 
 	</div>
 
@@ -50,7 +44,7 @@
             <div class="col-xs-8">
             </div>
             <div class="col-xs-2">
-                <button type="button" id="next" value="next" class="btn btn-primary btn-lg continue" disabled>
+                <button type="button" id="next" value="next" class="btn btn-primary btn-lg continue" onclick="progress_oneshot_instructs()" disabled>
                 Next <span class="glyphicon glyphicon-arrow-right"></span>
                 </button>
             </div>

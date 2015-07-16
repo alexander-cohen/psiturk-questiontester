@@ -1,4 +1,4 @@
-<div id="container-instructions">
+<div id="container-instructions" instruct_num = '2'>
 
       <h1>Instructions</h1>
 
@@ -6,13 +6,30 @@
 
       <div class="instructions well">
 
-          <p>
-            There are a bunch of possible questions you can choose from.
-            Be careful, because you only get to ask 4 questions! Make sure you
-            can effectively guess the correct shape after yo have asked your
-            questions, because you will be forced to redo this task if you guess
-            incorectly.
-          </p>
+        <p>There is a wide variety of possible objects. It includes categories such as:</p>
+        <ul>
+          <li>Animals</li>
+          <li>Insects</li>
+          <li>Plants</li>
+          <li>Food</li>
+          <li>Household items</li>
+          <li>Tools</li>
+          <li>Clohing</li>
+          <li>Modes of transportation</li>
+          <li>Sports</li>
+          <li>Objects</li>
+          <li>Other tangible items</li>
+        </ul>
+
+        <p>However, it excludes:</p>
+        <ul>
+          <li>Specific people</li>
+          <li>Places</li>
+          <li>Ideas</li>
+          <li>Thoughts</li>
+        </ul>
+
+        <p>In short, all 'things' are a possibility, and nothing else.</p>
 
       </div>
 
@@ -41,10 +58,11 @@
             <div class="col-xs-8">
             </div>
             <div class="col-xs-2">
-                <button type="button" id="next" value="next" class="btn btn-primary btn-lg continue" disabled>
+                <button type="button" id="next" value="next" class="btn btn-primary btn-lg continue" onclick="progress_oneshot_instructs()" disabled>
                 Next <span class="glyphicon glyphicon-arrow-right"></span>
                 </button>
             </div>
         </div>
     </div>
+
 </div>
