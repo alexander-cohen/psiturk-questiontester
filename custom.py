@@ -21,6 +21,7 @@ from similarities import *
 import editdistance
 
 from random import randint
+from random import choice
 
 # load the configuration options
 config = PsiturkConfig()
@@ -114,7 +115,8 @@ def get_similarity():
 @custom_code.route('/get_rand_object', methods=['GET'])
 def get_rand_object():
     try:
-        return str(items[randint(0, 1000)])
+        #return str(items[randint(0, 1000)])
+        return str(items[choice([0,1,36,29,833,26,3,1,167,171,402])])
 
     except TemplateNotFound:
         abort(404)

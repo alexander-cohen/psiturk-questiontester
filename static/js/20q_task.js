@@ -18,7 +18,7 @@
 var knowledge = "";
 var item = "computer";
 var iterations = 1;
-var max_iterations = 20;
+var max_iterations = 30;
 var num_games = 2;
 var game_on = 0;
 
@@ -145,7 +145,7 @@ var choicecomplete_20q = function() {
 					$("#submit-button").html("Next");
 					$("#submit-button").removeClass('btn-success');
 					$("#submit-button").addClass("btn-primary");
-					//$("#question-form").html("<h3 style='margin-bottom: 40px'>"+choice+"</h3>");
+					$("#question-form").html("<h3 style='margin-bottom: 40px'>"+choice+"</h3>");
 					show_info_gain();
 				}
 			})

@@ -40774,3 +40774,72 @@ TemplateNotFound: jquery.sortable.js
 2015-07-16 21:18:51,025 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
 [2015-07-16 22:05:55 -0400] [3061] [CRITICAL] WORKER TIMEOUT (pid:8685)
 2015-07-16 22:06:02,771 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-07-16 23:56:09 -0400] [3061] [CRITICAL] WORKER TIMEOUT (pid:8942)
+[2015-07-16 23:56:09 -0400] [3061] [CRITICAL] WORKER TIMEOUT (pid:8686)
+[2015-07-16 23:56:09 -0400] [3061] [CRITICAL] WORKER TIMEOUT (pid:8687)
+[2015-07-16 23:56:09 -0400] [3061] [CRITICAL] WORKER TIMEOUT (pid:8688)
+[2015-07-16 23:56:09 -0400] [3061] [CRITICAL] WORKER TIMEOUT (pid:8689)
+[2015-07-16 23:56:09 -0400] [3061] [CRITICAL] WORKER TIMEOUT (pid:8690)
+[2015-07-16 23:56:09 -0400] [3061] [CRITICAL] WORKER TIMEOUT (pid:8691)
+[2015-07-16 23:56:09 -0400] [3061] [CRITICAL] WORKER TIMEOUT (pid:8692)
+[2015-07-16 23:56:09 -0400] [3061] [CRITICAL] WORKER TIMEOUT (pid:8693)
+2015-07-16 23:56:23,186 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-16 23:56:25,653 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-16 23:56:25,685 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-16 23:56:25,769 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-16 23:56:25,773 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-16 23:56:25,777 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-16 23:56:25,946 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-16 23:56:26,000 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-16 23:56:26,003 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-17 00:02:14,146 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-17 00:02:16,948 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-17 00:02:16,956 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-17 00:02:17,153 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-17 00:02:17,207 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-17 00:02:17,292 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-17 00:02:17,306 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-17 00:02:17,313 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-17 00:02:17,335 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-17 00:02:34,911 Exception on /get_rand_object [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 118, in get_rand_object
+    return str(items[choice([0,1,36,29,833,26,3,1,167,171,402])])
+NameError: global name 'choice' is not defined
+2015-07-17 00:03:26,278 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-17 00:03:28,011 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-17 00:03:28,250 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-17 00:03:28,493 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-17 00:03:28,623 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-17 00:03:28,684 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-17 00:03:28,710 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-17 00:03:28,735 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-17 00:03:28,771 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-07-17 01:04:50 -0400] [10583] [CRITICAL] WORKER TIMEOUT (pid:10592)
+[2015-07-17 01:04:51 -0400] [10583] [CRITICAL] WORKER TIMEOUT (pid:10593)
+[2015-07-17 01:04:51 -0400] [10583] [CRITICAL] WORKER TIMEOUT (pid:10594)
+[2015-07-17 01:04:51 -0400] [10583] [CRITICAL] WORKER TIMEOUT (pid:10595)
+[2015-07-17 01:04:51 -0400] [10583] [CRITICAL] WORKER TIMEOUT (pid:10587)
+[2015-07-17 01:04:51 -0400] [10583] [CRITICAL] WORKER TIMEOUT (pid:10588)
+[2015-07-17 01:04:51 -0400] [10583] [CRITICAL] WORKER TIMEOUT (pid:10589)
+[2015-07-17 01:04:51 -0400] [10583] [CRITICAL] WORKER TIMEOUT (pid:10590)
+[2015-07-17 01:04:51 -0400] [10583] [CRITICAL] WORKER TIMEOUT (pid:10591)
+2015-07-17 01:05:12,599 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-17 01:05:14,875 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-17 01:05:15,035 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-17 01:05:15,053 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-17 01:05:15,056 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-17 01:05:15,096 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-17 01:05:15,106 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-17 01:05:15,134 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-17 01:05:15,153 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
