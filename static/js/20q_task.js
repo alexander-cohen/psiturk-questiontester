@@ -82,13 +82,13 @@ var pre_20q = function() {
 					info_gains = data.split(',')[1].split(":");
 					console.log(new_questions);
 					var questions_to_ask = shuffle([[new_questions[2], info_gains[2]],
-													[new_questions[5], info_gains[5]],
-													[new_questions[8], info_gains[8]],
-													[new_questions[11], info_gains[11]],
-													[new_questions[14], info_gains[14]],
-													[new_questions[17], info_gains[17]],
-													[new_questions[20], info_gains[20]],
-													[new_questions[23], info_gains[23]]]);
+																					[new_questions[8], info_gains[8]],
+																					[new_questions[16], info_gains[16]],
+																					[new_questions[24], info_gains[24]],
+																					[new_questions[32], info_gains[32]],
+																					[new_questions[40], info_gains[40]],
+																					[new_questions[48], info_gains[48]],
+																					[new_questions[56], info_gains[56]]]);
 					for(var i = 0; i < 8; i++) {
 						$('#q'+ i.toString()).next('label').html('<span class="question-text">' + questions_to_ask[i][0] + '</span>');
 						$('#q'+ i.toString()).next('label').attr("info-gain", questions_to_ask[i][1]);
@@ -133,7 +133,7 @@ var choicecomplete_20q = function() {
 		$("input[name=q1]").each(function() {
 			all_gains.push($(this).next('label').attr('info-gain'));
 		});
-		
+
 		log_data('20q_choice', [iterations, choice, info_gain, all_gains]);
 
 		$.ajax({
