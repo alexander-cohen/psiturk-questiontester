@@ -213,7 +213,6 @@ var get_data = function() {
 }
 
 var freeform_resp_submitted = function() {
-	alert($("#quest-form").val());
 	psiTurk.recordUnstructuredData('quest-choice', $("#quest-form").val());
 	get_data_ranked();
 }
