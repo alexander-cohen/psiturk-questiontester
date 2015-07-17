@@ -129,7 +129,13 @@ var choicecomplete_20q = function() {
 	if($("#submit-button").html() == "Submit") {
 		var choice = $("input[name=q1]:checked").next('label').find('.question-text').html();
 		var info_gain = $("input[name=q1]:checked").next('label').attr("info-gain");
-		psiTurk.recordTrialData(["Prelim choice", iterations, choice, info_gain])
+		var all_gains = [];
+		$("input[name=q1]").each(function() {
+			all_gains.push($(this).next('label').attr('info-gain'));
+		});
+		
+		log_data('20q_choice', [iterations, choice, info_gain, all_gains]);
+
 		$.ajax({
 				//  send this user's unique id and get stimuli back
 				url: "/get_question_response",

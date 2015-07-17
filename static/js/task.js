@@ -79,6 +79,9 @@ var QUIZ_QUESTIONS = 2;
 var quiz_question_itr = 0;
 
 var fullgame_instruct_on = 1;
+
+var to_log = [];
+
 /********************
 * HTML manipulation
 *
@@ -98,6 +101,10 @@ function pad(num, size) {
   var s = num+"";
   while (s.length < size) s = "0" + s;
   return s;
+}
+
+function log_data(name, dat) {
+	to_log.push([name, dat]);
 }
 
 function rand_num_incl(min, max) {
@@ -162,6 +169,7 @@ var show_questions = function(first_time) {
 
 	if(first_time) {
 		question_answer_pairs = question_answer_pairs_indx[rand_num_incl(0, question_answer_pairs_indx.length - 1)].slice(0, depth);
+		log_data('question_answer_pairs', question_answer_pairs);
 		psiTurk.showPage('setup.html');
 
 		for(var i = 0; i < 1; i++) {
@@ -213,7 +221,7 @@ var get_data = function() {
 }
 
 var freeform_resp_submitted = function() {
-	psiTurk.recordUnstructuredData('quest-choice', $("#quest-form").val());
+	log_data('quest_freeform', $("#quest-form").val());
 	get_data_ranked();
 }
 
@@ -254,7 +262,8 @@ var answer_chosen = function() {
 
 	else {
 		var ordered_arr = [ ordered[0].charAt(1), ordered[1].charAt(1), ordered[2].charAt(1), ordered[3].charAt(1) ];
-		psiTurk.recordTrialData(["Final choice", question_answer_pairs, ordered_arr]);
+		log_data('ranked_choices', ordered_arr);
+		//psiTurk.recordTrialData(["Final choice", question_answer_pairs, ordered_arr]);
 		make_alert("Thank you! You will now go back and do the exact same thing, "+
 								"but with a <strong>different</strong> game. Remember, we are "+
 								"starting completely fresh!", show_questions);
@@ -281,8 +290,8 @@ var quizcomplete = function(resp) {
 	var correct_resp = quizquestions[0][1];
 	var correct = parseInt(resp) == correct_resp;
 
-	psiTurk.recordUnstructuredData("quiz-response", quizquestion_on.toString() + "," +
-				quizquestions[0][0] + "," + quizquestions[0][1] + "," + resp + ',' + correct);
+	log_data('quiz_response', [quizquestion_on.toString(), quiz_question_itr,
+		quizquestions[0][0], quizquestions[0][1], resp, correct]);
 
 	quizquestion_on++;
 
@@ -298,15 +307,6 @@ var quizcomplete = function(resp) {
 		do_quiz();
 	}
 }
-
-var complete = function() {
-  var comments = document.getElementById("comments").value;
-	psiTurk.showPage('complete.html');
-  psiTurk.recordUnstructuredData('comments', comments);
-  psiTurk.saveData();
-	psiTurk.completeHIT();
-}
-
 
 var make_alert = function(message, onclose) {
 	$("<p>" + message + "</p>").dialog(
@@ -387,6 +387,17 @@ var objectquiz_submitted = function() {
 
 }
 
+var complete = function() {
+  var comments = document.getElementById("comments").value;
+	psiTurk.showPage('complete.html');
+  log_data('comments', comments);
+	psiTurk.recordTrialData(to_log);
+  psiTurk.saveData();
+	psiTurk.completeHIT();
+}
+
+
+
 // Task object to keep track of the current phase
 var currentview;
 
@@ -399,8 +410,8 @@ $(window).load( function(){
     	function() {
 				//progress_20q_instructs();
 				//currentview = start_shapegame();
-				//currentview = start_20q_game();
-    	  currentview = show_questions();
+				currentview = start_20q_game();
+    	  //currentview = show_questions();
 				//currentview = do_quiz();
 				//currentview = start_20q_game();
 				//currentview = show_questions();
