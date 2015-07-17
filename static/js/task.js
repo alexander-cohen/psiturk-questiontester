@@ -26,6 +26,7 @@ var pages = [
 	"instructions/instruct-2.html",
 	"instructions/instruct-ready.html",
 
+	"freeform-resp.html",
 	"quiz.html",
 	"stage.html",
 	"setup.html",
@@ -192,8 +193,32 @@ var show_questions = function(first_time) {
 
 }
 
-
 var get_data = function() {
+	psiTurk.showPage('freeform-resp.html');
+
+	var knowledge_arr = question_answer_pairs;
+	$("#prev-questions").html("");
+
+	for(var k = 0; k < knowledge_arr.length; k++) {
+	  var knowledge_piece = knowledge_arr[k]
+	  $("#prev-questions").prepend("<h4>" + features[knowledge_piece[0]] + "</h4>" +
+	                images[knowledge_piece[1]] + "<hr>");
+	}
+
+	$("#prev-questions").find( $("img") ).attr("width", 600);
+	$("#prev-questions").find( $("div") ).css("margin-left", -103);
+	$("#prev-questions").css("margin-left", "50px");
+	$("#prev-questions").find( $("div") ).css("margin-right", -103);
+
+}
+
+var freeform_resp_submitted = function() {
+	alert($("#quest-form").val());
+	psiTurk.recordUnstructuredData('quest-choice', $("#quest-form").val());
+	get_data_ranked();
+}
+
+var get_data_ranked = function() {
 	psiTurk.showPage('stage.html');
 
 	var question_options = ['Question1',
@@ -373,12 +398,10 @@ $(window).load( function(){
     psiTurk.doInstructions(
     	instructionPages, // a list of pages you want to display in sequence
     	function() {
-				progress_20q_instructs();
+				//progress_20q_instructs();
 				//currentview = start_shapegame();
 				//currentview = start_20q_game();
-    	  //currentview = show_questions();
-				//currentview = show_questions();
-				//currentview = show_questions();
+    	  currentview = show_questions();
 				//currentview = do_quiz();
 				//currentview = start_20q_game();
 				//currentview = show_questions();
