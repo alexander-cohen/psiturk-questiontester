@@ -73,7 +73,7 @@ var features =  ['IS IT AN ANIMAL?', 'IS IT A BODY PART?', 'IS IT A BUILDING?', 
 var quizquestions;
 var quizquestion_on = 0;
 var oneshot_instruct_on = 1;
-var depth = 4 ;
+var depth = 15;
 var QUIZ_QUESTIONS = 2;
 var quiz_question_itr = 0;
 

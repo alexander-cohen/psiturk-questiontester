@@ -1,0 +1,80 @@
+<div id="container-instructions" instruct_num = '2'>
+
+      <h1>Instructions</h1>
+
+      <hr>
+
+      <div class="instructions well">
+
+        <p>
+          Here is a more complete list of possible categories. However if you think it
+          could be an object that fits into a category <strong>not</strong> on
+          this list, that is still possible.
+        </p>
+        <ul>
+          <li>Animals</li>
+          <li>Insects</li>
+          <li>Plants</li>
+          <li>Food</li>
+          <li>Household items</li>
+          <li>Tools</li>
+          <li>Clothing</li>
+          <li>Modes of transportation</li>
+          <li>Sports</li>
+          <li>Objects</li>
+          <li>Other tangible items</li>
+        </ul>
+
+        <p>Nothing in the following list will appear:</p>
+        <ul>
+          <li>Specific people</li>
+          <li>Places</li>
+          <li>Proper nouns</li>
+          <li>Ideas</li>
+          <li>Verbs</li>
+          <li>Adjectives</li>
+          <li>Adverbs</li>
+        </ul>
+
+        <p>
+          In short, all 'things' are a possibility, and nothing else.
+          There are only nouns in the list.
+        </p>
+
+      </div>
+
+      <hr>
+
+      <style>
+        #next {
+            opacity: 0;
+            float: right;
+        }
+      </style>
+
+      <script>
+          setTimeout(function() {
+              $("#next").fadeTo('slow', 1.0, function(){
+  							$("#next").removeAttr('disabled')
+  						});
+          }, 1000)
+      </script>
+
+    <div class="instructionsnav">
+        <div class="row">
+            <div class="col-xs-2">
+                <button type="button" id="previous" value="next" class="btn btn-primary btn-lg previous">
+                <span class="glyphicon glyphicon-arrow-left"></span> Previous
+                </button>
+            </div>
+            <div class="col-xs-8">
+            </div>
+            <div class="col-xs-2">
+                <button type="button" id="next" value="next" class="btn btn-primary btn-lg continue" onclick="progress_20q_instructs()" disabled>
+                Next <span class="glyphicon glyphicon-arrow-right"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>
