@@ -11,7 +11,7 @@
 				game. It will involve you asking a series of questions, and getting responses
 				from the computer. You will use these responses to try and figure out what
 				item the computer is thinking of. At any point you may guess what the item is,
-				but after ___ questions you will be moved on to the next game.
+				but after 25 questions you will be moved on to the next game.
 	    </p>
 
 	    <script type="text/javascript">
@@ -25,9 +25,10 @@
     <style>
         #next {
             opacity: 0;
-
+            float: right;
         }
     </style>
+
     <script>
         setTimeout(function() {
             $("#next").fadeTo('slow', 1.0, function(){

@@ -20,6 +20,8 @@ var pages = [
 	"instructions/instruct_20q-2.html",
 	"instructions/instruct_20q-3.html",
 
+	"instructions/instruct_20q-objectquiz.html",
+
 	"instructions/instruct-1.html",
 	"instructions/instruct-2.html",
 	"instructions/instruct-ready.html",
@@ -313,7 +315,7 @@ var show_fullgame_instructs = function() {
 }
 
 
-var progress_oneshot_instructs = function(){
+var progress_oneshot_instructs = function() {
 	if(oneshot_instruct_on >= 3) {
 		show_questions();
 		return;
@@ -322,8 +324,8 @@ var progress_oneshot_instructs = function(){
 	oneshot_instruct_on++;
 }
 
-var progress_20q_instructs = function(){
-	if(fullgame_instruct_on >= 4) {
+var progress_20q_instructs = function() {
+	if(fullgame_instruct_on >= 5) {
 		start_20q_game();
 		return;
 	}
@@ -331,6 +333,35 @@ var progress_20q_instructs = function(){
 	fullgame_instruct_on++;
 }
 
+var do_objectquiz = function() {
+	psiTurk.showPage('instructions/instruct_20q-objectquiz.html');
+}
+
+var objectquiz_submitted = function() {
+	var correct_answers = {"Animals":true,
+												 "Places":false,
+												 "People":false,
+												 "Household objects":true,
+												 "Plants":true,
+												 "Verbs":false,
+												 "Tangible things":true,
+												 "Adjectives":false};
+
+	var amount_incorrect = 0;
+	for(var name in correct_answers) {
+		if(correct_answers[name] != $("input[value='" + name + "']").is(':checked'))
+			amount_incorrect++;
+	}
+
+	if(amount_incorrect == 0) {
+		make_alert("Congratulations, you answered the quiz completely correctly!", progress_20q_instructs);
+	}
+	else {
+		make_alert("Unfortunately, you got <strong>" + amount_incorrect +
+			"</strong> incorrect. Please take another look at the object list and try again.", function(){psiTurk.showPage('instructions/instruct_20q-2.html')});
+	}
+
+}
 
 // Task object to keep track of the current phase
 var currentview;
@@ -342,9 +373,10 @@ $(window).load( function(){
     psiTurk.doInstructions(
     	instructionPages, // a list of pages you want to display in sequence
     	function() {
+				progress_20q_instructs();
 				//currentview = start_shapegame();
 				//currentview = start_20q_game();
-    	  currentview = show_questions();
+    	  //currentview = show_questions();
 				//currentview = show_questions();
 				//currentview = show_questions();
 				//currentview = do_quiz();
