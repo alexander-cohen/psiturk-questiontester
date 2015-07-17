@@ -195,24 +195,18 @@ var get_data = function() {
 	psiTurk.showPage('stage.html');
 
 	var question_options = ['Question1',
-	                        'Question2',
-	                        'Question3',
-	                        'Question4'];
+													'Question2',
+													'Question3',
+													'Question4'];
 
-
-	var options = '<option value="#" selected="selected">Pick a question</option>';
-	for(var i = 0; i < 4; i++) {
-		$("#q" + i.toString()).html(question_options[i]);
-		options += '<option value="' + question_options[i] + '">' + question_options[i] + '</option>';
-	}
 
 	var knowledge_arr = question_answer_pairs;
 	$("#prev-questions").html("");
 
 	for(var k = 0; k < knowledge_arr.length; k++) {
-		var knowledge_piece = knowledge_arr[k]
-		$("#prev-questions").prepend("<h4>" + features[knowledge_piece[0]] + "</h4>" +
-									images[knowledge_piece[1]] + "<hr>");
+	  var knowledge_piece = knowledge_arr[k]
+	  $("#prev-questions").prepend("<h4>" + features[knowledge_piece[0]] + "</h4>" +
+	                images[knowledge_piece[1]] + "<hr>");
 	}
 
 	$("#prev-questions").find( $("img") ).attr("width", 600);
@@ -220,51 +214,21 @@ var get_data = function() {
 	$("#prev-questions").css("margin-left", "50px");
 	$("#prev-questions").find( $("div") ).css("margin-right", -103);
 
-	$("select").html(options);
-
-  (function () {
-    var previous;
-
-    $("select").on('focus', function () {
-        // Store the current value on focus and on change
-        previous = this.value;
-    }).change(function() {
-        var sId = this.id; // store off the changed element id
-        var vId = this.value; // store off the changed element value
-
-        $('select').each( function(){ // this loops across the same set of elements
-            if(this.id != sId && vId != "#") {
-              $(this).find("[value="+vId+"]").remove();
-            }
-        });
-
-        $('select').each( function() {
-           var num = 0;
-            $(this).find("[value="+previous+"]").each(function(){
-              num++;
-            })
-            if(num == 0) {
-              $(this).append("<option value=" + previous + ">" + previous + "</option>");
-            }
-        })
-
-    });
-  })();
-
-  $('select').on('change', function(event){ // This binds listeners to the change event on all the select elements
-
-  });
+	for(var i = 0; i < 4; i++) {
+		$("#q"+i).find('p').html(question_options[i]);
+	}
 }
 
 var answer_chosen = function() {
-	if($("#1").val() == "#" ||
-		$("#2").val() == "#" ||
-		$("#3").val() == "#" ||
-		$("#4").val() == "#") make_alert("Please choose a question for each rank", function(){});
+	var ordered = $("#ranked").sortable("toArray");
+
+
+	if(ordered.length < 4) make_alert("Please rank every question", function(){});
 
 
 	else {
-		psiTurk.recordTrialData(["Final choice", question_answer_pairs, [$("#1").val(), $("#2").val(), $("#3").val(), $("#4").val()] ] );
+		var ordered_arr = [ ordered[0].charAt(1), ordered[1].charAt(1), ordered[2].charAt(1), ordered[3].charAt(1) ];
+		psiTurk.recordTrialData(["Final choice", question_answer_pairs, ordered_arr]);
 		make_alert("Thank you! You will now go back and do the exact same thing, "+
 								"but with a <strong>different</strong> game. Remember, we are "+
 								"starting completely fresh!", show_questions);
@@ -379,7 +343,8 @@ $(window).load( function(){
     	instructionPages, // a list of pages you want to display in sequence
     	function() {
 				//currentview = start_shapegame();
-    		currentview = show_questions();
+    		//currentview = show_questions();
+				currentview = show_questions();
 				//currentview = show_questions();
 				//currentview = do_quiz();
 				//currentview = start_20q_game();

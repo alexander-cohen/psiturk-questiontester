@@ -1,99 +1,66 @@
 <div id="container-exp">
+  <div id='sortable-lists' style='margin-left: 100px; margin-top: 50px'>
+    <style>
+      #options, #ranked {
+        border: 3px solid #eee;
+        width: 500px;
+        min-height: 75px;
+        list-style-type: none;
+        margin: 0;
+        padding: 5px 5px 5px 5px;
+        float: left;
+      }
+      #options li, #ranked li {
+        margin: 5px 5px 5px 5px;
+        padding: 5px;
+        font-size: 1.2em;
+        width: 98%;
+      }
 
-    <div style="margin-left:25px; margin-top:50px; margin-right:0px; margin-bottom:50px; float: left; width: 400px">
-      <p>
-        Please select your rankings. If you want to change the order, just
-        put the value one of the ones you want to change back to default, change
-        the other one, and then change the first.
-      <p>
-      <div id="questions" style="margin-top: 25px">
-        <p>Questions:</p>
-        <ul>
-          <li> <p id='q0'></p> </li>
-          <li> <p id='q1'></p> </li>
-          <li> <p id='q2'></p> </li>
-          <li> <p id='q3'></p> </li>
+      li:hover {
+        cursor: move;
+      }
+
+      li:active {
+        cursor: move;
+      }
+
+    </style>
+    <script>
+        $(function() {
+          $( "#options, #ranked" ).sortable({
+            connectWith: ".connectedSortable"
+          }).disableSelection();
+        });
+    </script>
+
+    <div id='questions' style='float:left'>
+      <h2>Please rank the given questions</h2>
+      <div id='question-list' style='float: left; margin-right: 30px; margin-bottom:60px'>
+        <h3>Given Questions</h3>
+        <ul id="options" class="connectedSortable">
+          <li class="ui-state-default" align='center' id='q0'><p align='center'></p></li>
+          <li class="ui-state-default" align='center' id='q1'><p align='center'></p></li>
+          <li class="ui-state-default" align='center' id='q2'><p align='center'></p></li>
+          <li class="ui-state-default" align='center' id='q3'><p align='center'></p></li>
         </ul>
-
       </div>
 
-      <table>
+      <div id='ranked-list' style='clear: left'>
+        <h3>Ranked questions</h3>
+        <ul id="ranked" class="connectedSortable">
+        </ul>
+      </div>
 
-      <tr><td>1). </td><td><select id="1" name="1">
+      <div style='clear:left;'>
+        <button onclick="answer_chosen();" type="button" class="btn btn-success" id="submit-button" style="margin-top:15px">Submit</button>
+      </div>
 
-      </select></td></tr>
-
-      <tr><td>2). </td><td><select id="2" name="2">
-
-      </select></td></tr>
-
-      <tr><td>3). </td><td><select id="3" name="3">
-
-      </select></td></tr>
-
-      <tr><td>4). </td><td><select id="4" name="4">
-
-      </select></td></tr>
-      </table>
-      <button onclick="answer_chosen();" type="button" class="btn btn-success" id="submit-button" style="margin-top:15px">Submit</button>
     </div>
 
-    <div id="prev-questions" style="float: left; margin-top: 50px"></div>
+    <div id='prev-questions' style='float:left'>
+    </div>
+
+  </div>
 
 </div>
-
-<style>
-  table {
-    border-collapse: collapse;
-  }
-
-  table {
-    border-collapse: collapse;
-  }
-
-  td {
-      padding-top: .5em;
-      padding-bottom: .5em;
-      padding-left: 1.0em;
-  }
-
-</style>
-
-<!--
-<script>
-  $("select").html(options);
-
-  (function () {
-    var previous;
-
-    $("select").on('focus', function () {
-        // Store the current value on focus and on change
-        previous = this.value;
-    }).change(function() {
-        var sId = this.id; // store off the changed element id
-        var vId = this.value; // store off the changed element value
-
-        $('select').each( function(){ // this loops across the same set of elements
-            if(this.id != sId && vId != "#") {
-              $(this).find("[value="+vId+"]").remove();
-            }
-        });
-
-        $('select').each( function() {
-           var num = 0;
-            $(this).find("[value="+previous+"]").each(function(){
-              num++;
-            })
-            if(num == 0) {
-              $(this).append("<option value=" + previous + ">" + previous + "</option>");
-            }
-        })
-
-    });
-  })();
-
-  $('select').on('change', function(event){ // This binds listeners to the change event on all the select elements
-
-    });
-</script>
--->

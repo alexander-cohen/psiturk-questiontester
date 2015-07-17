@@ -40727,3 +40727,50 @@ ImportError: cannot import name custom_code
 2015-07-16 13:59:35,920 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
 2015-07-16 13:59:35,921 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
 2015-07-16 13:59:35,928 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-16 18:56:11,515 Exception on /jquery.sortable.js [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 665, in regularpage
+    return render_template(pagename)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 830, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 791, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 765, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: jquery.sortable.js
+[2015-07-16 21:18:36 -0400] [3061] [CRITICAL] WORKER TIMEOUT (pid:3072)
+[2015-07-16 21:18:36 -0400] [3061] [CRITICAL] WORKER TIMEOUT (pid:3073)
+[2015-07-16 21:18:36 -0400] [3061] [CRITICAL] WORKER TIMEOUT (pid:3065)
+[2015-07-16 21:18:36 -0400] [3061] [CRITICAL] WORKER TIMEOUT (pid:3066)
+[2015-07-16 21:18:36 -0400] [3061] [CRITICAL] WORKER TIMEOUT (pid:3067)
+[2015-07-16 21:18:36 -0400] [3061] [CRITICAL] WORKER TIMEOUT (pid:3068)
+[2015-07-16 21:18:36 -0400] [3061] [CRITICAL] WORKER TIMEOUT (pid:3069)
+[2015-07-16 21:18:36 -0400] [3061] [CRITICAL] WORKER TIMEOUT (pid:3070)
+[2015-07-16 21:18:36 -0400] [3061] [CRITICAL] WORKER TIMEOUT (pid:3071)
+2015-07-16 21:18:49,405 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-16 21:18:50,922 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-16 21:18:50,961 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-16 21:18:50,976 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-16 21:18:50,979 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-16 21:18:50,987 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-16 21:18:50,997 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-16 21:18:51,022 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-07-16 21:18:51,025 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-07-16 22:05:55 -0400] [3061] [CRITICAL] WORKER TIMEOUT (pid:8685)
+2015-07-16 22:06:02,771 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
