@@ -342,9 +342,9 @@ $(window).load( function(){
     psiTurk.doInstructions(
     	instructionPages, // a list of pages you want to display in sequence
     	function() {
-				currentview = start_shapegame();
+				//currentview = start_shapegame();
 				//currentview = start_20q_game();
-    		//currentview = show_questions();
+    	  currentview = show_questions();
 				//currentview = show_questions();
 				//currentview = show_questions();
 				//currentview = do_quiz();
