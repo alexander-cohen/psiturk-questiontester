@@ -161,7 +161,7 @@ var show_questions = function(first_time) {
 
 
 	if(first_time) {
-		question_answer_pairs = question_answer_pairs_indx[rand_num_incl(0, question_answer_pairs_indx.length - 1)].slice(0, 4);
+		question_answer_pairs = question_answer_pairs_indx[rand_num_incl(0, question_answer_pairs_indx.length - 1)].slice(0, depth);
 		psiTurk.showPage('setup.html');
 
 		for(var i = 0; i < 1; i++) {
