@@ -82,13 +82,13 @@ var pre_20q = function() {
 					info_gains = data.split(',')[1].split(":");
 					console.log(new_questions);
 					var questions_to_ask = shuffle([[new_questions[2], info_gains[2]],
-																					[new_questions[8], info_gains[8]],
-																					[new_questions[16], info_gains[16]],
-																					[new_questions[24], info_gains[24]],
-																					[new_questions[32], info_gains[32]],
-																					[new_questions[40], info_gains[40]],
-																					[new_questions[48], info_gains[48]],
-																					[new_questions[56], info_gains[56]]]);
+																					[new_questions[10], info_gains[10]],
+																					[new_questions[18], info_gains[18]],
+																					[new_questions[26], info_gains[26]],
+																					[new_questions[34], info_gains[34]],
+																					[new_questions[42], info_gains[42]],
+																					[new_questions[50], info_gains[50]],
+																					[new_questions[58], info_gains[58]]]);
 					for(var i = 0; i < 8; i++) {
 						$('#q'+ i.toString()).next('label').html('<span class="question-text">' + questions_to_ask[i][0] + '</span>');
 						$('#q'+ i.toString()).next('label').attr("info-gain", questions_to_ask[i][1]);
