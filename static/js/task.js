@@ -19,6 +19,7 @@ var pages = [
 	"instructions/instruct_20q-1.html",
 	"instructions/instruct_20q-2.html",
 	"instructions/instruct_20q-3.html",
+	"instructions/instruct_20q-4.html",
 
 	"instructions/instruct_20q-objectquiz.html",
 
@@ -408,9 +409,9 @@ $(window).load( function(){
     psiTurk.doInstructions(
     	instructionPages, // a list of pages you want to display in sequence
     	function() {
-				//progress_20q_instructs();
+				progress_20q_instructs();
 				//currentview = start_shapegame();
-				currentview = start_20q_game();
+				//currentview = start_20q_game();
     	  //currentview = show_questions();
 				//currentview = do_quiz();
 				//currentview = start_20q_game();
