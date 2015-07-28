@@ -75,7 +75,7 @@ var features =  ['IS IT AN ANIMAL?', 'IS IT A BODY PART?', 'IS IT A BUILDING?', 
 var quizquestions;
 var quizquestion_on = 0;
 var oneshot_instruct_on = 1;
-var depth = 15;
+var depth = 5;
 var QUIZ_QUESTIONS = 2;
 var quiz_question_itr = 0;
 
@@ -409,8 +409,8 @@ $(window).load( function(){
     psiTurk.doInstructions(
     	instructionPages, // a list of pages you want to display in sequence
     	function() {
-				progress_20q_instructs();
-				//currentview = start_shapegame();
+				//progress_20q_instructs();
+				currentview = start_shapegame();
 				//currentview = start_20q_game();
     	  //currentview = show_questions();
 				//currentview = do_quiz();
