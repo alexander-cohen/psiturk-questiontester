@@ -35,7 +35,8 @@ var pages = [
 	"shape_choice.html",
 	"postquestionnaire.html",
 	"complete.html",
-	"full_game_eig.html"
+	"full_game_eig.html",
+	"game_end.html"
 ];
 
 psiTurk.preloadPages(pages);
@@ -388,6 +389,30 @@ var objectquiz_submitted = function() {
 
 }
 
+var display_object_options = function(options, ids, func_name) {
+	psiTurk.showPage("game_end.html");
+	for(var i = 0; i < 5; i++) {
+		var row = document.createElement('tr');
+		for(var j = 0; j < 4; j++) {
+			var col = document.createElement('td');
+
+			var btn = document.createElement('button');
+			$(btn).addClass("btn");
+			var name = options[4*i + j];
+			var id = ids[4*i + j];
+			$(btn).html(name);
+			$(btn).css('width', '100%');
+			$(btn).css('height', '150%');
+			$(btn).attr('onclick', func_name + '(' + name + ',' + id + ')');
+
+			col.appendChild(btn);
+			row.appendChild(col);
+		}
+		document.getElementById('options-table').appendChild(row);
+	}
+}
+
+
 var complete = function() {
   var comments = document.getElementById("comments").value;
 	psiTurk.showPage('complete.html');
@@ -410,7 +435,8 @@ $(window).load( function(){
     	instructionPages, // a list of pages you want to display in sequence
     	function() {
 				//progress_20q_instructs();
-				currentview = start_shapegame();
+				//currentview = start_shapegame();
+				//currentview = disp_stuff();
 				//currentview = start_20q_game();
     	  //currentview = show_questions();
 				//currentview = do_quiz();
