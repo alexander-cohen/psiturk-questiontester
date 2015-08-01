@@ -389,17 +389,17 @@ var objectquiz_submitted = function() {
 
 }
 
-var display_object_options = function(options, ids, func_name) {
+var display_object_options = function(options, ids, rows, cols, func_name) {
 	psiTurk.showPage("game_end.html");
-	for(var i = 0; i < 5; i++) {
+	for(var i = 0; i < rows; i++) {
 		var row = document.createElement('tr');
-		for(var j = 0; j < 4; j++) {
+		for(var j = 0; j < cols; j++) {
 			var col = document.createElement('td');
 
 			var btn = document.createElement('button');
 			$(btn).addClass("btn");
-			var name = options[4*i + j];
-			var id = ids[4*i + j];
+			var name = options[cols*i + j];
+			var id = ids[cols*i + j];
 			$(btn).html(name);
 			$(btn).css('width', '100%');
 			$(btn).css('height', '150%');
@@ -442,6 +442,7 @@ $(window).load( function(){
 				//currentview = do_quiz();
 				//currentview = start_20q_game();
 				//currentview = show_questions();
+				start_20q_game();
     	} // what you want to do when you are done with instructions
     );
 });

@@ -231,6 +231,16 @@ var guess_submitted = function() {
 
 }
 
+var option_clicked_20q = function(item, indx) {
+
+}
+
+var end_pressed = function() {
+	var options = ['1','2','3','4','5','6','7', '1','2','3','4','5','6','7', '1','2','3','4','5','6'];
+	var indexes = ['1','2','3','4','5','6','7', '1','2','3','4','5','6','7', '1','2','3','4','5','6'];
+	display_object_options(options, indexes, 5, 4, 'option_clicked_20q');
+}
+
 var finish_guess_submitted = function() {
 	if(game_on == 0) {
 		make_alert("Now you will do the same thing, but if you do well, you will recieve a bonus." +

@@ -118,11 +118,10 @@
 				<br><br>
 				Keep in mind, you only get 1 guess! Try to use it wisely!
 			</form>
-			<form id="guess-form">
-				<input type="submit" class="btn btn-continue" id="submit-button-guess" title="End">
-				<br><br>
-				Keep in mind, there is no going back! Once you end, it is over
-			</form>
+
+			<button id='end-button' type='submit' onclick='end_pressed()' class='btn btn-success' style='margin-top:20px'>
+				End
+			</button>
 
 			<script>
 					$('#guess-form').submit(function(event) {
