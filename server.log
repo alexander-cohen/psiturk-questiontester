@@ -41473,3 +41473,13 @@ NameError: global name 'choice' is not defined
 2015-07-31 10:19:19,632 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
 2015-07-31 10:19:19,642 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
 2015-07-31 10:19:19,643 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-03 14:28:10,526 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-03 14:28:12,271 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-03 14:28:12,536 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-03 14:28:12,648 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-03 14:28:12,668 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-03 14:28:12,682 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-03 14:28:12,728 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-03 14:28:12,729 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-03 14:28:12,769 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-03 14:44:27,389 hit_assign_worker_id_not_set_in_exp (1003) {'question': [u'this experiment sucks']}

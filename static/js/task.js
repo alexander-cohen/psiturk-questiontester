@@ -179,6 +179,7 @@ var show_questions = function(first_time) {
 		}
 
 		$("#block1").css('opacity', '1.0');
+		quizquestions = shuffle(question_answer_pairs.slice());
 	}
 
 	else {
@@ -199,7 +200,7 @@ var show_questions = function(first_time) {
 		$("#next").removeAttr('disabled');
 	}
 
-	quizquestions = shuffle(question_answer_pairs.slice());
+
 
 }
 
@@ -441,8 +442,8 @@ $(window).load( function(){
     	  //currentview = show_questions();
 				//currentview = do_quiz();
 				//currentview = start_20q_game();
-				//currentview = show_questions();
-				start_20q_game();
+				currentview = show_questions();
+				//start_20q_game();
     	} // what you want to do when you are done with instructions
     );
 });

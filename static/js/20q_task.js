@@ -224,8 +224,6 @@ var guess_submitted = function() {
 					);
 				}
 			}
-
-
 		}
 	})
 
