@@ -41483,3 +41483,11 @@ NameError: global name 'choice' is not defined
 2015-08-03 14:28:12,729 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
 2015-08-03 14:28:12,769 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
 2015-08-03 14:44:27,389 hit_assign_worker_id_not_set_in_exp (1003) {'question': [u'this experiment sucks']}
+[2015-08-03 20:23:54 -0400] [6255] [CRITICAL] WORKER TIMEOUT (pid:6259)
+[2015-08-03 20:23:55 -0400] [6255] [CRITICAL] WORKER TIMEOUT (pid:6261)
+[2015-08-03 20:23:55 -0400] [6255] [CRITICAL] WORKER TIMEOUT (pid:6264)
+[2015-08-03 20:23:55 -0400] [6255] [CRITICAL] WORKER TIMEOUT (pid:6265)
+2015-08-03 20:24:07,837 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-03 20:24:08,550 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-03 20:24:08,582 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-03 20:24:08,606 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
