@@ -21,7 +21,10 @@ from similarities import *
 import editdistance
 
 from random import randint
+from random import sample
 from random import choice
+from random import shuffle
+
 
 # load the configuration options
 config = PsiturkConfig()
@@ -116,7 +119,23 @@ def get_similarity():
 def get_rand_object():
     try:
         #qa,lreturn str(items[randint(0, 1000)])
-        return str(items[choice([0,1,36,29,833,26,3,1,167,171,402])])
+        return str(items[choice(range(999))])
+
+    except TemplateNotFound:
+        abort(404)
+
+@custom_code.route('/get_rand_objects_without', methods=['GET'])
+def get_rand_objects_without():
+    try:
+        #qa,lreturn str(items[randint(0, 1000)])
+        options = range(999)
+        obj = str(request.args['object'])
+        amount = int(str(request.args['amount']))
+        options.remove(items.index(obj))
+        item_choices = sample(options, amount-1)
+        item_choices.append(items.index(obj))
+        shuffle(item_choices)
+        return ':'.join([items[i] for i in item_choices]) + ',' + ':'.join([str(i) for i in item_choices])
 
     except TemplateNotFound:
         abort(404)

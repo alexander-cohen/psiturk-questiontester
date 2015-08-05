@@ -229,14 +229,60 @@ var guess_submitted = function() {
 
 }
 
-var option_clicked_20q = function(item, indx) {
+var option_clicked_20q = function(item_chosen, indx) {
+	var correct = item_chosen == item;
+	if(correct) {
+		if(game_on == 0) make_alert("Correct! Good job!", finish_guess_submitted);
+		else {
+			make_alert("Correct! Good guess! You will recieve a bonus of $" + bonus().toFixed(2), finish_guess_submitted);
+		}
+	}
+	else {
+		if(game_on == 0) {
+			make_alert("Incorrect, sorry. The object is <strong>" + item + "</strong>.", finish_guess_submitted);
+		}
+		else {
 
+			$("<p>Incorrect, I am sorry but you do not recieve a bonus. The object is <strong>" + item + "</strong>. Go to next game. If you think you got it right and would like to contest this, your complaint will be recorded and your response will be reviewed. If it is deemed correct, you will recieve your bonus.</p>").dialog(
+					{
+						dialogClass: "no-close",
+							modal:true, //Not necessary but dims the page background
+							width: 400,
+							buttons:{
+								'Continue':function() {
+										finish_guess_submitted();
+									 },
+									'Complain':function() {
+											psiTurk.recordUnstructuredData("complaint", $("#guess-box").val().toUpperCase() + ":" + item.toUpperCase());
+										finish_guess_submitted();
+									 }
+
+							},
+							close: function(event, ui) {
+								finish_guess_submitted();
+							}
+					}
+			);
+		}
+	}
 }
 
+
 var end_pressed = function() {
-	var options = ['1','2','3','4','5','6','7', '1','2','3','4','5','6','7', '1','2','3','4','5','6'];
-	var indexes = ['1','2','3','4','5','6','7', '1','2','3','4','5','6','7', '1','2','3','4','5','6'];
-	display_object_options(options, indexes, 5, 4, 'option_clicked_20q');
+
+	$.ajax({
+		url: "/get_rand_objects_without",
+		type: "GET",
+		data: {"object":item, amount:'20'},
+		success: function(data) {
+			var split = data.split(',');
+			var options = split[0].split(':');
+			var indexes = split[1].split(':');
+			display_object_options(options, indexes, 5, 4, 'option_clicked_20q');
+		}
+	})
+
+
 }
 
 var finish_guess_submitted = function() {

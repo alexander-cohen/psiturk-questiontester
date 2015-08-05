@@ -392,6 +392,7 @@ var objectquiz_submitted = function() {
 
 var display_object_options = function(options, ids, rows, cols, func_name) {
 	psiTurk.showPage("game_end.html");
+
 	for(var i = 0; i < rows; i++) {
 		var row = document.createElement('tr');
 		for(var j = 0; j < cols; j++) {
@@ -404,13 +405,18 @@ var display_object_options = function(options, ids, rows, cols, func_name) {
 			$(btn).html(name);
 			$(btn).css('width', '100%');
 			$(btn).css('height', '150%');
-			$(btn).attr('onclick', func_name + '(' + name + ',' + id + ')');
+			$(btn).attr('onclick', func_name + '("' + name + '",' + id + ')');
 
 			col.appendChild(btn);
 			row.appendChild(col);
 		}
 		document.getElementById('options-table').appendChild(row);
 	}
+	$("button").hover(function(){
+		$(this).addClass('btn-primary');
+	}, function() {
+		$(this).removeClass('btn-primary');
+	});
 }
 
 
