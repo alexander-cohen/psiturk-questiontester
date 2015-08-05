@@ -58,7 +58,7 @@
             float: right;
         }
       </style>
-      
+
       <script>
           setTimeout(function() {
               $("#next").fadeTo('slow', 1.0, function(){
@@ -85,3 +85,22 @@
     </div>
 
 </div>
+<div class="skipbutton">
+  <div class="row">
+      <div class="col-xs-2">
+      </div>
+      <div class="col-xs-8">
+      </div>
+      <div class="col-xs-2">
+          <button type="button" class="btn btn-primary btn-lg continue" onclick="next_section(2)">
+          Next <span class="glyphicon glyphicon-arrow-right"></span>
+          </button>
+      </div>
+  </div>
+</div>
+<script>
+  if(no_skip_buttons) {
+    $('.skipbutton').html('');
+
+  }
+</script>

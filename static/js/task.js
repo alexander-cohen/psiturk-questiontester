@@ -10,7 +10,7 @@ var psiTurk = new PsiTurk(uniqueId, adServerLoc, mode);
 var mycondition = condition;  // these two variables are passed by the psiturk server process
 var mycounterbalance = counterbalance;  // they tell you which condition you have been assigned to
 // they are not used in the stroop code but may be useful to you
-
+var no_skip_buttons = false;
 // All pages to be loaded
 var pages = [
 	"instructions/instruct_oneshot-1.html",
@@ -423,7 +423,36 @@ var complete = function() {
 	psiTurk.completeHIT();
 }
 
-
+var next_section = function(section) {
+	if(section == "SHAPEINSTRUCTS" ||
+			section == 0) {
+		start_shapegame();
+	}
+	if(section == "SHAPEGAME" ||
+			section == 1) {
+		progress_20q_instructs();
+	}
+	if(section == "20QINSTRUCTS" ||
+			section == 2) {
+		start_20q_game();
+	}
+	if(section == "20QGAME" ||
+			section == 3) {
+		progress_oneshot_instructs();
+	}
+	if(section == "ONESHOTINSTRUCTS" ||
+			section == 4) {
+		show_questions();
+	}
+	if(section == "QUESTIONS" ||
+			section == 5) {
+		do_quiz();
+	}
+	if(section == "QUIZ" ||
+			section == 6) {
+		get_data();
+	}
+}
 
 // Task object to keep track of the current phase
 var currentview;
@@ -436,13 +465,13 @@ $(window).load( function(){
     	instructionPages, // a list of pages you want to display in sequence
     	function() {
 				//progress_20q_instructs();
-				//currentview = start_shapegame();
+				currentview = start_shapegame();
 				//currentview = disp_stuff();
 				//currentview = start_20q_game();
     	  //currentview = show_questions();
 				//currentview = do_quiz();
 				//currentview = start_20q_game();
-				currentview = show_questions();
+				//currentview = show_questions();
 				//start_20q_game();
     	} // what you want to do when you are done with instructions
     );
