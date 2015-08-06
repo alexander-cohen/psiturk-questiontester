@@ -167,8 +167,11 @@ var choicecomplete_20q = function() {
 					else knowledge += "," + choice + ":" + data;
 					//$("#prev-questions").css("margin-left", "0px");
 					$("#answer").html(images[data]);
-					$("#answer").prepend("<h2>"+choice+"</h2>");
-					$("#answer").append("<hr>");
+					$("#answer").prepend("<h4>"+choice+"</h4>");
+					$("#answer").css("border-style", 'solid');
+					$("#answer").css("border-color", 'DarkCyan');
+					$("#answer").css("border-width", 'thick');
+					$("#answer").css("margin-top", '15px');
 
 					$("#prev-questions").prepend($("#answer"));
 

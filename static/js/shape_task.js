@@ -56,7 +56,7 @@ function load_img_names_noshuffle() {
       if(j < 3) choice_str += '-';
     }
     shape_imgs.push('<img src="/static/images/shapes/' + choice_str + '.png"  alt=' +
-                      choice_str + ' width=150 bin_rep=' + base2 + '>');
+                      choice_str + ' width=100 bin_rep=' + base2 + '>');
   }
   return shape_imgs;
 }

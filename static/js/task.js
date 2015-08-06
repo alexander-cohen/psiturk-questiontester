@@ -494,7 +494,7 @@ var do_objectquiz = function() {
 
 var objectquiz_submitted = function() {
 	var correct_answers =   {"Animals":true,
-							 "Specific Places":false,
+							 "Buildings":true,
 							 "People":false,
 							 "Household objects":true,
 							 "Plants":true,
