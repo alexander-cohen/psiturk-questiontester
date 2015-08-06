@@ -101,6 +101,16 @@ var to_log = [];
 *
 ********************/
 
+
+$(document).ready(function() {
+	$(window).resize(function() {
+		if($(window).width() < 900) {
+			$("button:contains('Close')").click()
+			make_alert("Please make your window bigger", function(){})
+		}
+	});
+});
+
 function shuffle(o){
     for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
     return o;
@@ -349,6 +359,8 @@ var do_quiz = function() {
 
 
 var quizcomplete = function(resp) {
+	alert(quizquestions);
+	alert(quizquestions[0])
 	var correct_resp = quizquestions[0][1];
 	var correct = parseInt(resp) == correct_resp;
 
@@ -361,7 +373,9 @@ var quizcomplete = function(resp) {
 
 	if(!correct) {
 		make_alert("Incorrect, please go back and try again. Really pay attention this time!",
-			function(){show_questions(false);} );
+			function(){
+				show_questions(false);
+			});
 	}
 
 	else {
@@ -400,6 +414,10 @@ var show_fullgame_instructs = function() {
 	progress_20q_instructs();
 }
 
+var decrement_oneshot_instructs = function() {
+	oneshot_instruct_on--;
+	psiTurk.showPage('instructions/instruct_oneshot-' + (oneshot_instruct_on-1).toString() + '.html');
+}
 
 var progress_oneshot_instructs = function() {
 	if(oneshot_instruct_on >= 3) {
@@ -408,6 +426,12 @@ var progress_oneshot_instructs = function() {
 	}
 	psiTurk.showPage('instructions/instruct_oneshot-' + oneshot_instruct_on.toString() + '.html');
 	oneshot_instruct_on++;
+}
+
+var decrement_20q_instructions = function() {
+	fullgame_instruct_on--;
+	psiTurk.showPage('instructions/instruct_20q-' + (fullgame_instruct_on-1).toString() + '.html');
+
 }
 
 var progress_20q_instructs = function() {
@@ -444,7 +468,11 @@ var objectquiz_submitted = function() {
 	}
 	else {
 		make_alert("Unfortunately, you got <strong>" + amount_incorrect +
-			"</strong> incorrect. Please take another look at the object list and try again.", function(){psiTurk.showPage('instructions/instruct_20q-2.html')});
+			"</strong> incorrect. Please take another look at the object list and try again.", 
+				function() {
+					fullgame_instruct_on = 3;
+					psiTurk.showPage('instructions/instruct_20q-2.html');
+				});
 	}
 
 }
@@ -534,7 +562,7 @@ $(window).load( function(){
 				//get_data()
 				//currentview = disp_stuff();
 				//currentview = start_20q_game();
-    	  //currentview = show_questions();
+    	  		//currentview = show_questions();
 				//currentview = do_quiz();
 				//currentview = start_20q_game();
 				//currentview = show_questions();

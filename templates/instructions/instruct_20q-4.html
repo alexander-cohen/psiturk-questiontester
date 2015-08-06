@@ -29,17 +29,17 @@
           }, 1000)
       </script>
 
-    <div class="instructionsnav" style='position: fixed; bottom: 20px;'>
+    <div class="instructionsnav">
         <div class="row">
             <div class="col-xs-2">
-                <button type="button" id="previous" value="next" class="btn btn-primary btn-lg previous" style='position: fixed; left: 45px; bottom: 35px'>
+                <button type="button" id="previous" onclick="decrement_20q_instructions()" value="next" class="btn btn-primary btn-lg previous">
                 <span class="glyphicon glyphicon-arrow-left"></span> Previous
                 </button>
             </div>
             <div class="col-xs-8">
             </div>
             <div class="col-xs-2">
-                <button type="button" id="next" value="next" class="btn btn-primary btn-lg continue" onclick="progress_20q_instructs()" style='position: fixed; right: 45px; bottom: 35px' disabled>
+                <button type="button" id="next" value="next" class="btn btn-primary btn-lg continue"  onclick="progress_20q_instructs()" disabled>
                 Next <span class="glyphicon glyphicon-arrow-right"></span>
                 </button>
             </div>
