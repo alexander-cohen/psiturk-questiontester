@@ -114,6 +114,34 @@ def get_good_questions():
     except TemplateNotFound:
         abort(404)
 
+
+#----------------------------------------------
+# Get ordered info gain
+#----------------------------------------------
+@custom_code.route('/get_good_questions_norepeat', methods=['GET'])
+def get_good_questions_norepeat():
+    try:
+        player = Player()
+        knowledge = str(request.args['knowledge']).split(",")
+        shown = str(request.args['shown']).split(",")
+        for k in knowledge:
+            if k == "": continue
+            parts = k.split(":")
+            player.add_knowledge_name(parts[0], parts[1])
+
+        thresh = 2
+        to_remove = [s for s in list(set(shown)) if shown.count(s) >= thresh]
+
+        for s in to_remove:
+            try:
+                player.features_left.remove(features.index(s))
+            except:
+                pass
+
+        return player.ordered_features_name_and_gain_str()
+    except TemplateNotFound:
+        abort(404)
+
 #----------------------------------------------
 # Get if is similar object
 #----------------------------------------------

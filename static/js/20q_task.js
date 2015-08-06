@@ -21,6 +21,9 @@ var iterations = 1;
 var max_iterations = 30;
 var num_games = 2;
 var game_on = 0;
+var options_show = 4;
+
+var questions_shown = [];
 
 var bonus = function() {
 	return 1.0 - (iterations) * 0.05;
@@ -29,6 +32,7 @@ var bonus = function() {
 var start_20q_game = function() {
 	psiTurk.showPage("full_game_eig.html");
 	iterations = 0;
+	questions_shown = [];
 	$.ajax({
 		url: "/get_rand_object",
 		type: "GET",
@@ -57,6 +61,14 @@ var load_knowledge = function() {
 
 var pre_20q = function() {
 	psiTurk.showPage("full_game_eig.html");
+	for(var i = 0; i < options_show; i++) {
+		$("#answers").append(
+				'<div class="radio-question">' + 
+			      		'<input type="radio" name="q1" value="b" id="q' + i.toString() + '">' +
+			      			'<label style="margin:0.5em" for="q' + i.toString() + '"></label>' +
+			      		'</div>' 
+			);
+	}
 
 	load_knowledge();
 	$("#game-on").html("Game on: " + game_on.toString() + " / " + num_games.toString());
@@ -64,32 +76,38 @@ var pre_20q = function() {
 		$("#question-number").html("You have used up all your questions,<br>now you must guess an object");
 		$("#questions").html("<br><br>");
 	}
-
+ 
 	else {
 		$("#question-number").html("Question number: " + iterations.toString() + "/" + max_iterations.toString());
 		if(game_on > 0) $("#bonus").html("Bonus: $" + bonus().toFixed(2));
 		$("#submit-button").html(' <span class="glyphicon glyphicon-refresh spinning"></span> Loading...    ');
 		$("#submit-button").attr('disabled')
 		$("#answers").css('opacity', 0);
+
 		$.ajax({
-			url: "/get_good_questions",
+			url: "/get_good_questions_norepeat",
 			type: "GET",
-			data: {"knowledge":knowledge},
+			data: {"knowledge":knowledge, "shown":questions_shown.join()},
 			success: function(data) {
+					console.log(data);
 					$("#submit-button").html('Submit');
 					$("#submit-button").removeAttr('disabled');
 					new_questions = data.split(',')[0].split(":");
 					info_gains = data.split(',')[1].split(":");
 					console.log(new_questions);
-					var questions_to_ask = shuffle([[new_questions[2], info_gains[2]],
-																					[new_questions[29], info_gains[29]],
-																					[new_questions[56], info_gains[56]],
-																					[new_questions[83], info_gains[83]],
-																					[new_questions[110], info_gains[110]],
-																					[new_questions[137], info_gains[137]],
-																					[new_questions[164], info_gains[164]],
-																					[new_questions[191], info_gains[191]]]);
-					for(var i = 0; i < 8; i++) {
+					var start = 2;
+					var end = 218 - iterations;
+					var jump = Math.floor((end - start) / options_show);
+					var questions_to_ask = [];
+
+					for(var i = start, j = 0; j < options_show; i += jump, j++) {
+						console.log(i);
+						questions_to_ask[j] = [new_questions[i], info_gains[i]];
+						questions_shown.push(new_questions[i]);
+					}
+
+					var questions_to_ask = shuffle(questions_to_ask);
+					for(var i = 0; i < options_show ; i++) {
 						$('#q'+ i.toString()).next('label').html('<span class="question-text">' + questions_to_ask[i][0] + '</span>');
 						$('#q'+ i.toString()).next('label').attr("info-gain", questions_to_ask[i][1]);
 					}
@@ -126,6 +144,7 @@ var show_info_gain = function() {
 }
 
 var choicecomplete_20q = function() {
+	if($("#submit-button").hasClass("spinning")) return;
 	if($("#submit-button").html() == "Submit") {
 		var choice = $("input[name=q1]:checked").next('label').find('.question-text').html();
 		var info_gain = $("input[name=q1]:checked").next('label').attr("info-gain");

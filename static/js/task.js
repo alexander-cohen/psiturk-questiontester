@@ -89,6 +89,7 @@ var quiz_question_itr = 0;
 
 var fullgame_instruct_on = 1;
 
+
 var to_log = [];
 
 /********************
@@ -104,9 +105,19 @@ var to_log = [];
 
 $(document).ready(function() {
 	$(window).resize(function() {
-		if($(window).width() < 900) {
+		if($(window).width() < 925) {
+			$("button:contains('Close')").removeAttr('disabled');
+			$("button:contains('Close')").removeAttr('hidden');
 			$("button:contains('Close')").click()
 			make_alert("Please make your window bigger", function(){})
+			$("button:contains('Close')").prop('disabled', true);
+			$("button:contains('Close')").prop('hidden', true);
+			$(".ui-dialog-buttonpane").css("border", "0px");
+		}
+		else {
+			$("button:contains('Close')").removeAttr('disabled');
+			$("button:contains('Close')").removeAttr('hidden');
+			$("button:contains('Close')").click()
 		}
 	});
 });

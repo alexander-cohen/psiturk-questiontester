@@ -41705,3 +41705,555 @@ NameError: global name 'choice' is not defined
 2015-08-06 10:30:01,675 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
 2015-08-06 10:30:01,746 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
 2015-08-06 10:30:01,794 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:05:21,468 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:05:23,119 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:05:23,174 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:05:23,260 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:05:23,340 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:05:23,378 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:05:23,419 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:05:23,425 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:05:23,464 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:05:33,436 Exception on /get_good_questions_norepeat [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 133, in get_good_questions_norepeat
+    player.features_left.remove(features.index(s))
+ValueError: '' is not in list
+2015-08-06 13:05:49,651 Exception on /get_good_questions_norepeat [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 133, in get_good_questions_norepeat
+    player.features_left.remove(features.index(s))
+ValueError: '' is not in list
+2015-08-06 13:05:51,320 Exception on /get_good_questions_norepeat [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 133, in get_good_questions_norepeat
+    player.features_left.remove(features.index(s))
+ValueError: '' is not in list
+2015-08-06 13:05:51,618 Exception on /get_good_questions_norepeat [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 133, in get_good_questions_norepeat
+    player.features_left.remove(features.index(s))
+ValueError: '' is not in list
+2015-08-06 13:05:51,822 Exception on /get_good_questions_norepeat [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 133, in get_good_questions_norepeat
+    player.features_left.remove(features.index(s))
+ValueError: '' is not in list
+2015-08-06 13:05:52,011 Exception on /get_good_questions_norepeat [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 133, in get_good_questions_norepeat
+    player.features_left.remove(features.index(s))
+ValueError: '' is not in list
+2015-08-06 13:05:52,230 Exception on /get_good_questions_norepeat [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 133, in get_good_questions_norepeat
+    player.features_left.remove(features.index(s))
+ValueError: '' is not in list
+2015-08-06 13:05:52,419 Exception on /get_good_questions_norepeat [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 133, in get_good_questions_norepeat
+    player.features_left.remove(features.index(s))
+ValueError: '' is not in list
+2015-08-06 13:05:52,642 Exception on /get_good_questions_norepeat [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 133, in get_good_questions_norepeat
+    player.features_left.remove(features.index(s))
+ValueError: '' is not in list
+2015-08-06 13:05:52,860 Exception on /get_good_questions_norepeat [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 133, in get_good_questions_norepeat
+    player.features_left.remove(features.index(s))
+ValueError: '' is not in list
+2015-08-06 13:05:53,048 Exception on /get_good_questions_norepeat [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 133, in get_good_questions_norepeat
+    player.features_left.remove(features.index(s))
+ValueError: '' is not in list
+2015-08-06 13:05:53,241 Exception on /get_good_questions_norepeat [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 133, in get_good_questions_norepeat
+    player.features_left.remove(features.index(s))
+ValueError: '' is not in list
+2015-08-06 13:05:53,408 Exception on /get_good_questions_norepeat [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 133, in get_good_questions_norepeat
+    player.features_left.remove(features.index(s))
+ValueError: '' is not in list
+2015-08-06 13:05:54,034 Exception on /get_good_questions_norepeat [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 133, in get_good_questions_norepeat
+    player.features_left.remove(features.index(s))
+ValueError: '' is not in list
+2015-08-06 13:05:54,242 Exception on /get_good_questions_norepeat [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 133, in get_good_questions_norepeat
+    player.features_left.remove(features.index(s))
+ValueError: '' is not in list
+2015-08-06 13:05:54,433 Exception on /get_good_questions_norepeat [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 133, in get_good_questions_norepeat
+    player.features_left.remove(features.index(s))
+ValueError: '' is not in list
+2015-08-06 13:05:54,631 Exception on /get_good_questions_norepeat [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 133, in get_good_questions_norepeat
+    player.features_left.remove(features.index(s))
+ValueError: '' is not in list
+2015-08-06 13:05:54,830 Exception on /get_good_questions_norepeat [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 133, in get_good_questions_norepeat
+    player.features_left.remove(features.index(s))
+ValueError: '' is not in list
+2015-08-06 13:05:55,007 Exception on /get_good_questions_norepeat [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 133, in get_good_questions_norepeat
+    player.features_left.remove(features.index(s))
+ValueError: '' is not in list
+2015-08-06 13:05:55,201 Exception on /get_good_questions_norepeat [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 133, in get_good_questions_norepeat
+    player.features_left.remove(features.index(s))
+ValueError: '' is not in list
+2015-08-06 13:05:55,388 Exception on /get_good_questions_norepeat [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 133, in get_good_questions_norepeat
+    player.features_left.remove(features.index(s))
+ValueError: '' is not in list
+2015-08-06 13:05:55,588 Exception on /get_good_questions_norepeat [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 133, in get_good_questions_norepeat
+    player.features_left.remove(features.index(s))
+ValueError: '' is not in list
+2015-08-06 13:05:55,756 Exception on /get_good_questions_norepeat [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 133, in get_good_questions_norepeat
+    player.features_left.remove(features.index(s))
+ValueError: '' is not in list
+2015-08-06 13:05:55,959 Exception on /get_good_questions_norepeat [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 133, in get_good_questions_norepeat
+    player.features_left.remove(features.index(s))
+ValueError: '' is not in list
+2015-08-06 13:05:56,139 Exception on /get_good_questions_norepeat [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 133, in get_good_questions_norepeat
+    player.features_left.remove(features.index(s))
+ValueError: '' is not in list
+2015-08-06 13:05:56,365 Exception on /get_good_questions_norepeat [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 133, in get_good_questions_norepeat
+    player.features_left.remove(features.index(s))
+ValueError: '' is not in list
+2015-08-06 13:06:07,230 Exception on /get_good_questions_norepeat [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 133, in get_good_questions_norepeat
+    player.features_left.remove(features.index(s))
+ValueError: '' is not in list
+2015-08-06 13:06:07,421 Exception on /get_good_questions_norepeat [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 133, in get_good_questions_norepeat
+    player.features_left.remove(features.index(s))
+ValueError: '' is not in list
+2015-08-06 13:10:45,277 Exception on /get_good_questions_norepeat [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 133, in get_good_questions_norepeat
+    player.features_left.remove(features.index(s))
+ValueError: '' is not in list
+2015-08-06 13:11:26,625 Exception on /get_good_questions_norepeat [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 133, in get_good_questions_norepeat
+    for s in shown:
+ValueError: '' is not in list
+2015-08-06 13:11:33,181 Exception on /get_good_questions_norepeat [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 133, in get_good_questions_norepeat
+    for s in shown:
+ValueError: '' is not in list
+2015-08-06 13:12:09,227 Exception on /get_good_questions_norepeat [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alxcoh/Documents/Brenden Lake/psiturk-questiontester/custom.py", line 133, in get_good_questions_norepeat
+    for s in shown:
+ValueError: '' is not in list
+2015-08-06 13:12:40,172 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:12:41,752 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:12:41,985 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:12:42,117 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:12:42,173 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:12:42,200 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:12:42,208 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:12:42,252 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:12:42,336 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:13:13,554 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:13:14,119 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:13:14,583 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:13:14,781 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:13:14,805 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:13:14,837 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:13:14,860 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:13:14,864 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:13:14,933 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:14:23,902 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:14:25,512 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:14:25,686 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:14:25,827 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:14:25,849 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:14:25,864 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:14:25,866 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:14:25,891 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:14:25,893 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:15:46,046 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:15:47,806 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:15:47,983 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:15:48,160 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:15:48,191 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:15:48,193 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:15:48,204 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:15:48,219 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:15:48,220 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:17:05,443 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:17:07,014 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:17:07,173 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:17:07,321 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:17:07,324 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:17:07,389 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:17:07,394 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:17:07,414 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:17:07,431 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:17:53,233 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:17:54,849 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:17:55,109 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:17:55,123 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:17:55,221 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:17:55,244 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:17:55,259 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:17:55,345 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:17:55,359 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:21:00,264 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:21:01,826 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:21:01,985 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:21:02,079 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:21:02,108 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:21:02,209 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:21:02,262 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:21:02,281 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-06 13:21:02,307 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
