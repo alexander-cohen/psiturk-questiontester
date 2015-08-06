@@ -61,6 +61,25 @@ def get_similar():
         abort(404)
 
 
+
+@custom_code.route('/get_object', methods=['GET'])
+def get_object():
+    index = int(str(request.args['index']))
+    try:
+        return items[index]
+    except TemplateNotFound:
+        abort(404)
+
+@custom_code.route('/get_index', methods=['GET'])
+def get_index():
+    item = str(request.args['object'])
+    try:
+        return str(items.index(item))
+    except TemplateNotFound:
+        abort(404)
+
+
+
 #----------------------------------------------
 # Get answer
 #----------------------------------------------

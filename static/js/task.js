@@ -20,6 +20,13 @@ var pages = [
 	"instructions/instruct_20q-2.html",
 	"instructions/instruct_20q-3.html",
 	"instructions/instruct_20q-4.html",
+	"instructions/instruct_20q-5.html",
+	"instructions/instruct_20q-6.html",
+	"instructions/instruct_20q-7.html",
+	"instructions/instruct_20q-8.html",
+	"instructions/instruct_20q-9.html",
+	"instructions/instruct_20q-10.html",
+	"instructions/instruct_20q-11.html",
 
 	"instructions/instruct_20q-objectquiz.html",
 
@@ -232,9 +239,9 @@ var get_data_ranked = function() {
 	psiTurk.showPage('stage.html');
 
 	var question_options = ['Question1',
-													'Question2',
-													'Question3',
-													'Question4'];
+							'Question2',
+							'Question3',
+							'Question4'];
 
 
 	var knowledge_arr = question_answer_pairs;
@@ -260,20 +267,71 @@ var answer_chosen = function() {
 	var ordered = $("#ranked").sortable("toArray");
 
 
-	if(ordered.length < 4) make_alert("Please rank every question", function(){});
+	if(ordered.length < 4 && $("#submit-button").hasClass('btn-success')) make_alert("Please rank every question", function(){});
 
 
-	else {
+	else if($("#submit-button").hasClass('btn-success')){
 		var ordered_arr = [ ordered[0].charAt(1), ordered[1].charAt(1), ordered[2].charAt(1), ordered[3].charAt(1) ];
+		//alert(ordered + "\narr form: \n" + ordered_arr)
 		log_data('ranked_choices', ordered_arr);
 		//psiTurk.recordTrialData(["Final choice", question_answer_pairs, ordered_arr]);
+		/*
 		make_alert("Thank you! You will now go back and do the exact same thing, "+
 								"but with a <strong>different</strong> game. Remember, we are "+
 								"starting completely fresh!", show_questions);
+		*/
+		var quest_name = $("#"+ordered[0]).find('p').html();
+		var data = 1.0;
+		$("#answers").css('opacity', 0);
+		$("#answers").css('margin-top', "30px");
+		$("#answers").css('margin-bottom', "30px");
+		$("#question-list").html('');
+		$("#ranked-list").html('<h2>'+quest_name+'</h2>');
+		$("#answer").html(images[data]);
+		$("#answer").fadeTo('slow', 1.0);
+		$("#submit-button").html("Next");
+		$("#submit-button").removeClass('btn-success');
+		$("#submit-button").addClass("btn-primary");
 		//setTimeout(function(){psiTurk.showPage('postquestionnaire.html')}, 500);
 
 	}
 
+	else {
+		give_options_final();
+	}
+
+}
+
+var give_options_final = function() {
+	//options, ids, rows, cols, func_name
+	var the_item = "dog";
+	$.ajax({
+		url: "/get_rand_objects_without",
+		type: "GET",
+		data: {"object":the_item, amount:'20'},
+		success: function(data) {
+			var split = data.split(',');
+			var options = split[0].split(':');
+			var indexes = split[1].split(':');
+			display_object_options(options, indexes, 5, 4, 'option_clicked_oneshot');
+			load_knowledge();
+		}
+	})
+
+}
+
+var option_clicked_oneshot = function(item_chosen, index) {
+	var the_item = "dog";
+	var correct = item_chosen == the_item;
+	if(correct) {
+		make_alert("Thank you! You were correct. You will now complete the same task with a new game:",
+			show_questions);
+	}
+	else {
+		make_alert("Sorry, you were incorrect. The correct object was <strong>"+the_item+"</strong>. You will now complete the same task with a new game:",
+			show_questions);
+	}
+	
 }
 
 var do_quiz = function() {
@@ -288,6 +346,7 @@ var do_quiz = function() {
 	$('#question-label').html(features[quizquestions[0][0]]);
 	$('#question-on').html('Question on: ' + (quiz_question_itr+1) + '/' + 	QUIZ_QUESTIONS);
 }
+
 
 var quizcomplete = function(resp) {
 	var correct_resp = quizquestions[0][1];
@@ -352,7 +411,7 @@ var progress_oneshot_instructs = function() {
 }
 
 var progress_20q_instructs = function() {
-	if(fullgame_instruct_on >= 5) {
+	if(fullgame_instruct_on >= 12) {
 		start_20q_game();
 		return;
 	}
@@ -471,7 +530,8 @@ $(window).load( function(){
     	instructionPages, // a list of pages you want to display in sequence
     	function() {
 				//progress_20q_instructs();
-				currentview = start_shapegame();
+				//currentview = start_shapegame();
+				get_data()
 				//currentview = disp_stuff();
 				//currentview = start_20q_game();
     	  //currentview = show_questions();

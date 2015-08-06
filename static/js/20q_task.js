@@ -279,6 +279,7 @@ var end_pressed = function() {
 			var options = split[0].split(':');
 			var indexes = split[1].split(':');
 			display_object_options(options, indexes, 5, 4, 'option_clicked_20q');
+			load_knowledge();
 		}
 	})
 
