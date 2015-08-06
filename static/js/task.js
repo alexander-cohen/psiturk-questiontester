@@ -530,8 +530,8 @@ $(window).load( function(){
     	instructionPages, // a list of pages you want to display in sequence
     	function() {
 				//progress_20q_instructs();
-				//currentview = start_shapegame();
-				get_data()
+				currentview = start_shapegame();
+				//get_data()
 				//currentview = disp_stuff();
 				//currentview = start_20q_game();
     	  //currentview = show_questions();
