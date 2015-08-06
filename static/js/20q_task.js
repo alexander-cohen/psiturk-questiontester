@@ -33,6 +33,7 @@ var start_20q_game = function() {
 	psiTurk.showPage("full_game_eig.html");
 	iterations = 0;
 	questions_shown = [];
+	knowledge = "";
 	$.ajax({
 		url: "/get_rand_object",
 		type: "GET",

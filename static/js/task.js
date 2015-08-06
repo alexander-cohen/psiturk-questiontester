@@ -82,10 +82,13 @@ var features =  ['IS IT AN ANIMAL?', 'IS IT A BODY PART?', 'IS IT A BUILDING?', 
 
 var quizquestions;
 var quizquestion_on = 0;
+var quizquestions_incorrect = 0;
 var oneshot_instruct_on = 1;
 var depth = 5;
 var QUIZ_QUESTIONS = 2;
 var quiz_question_itr = 0;
+
+var max_quizquestions = 8;
 
 var fullgame_instruct_on = 1;
 
@@ -105,7 +108,7 @@ var to_log = [];
 
 $(document).ready(function() {
 	$(window).resize(function() {
-		if($(window).width() < 925) {
+		if($(window).width() < 1200) {
 			$("button:contains('Close')").removeAttr('disabled');
 			$("button:contains('Close')").removeAttr('hidden');
 			$("button:contains('Close')").click()
@@ -194,10 +197,13 @@ function pageScroll(times, max) {
 
 var show_questions = function(first_time) {
 	quiz_question_itr = 0;
+
 	first_time = typeof first_time !== 'undefined' ? first_time : true;
 
 
 	if(first_time) {
+		quizquestion_on = 0;
+		quizquestions_incorrect = 0;
 		question_answer_pairs = question_answer_pairs_indx[rand_num_incl(0, question_answer_pairs_indx.length - 1)].slice(0, depth);
 		log_data('question_answer_pairs', question_answer_pairs);
 		psiTurk.showPage('setup.html');
@@ -214,11 +220,7 @@ var show_questions = function(first_time) {
 		psiTurk.showPage('setup.html');
 		$("#questions").html("");
 
-		for(var k = 0; k < question_answer_pairs.length; k++) {
-			var knowledge_piece = question_answer_pairs[k]
-			$("#questions").prepend("<h4>" + features[knowledge_piece[0]] + "</h4>" +
-										images[knowledge_piece[1]] + "<hr>");
-		}
+		load_oneshot_knowledge()
 
 		$("#questions").find( $("img") ).attr("width", 600);
 		$("#questions").find( $("div") ).css("margin-left", -103);
@@ -342,6 +344,14 @@ var answer_chosen = function() {
 
 }
 
+var load_oneshot_knowledge = function() {
+	for(var k = 0; k < question_answer_pairs.length; k++) {
+			var knowledge_piece = question_answer_pairs[k]
+			$("#questions").prepend("<h4>" + features[knowledge_piece[0]] + "</h4>" +
+										images[knowledge_piece[1]] + "<hr>");
+	}
+}
+
 var give_options_final = function() {
 	//options, ids, rows, cols, func_name
 	var the_item = "dog";
@@ -354,7 +364,7 @@ var give_options_final = function() {
 			var options = split[0].split(':');
 			var indexes = split[1].split(':');
 			display_object_options(options, indexes, 5, 4, 'option_clicked_oneshot');
-			load_knowledge();
+			
 		}
 	})
 
@@ -401,7 +411,12 @@ var quizcomplete = function(resp) {
 
 	quizquestions = removeArrValue(quizquestions, 0);
 
-	if(!correct) {
+	if(!correct && quizquestions_incorrect >= max_quizquestions) {
+		make_alert("You have now answered " + quizquestions_incorrect.toString() + 
+					" questions incorrectly. You may proceed with the task, but your " + 
+					"performance will be monitored to make sure you are taking the task seriously", get_data);
+	}
+	else if(!correct) {
 		make_alert("Incorrect, please go back and try again. Really pay attention this time!",
 			function(){
 				show_questions(false);
@@ -478,14 +493,14 @@ var do_objectquiz = function() {
 }
 
 var objectquiz_submitted = function() {
-	var correct_answers = {"Animals":true,
-												 "Places":false,
-												 "People":false,
-												 "Household objects":true,
-												 "Plants":true,
-												 "Verbs":false,
-												 "Tangible things":true,
-												 "Adjectives":false};
+	var correct_answers =   {"Animals":true,
+							 "Specific Places":false,
+							 "People":false,
+							 "Household objects":true,
+							 "Plants":true,
+							 "Verbs":false,
+							 "Tangible things":true,
+							 "Adjectives":false};
 
 	var amount_incorrect = 0;
 	for(var name in correct_answers) {
