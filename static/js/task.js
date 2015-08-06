@@ -327,15 +327,27 @@ var answer_chosen = function() {
 		$("#answers").css('opacity', 0);
 		$("#answers").css('margin-top', "30px");
 		$("#answers").css('margin-bottom', "30px");
+		
 		$("#question-list").html('');
-		$("#ranked-list").html('<h2>'+quest_name+'</h2>');
-		$("#answer").html(images[data]);
+		$("#ranked-list").html('');
+
+		$("#answer").html('<h4>'+quest_name+'</h4>');
+		$("#answer").append(images[data]);
+
+		$("#answer").css("border-style", 'solid');
+		$("#answer").css("border-color", 'DarkCyan');
+		$("#answer").css("border-width", 'thick');
+		$("#answer").css("margin-top", '15px');
+
+		$("#prev-questions").prepend($("#answer"));
+		$("#prev-questions").prepend($("#submit-button"));
+
 		$("#answer").fadeTo('slow', 1.0);
+
 		$("#submit-button").html("Next");
 		$("#submit-button").removeClass('btn-success');
 		$("#submit-button").addClass("btn-primary");
 		//setTimeout(function(){psiTurk.showPage('postquestionnaire.html')}, 500);
-
 	}
 
 	else {
@@ -347,13 +359,12 @@ var answer_chosen = function() {
 var load_oneshot_knowledge = function() {
 	for(var k = 0; k < question_answer_pairs.length; k++) {
 			var knowledge_piece = question_answer_pairs[k]
-			$("#questions").prepend("<h4>" + features[knowledge_piece[0]] + "</h4>" +
+			$("#prev-questions").prepend("<h4>" + features[knowledge_piece[0]] + "</h4>" +
 										images[knowledge_piece[1]] + "<hr>");
 	}
 }
 
 var give_options_final = function() {
-	//options, ids, rows, cols, func_name
 	var the_item = "dog";
 	$.ajax({
 		url: "/get_rand_objects_without",
@@ -364,10 +375,9 @@ var give_options_final = function() {
 			var options = split[0].split(':');
 			var indexes = split[1].split(':');
 			display_object_options(options, indexes, 5, 4, 'option_clicked_oneshot');
-			
+			load_oneshot_knowledge();
 		}
-	})
-
+	});
 }
 
 var option_clicked_oneshot = function(item_chosen, index) {
