@@ -2,10 +2,9 @@
   	<div style="margin-left:25px; margin-top:50px; margin-right:0px; margin-bottom:200px; float: left">
       <form class='form-group' id='freeform-form'>
         <label for='quest-form'>Please type in your favorite question:</label>
-    		<input type="text" name="question" class='form-control' id='quest-form'>
-  		<br><br>
+        <input type="text" name="question" class='form-control' id='quest-form' onkeydown = "check_correct_color_freeform();" onkeyup = "check_correct_color_freeform();">
+        <br><br>
       </form>
-
       <script>
         $('#freeform-form').submit(function(event) {
             event.preventDefault();
@@ -14,7 +13,7 @@
       </script>
 
       <div style='clear:left'>
-        	<button onclick="freeform_resp_submitted();" type="button" class="btn btn-success" style='clear:left'>Submit</button>
+        	<button onclick="freeform_resp_submitted();" id="freeform-submit" type="button" class="btn btn-continue" style='clear:left'>Submit</button>
       </div>
 
     </div>

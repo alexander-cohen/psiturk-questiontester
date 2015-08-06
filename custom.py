@@ -114,9 +114,6 @@ def get_good_questions():
     except TemplateNotFound:
         abort(404)
 
-
-
-
 #----------------------------------------------
 # Get if is similar object
 #----------------------------------------------

@@ -145,9 +145,16 @@ var choicecomplete_20q = function() {
 					console.log(data);
 					if(knowledge == "") knowledge += choice + ":" + data;
 					else knowledge += "," + choice + ":" + data;
-					$("#prev-questions").css("margin-left", "0px");
+					//$("#prev-questions").css("margin-left", "0px");
 					$("#answer").html(images[data]);
+					$("#answer").prepend("<h2>"+choice+"</h2>");
+					$("#answer").append("<hr>");
+
+					$("#prev-questions").prepend($("#answer"));
+
 					$("#answer").fadeTo('slow', 1.0);
+					
+					$("#prev-questions").prepend($("#submit-button"));
 					$("#submit-button").html("Next");
 					$("#submit-button").removeClass('btn-success');
 					$("#submit-button").addClass("btn-primary");

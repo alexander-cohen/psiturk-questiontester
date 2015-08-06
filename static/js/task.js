@@ -240,9 +240,28 @@ var get_data = function() {
 
 }
 
+var check_correct_color_freeform = function() {
+	if($("#quest-form").val() == '') {
+      $("#freeform-submit").attr('class', '');
+      $("#freeform-submit").addClass('btn');
+      $("#freeform-submit").addClass('btn-continue');
+    }
+    else {
+      $("#freeform-submit").attr('class', '');
+      $("#freeform-submit").addClass('btn');
+      $("#freeform-submit").addClass('btn-primary');
+  }
+}
+
 var freeform_resp_submitted = function() {
-	log_data('quest_freeform', $("#quest-form").val());
-	get_data_ranked();
+	if($("#quest-form").val() == "") {
+		return;
+	}
+	else {
+		log_data('quest_freeform', $("#quest-form").val());
+		get_data_ranked();
+	}
+
 }
 
 var get_data_ranked = function() {
