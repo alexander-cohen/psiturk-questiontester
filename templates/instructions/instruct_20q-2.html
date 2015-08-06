@@ -1,0 +1,68 @@
+<div id="container-instructions" instruct_num = '2'>
+
+      <h1>Instructions</h1>
+
+      <hr>
+
+      <div class="instructions well">
+
+        <p>
+          There is a wide variety of possible objects. You will now be walked through all of the possiblbe categories
+        </p>
+
+      </div>
+
+      <hr>
+
+      <style>
+        #next {
+            opacity: 0;
+            float: right;
+        }
+      </style>
+
+      <script>
+          setTimeout(function() {
+              $("#next").fadeTo('slow', 1.0, function(){
+  							$("#next").removeAttr('disabled')
+  						});
+          }, 1000)
+      </script>
+
+    <div class="instructionsnav" style='position: fixed; bottom: 20px;'>
+        <div class="row">
+            <div class="col-xs-2">
+                <button type="button" id="previous" value="next" class="btn btn-primary btn-lg previous" style='position: fixed; left: 45px; bottom: 35px'>
+                <span class="glyphicon glyphicon-arrow-left"></span> Previous
+                </button>
+            </div>
+            <div class="col-xs-8">
+            </div>
+            <div class="col-xs-2">
+                <button type="button" id="next" value="next" class="btn btn-primary btn-lg continue" onclick="progress_20q_instructs()" style='position: fixed; right: 45px; bottom: 35px' disabled>
+                Next <span class="glyphicon glyphicon-arrow-right"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="skipbutton">
+  <div class="row">
+      <div class="col-xs-2">
+      </div>
+      <div class="col-xs-8">
+      </div>
+      <div class="col-xs-2">
+          <button type="button" class="btn btn-primary btn-lg continue" onclick="next_section(2)">
+          Magic <span class="glyphicon glyphicon-arrow-right"></span>
+          </button>
+      </div>
+  </div>
+</div>
+<script>
+  if(no_skip_buttons) {
+    $('.skipbutton').html('');
+
+  }
+</script>
