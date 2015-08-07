@@ -55,20 +55,20 @@ var instructionPages = [ // add as a list as many pages as you like
 ];
 
 images = { 'y':'<div style="margin-left:-109px"><img src="/static/images/slider_y.png"  alt="Definitely Yes" width=650></div>',
-				  'py':'<div style="margin-left:-109px"><img src="/static/images/slider_py.png" alt="Probably/Sometimes" width=650></div>',
-				   'u':'<div style="margin-left:-109px"><img src="/static/images/slider_u.png"  alt="Unknown/Not applicable" width=650></div>',
-				  'pn':'<div style="margin-left:-109px"><img src="/static/images/slider_pn.png" alt="Probably not/Rarely" width=650></div>',
-				   'n':'<div style="margin-left:-109px"><img src="/static/images/slider_n.png"  alt="Definitely No" width=650></div>',
+		  'py':'<div style="margin-left:-109px"><img src="/static/images/slider_py.png" alt="Probably/Sometimes" width=650></div>',
+		   'u':'<div style="margin-left:-109px"><img src="/static/images/slider_u.png"  alt="Unknown/Not applicable" width=650></div>',
+		  'pn':'<div style="margin-left:-109px"><img src="/static/images/slider_pn.png" alt="Probably not/Rarely" width=650></div>',
+		   'n':'<div style="margin-left:-109px"><img src="/static/images/slider_n.png"  alt="Definitely No" width=650></div>',
 
-				 '1.0':'<div style="margin-left:-109px"><img src="/static/images/slider_y.png"  alt="Definitely Yes" width=650></div>',
-				 '0.5':'<div style="margin-left:-109px"><img src="/static/images/slider_py.png" alt="Probably/Sometimes" width=650></div>',
-				 '0.0':'<div style="margin-left:-109px"><img src="/static/images/slider_u.png"  alt="Unknown/Not applicable" width=650></div>',
-				'-0.5':'<div style="margin-left:-109px"><img src="/static/images/slider_pn.png" alt="Probably not/Rarely" width=650></div>',
-				'-1.0':'<div style="margin-left:-109px"><img src="/static/images/slider_n.png"  alt="Definitely No" width=650></div>',
+		 '1.0':'<div style="margin-left:-109px"><img src="/static/images/slider_y.png"  alt="Definitely Yes" width=650></div>',
+		 '0.5':'<div style="margin-left:-109px"><img src="/static/images/slider_py.png" alt="Probably/Sometimes" width=650></div>',
+		 '0.0':'<div style="margin-left:-109px"><img src="/static/images/slider_u.png"  alt="Unknown/Not applicable" width=650></div>',
+		'-0.5':'<div style="margin-left:-109px"><img src="/static/images/slider_pn.png" alt="Probably not/Rarely" width=650></div>',
+		'-1.0':'<div style="margin-left:-109px"><img src="/static/images/slider_n.png"  alt="Definitely No" width=650></div>',
 
-					 '1':'<div style="margin-left:-109px"><img src="/static/images/slider_y.png"  alt="Definitely Yes" width=650></div>',
-					 '0':'<div style="margin-left:-109px"><img src="/static/images/slider_u.png"  alt="Unknown/Not applicable" width=650></div>',
-				 	'-1':'<div style="margin-left:-109px"><img src="/static/images/slider_n.png"  alt="Definitely No" width=650></div>'}
+   		   '1':'<div style="margin-left:-109px"><img src="/static/images/slider_y.png"  alt="Definitely Yes" width=650></div>',
+		   '0':'<div style="margin-left:-109px"><img src="/static/images/slider_u.png"  alt="Unknown/Not applicable" width=650></div>',
+	 	  '-1':'<div style="margin-left:-109px"><img src="/static/images/slider_n.png"  alt="Definitely No" width=650></div>'}
 
 
 // var question_answer_pairs = [ ["Is it mechanical?", "1.0"],
@@ -327,7 +327,7 @@ var answer_chosen = function() {
 		$("#answers").css('opacity', 0);
 		$("#answers").css('margin-top', "30px");
 		$("#answers").css('margin-bottom', "30px");
-		
+
 		$("#question-list").html('');
 		$("#ranked-list").html('');
 
@@ -403,10 +403,64 @@ var do_quiz = function() {
 
 	if (quizquestions.length == 0) quizquestions = shuffle(question_answer_pairs.slice());
 	psiTurk.showPage('quiz.html');
+	
 	$('#question-label').html(features[quizquestions[0][0]]);
 	$('#question-on').html('Question on: ' + (quiz_question_itr+1) + '/' + 	QUIZ_QUESTIONS);
+	load_quizresps(quizquestions[0][1]);
 }
 
+function load_quizresps(correct_val) {
+	var options = 2;
+	var far_away = false;
+	var indx = Math.floor(Math.random()*1000000) % options;
+	for(var i = 0; i < options; i++) {
+		var div = document.createElement('div');
+		div.style.margin = "20px";
+		var link = document.createElement('a');
+		if(i == indx) {
+			link.setAttribute('href', 'javascript:newquiz_complete("' + correct_val + '", true)');
+			link.innerHTML = images[correct_val.toString()];
+		}
+		else {
+			var rand_val = 0;
+			do {
+				rand_val = ((Math.floor(Math.random()*10) % 5) - 2) / 2;
+			} while(Math.abs(rand_val - correct_val) <= (far_away ? 1 : 0));
+
+			link.setAttribute('href', 'javascript:newquiz_complete("' + rand_val + '", false)');
+			link.innerHTML = images[rand_val.toString()];
+
+		}
+		div.appendChild(link);
+		document.getElementById("options").appendChild(div);
+	}
+}	
+
+var newquiz_complete = function(resp,  correct) {
+	log_data('quiz_response', [quizquestion_on.toString(), quiz_question_itr,
+		quizquestions[0][0], quizquestions[0][1], resp, correct]);
+
+	quizquestion_on++;
+
+	quizquestions = removeArrValue(quizquestions, 0);
+
+	if(!correct && quizquestions_incorrect >= max_quizquestions) {
+		make_alert("You have now answered " + quizquestions_incorrect.toString() + 
+					" questions incorrectly. You may proceed with the task, but your " + 
+					"performance will be monitored to make sure you are taking the task seriously", get_data);
+	}
+	else if(!correct) {
+		make_alert("Incorrect, please go back and try again. Really pay attention this time!",
+			function(){
+				show_questions(false);
+			});
+	}
+
+	else {
+		quiz_question_itr++;
+		do_quiz();
+	}
+}
 
 var quizcomplete = function(resp) {
 	alert(quizquestions);
