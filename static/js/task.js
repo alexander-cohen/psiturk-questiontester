@@ -362,6 +362,11 @@ var load_oneshot_knowledge = function() {
 			$("#prev-questions").prepend("<h4>" + features[knowledge_piece[0]] + "</h4>" +
 										images[knowledge_piece[1]] + "<hr>");
 	}
+	for(var k = 0; k < question_answer_pairs.length; k++) {
+			var knowledge_piece = question_answer_pairs[k]
+			$("#questions").prepend("<h4>" + features[knowledge_piece[0]] + "</h4>" +
+										images[knowledge_piece[1]] + "<hr>");
+	}
 }
 
 var give_options_final = function() {
