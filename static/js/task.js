@@ -410,7 +410,7 @@ var do_quiz = function() {
 	psiTurk.showPage('quiz.html');
 	
 	$('#question-label').html(features[quizquestions[0][0]]);
-	$('#question-on').html('Question on: ' + (quiz_question_itr+1) + '/' + 	QUIZ_QUESTIONS);
+	$('#question-on').html('Question ' + (quiz_question_itr+1) + ' of ' + 	QUIZ_QUESTIONS);
 	load_quizresps(quizquestions[0][1]);
 }
 
