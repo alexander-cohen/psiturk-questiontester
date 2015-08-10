@@ -15,6 +15,7 @@ var no_skip_buttons = false;
 var pages = [
 	"instructions/instruct_oneshot-1.html",
 	"instructions/instruct_oneshot-2.html",
+	"instructions/instruct_oneshot-3.html",
 
 	"instructions/instruct_20q-1.html",
 	"instructions/instruct_20q-2.html",
@@ -535,7 +536,7 @@ var decrement_oneshot_instructs = function() {
 }
 
 var progress_oneshot_instructs = function() {
-	if(oneshot_instruct_on >= 3) {
+	if(oneshot_instruct_on >= 4) {
 		show_questions();
 		return;
 	}
