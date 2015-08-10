@@ -42573,6 +42573,7 @@ ValueError: '' is not in list
 2015-08-07 10:38:39,105 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
 2015-08-07 10:38:39,240 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
 2015-08-07 10:38:39,269 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+<<<<<<< HEAD
 [2015-08-07 17:23:11 -0400] [7456] [CRITICAL] WORKER TIMEOUT (pid:18986)
 [2015-08-07 17:23:11 -0400] [7456] [CRITICAL] WORKER TIMEOUT (pid:18987)
 [2015-08-07 17:23:11 -0400] [7456] [CRITICAL] WORKER TIMEOUT (pid:18988)
@@ -42626,3 +42627,22 @@ ValueError: '' is not in list
 2015-08-07 17:25:06,107 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
 2015-08-07 17:25:06,159 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
 2015-08-07 17:25:06,308 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+=======
+2015-08-08 13:36:34,978 /opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-08 13:36:35,012 /opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-08 13:36:35,031 /opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-08 13:36:35,031 /opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-08 13:36:35,061 /opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-08 13:36:35,134 /opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-08 13:36:35,214 /opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-08 13:36:35,312 /opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-08 13:36:35,373 /opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-08 13:36:35,398 /opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-08 13:36:35,403 /opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-08 13:36:35,422 /opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-08 13:36:35,424 /opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-08 13:36:35,489 /opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-08 13:36:35,493 /opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-08 13:36:35,501 /opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-08 13:36:35,529 /opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+>>>>>>> origin/master

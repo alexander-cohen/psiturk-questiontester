@@ -137,7 +137,7 @@ function give_question_options() {
   }
 
   psiTurk.showPage('shape_game.html');
-  $("#question-number").html('Question on: ' + (question_on+1) + '/ 4');
+  $("#question-number").html('Question ' + (question_on+1) + ' of 4');
   load_shape_imgs();
   load_cur_knowledge();
   for(var i = 0; i < good_questions.length; i++) {
