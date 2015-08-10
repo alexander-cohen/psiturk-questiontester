@@ -607,7 +607,7 @@ var display_object_options = function(options, ids, rows, cols, func_name) {
 			$(btn).html(name);
 			$(btn).css('width', '100%');
 			$(btn).css('height', '150%');
-			$(btn).attr('onclick', func_name + '("' + name + '",' + id + ')');
+			$(btn).attr('func_to_do', func_name + '("' + name + '",' + id + ')');
 
 			col.appendChild(btn);
 			row.appendChild(col);
@@ -615,9 +615,29 @@ var display_object_options = function(options, ids, rows, cols, func_name) {
 		document.getElementById('options-table').appendChild(row);
 	}
 	$("button").hover(function(){
-		$(this).addClass('btn-primary');
-	}, function() {
-		$(this).removeClass('btn-primary');
+		if(!$(this).prop('temp_disable')) $(this).addClass('btn-primary');
+		}, function() {
+			$(this).removeClass('btn-primary');
+		}
+	);
+
+	$("button").click(function(evt) {
+	  if (evt.shiftKey || evt.altKey || evt.metaKey) {
+	  	if($(this).prop('temp_disable')) {
+				$(this).prop("temp_disable", false);
+				$(this).css("opacity", 1)
+				$(this).css("background-color", "rgb(192, 192, 192)")
+			}
+			else {
+				$(this).prop("temp_disable", true);
+				$(this).css("opacity", 0.7)
+				$(this).css("background-color", "RosyBrown")
+				$(this).removeClass("btn-primary")
+			}
+		}
+	  else {
+			if(!$(this).prop('temp_disable')) eval($(this).attr('func_to_do'))
+		}
 	});
 }
 

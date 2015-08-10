@@ -105,7 +105,7 @@ function shape_chosen(obj) {
   var correct = obj == shape_choice;
   make_alert((correct ?
               'Correct! Great Job! Now move on to Part II of this HIT' :
-              'Incorrect, sorry. You must now redo the task.'), function(){
+              'Incorrect, sorry. You must now redo the task. A different shape will be chosen'), function(){
                                     if(correct) show_fullgame_instructs();
                                     else start_shapegame();
                                   });

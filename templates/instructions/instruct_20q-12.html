@@ -9,7 +9,8 @@
           <p>
             At the end of the game, you will choose one object from a table of _ random options.
             You may end the game at any time you wish, and you will then be forced to choose
-            your object. The object list will look like this:
+            your object. You click on an object to choose it, and can Command-click to toggle
+            a choice being disabled. The object list will look like this:
           </p>
           <style>
             th, td { padding: 5px; }
@@ -109,11 +110,33 @@
           <script type="text/javascript">
             $(document).ready(function() {
               $("button").hover(function(){
-                $(this).addClass('btn-primary');
-              }, function() {
-                $(this).removeClass('btn-primary');
-              });
+            		if(!$(this).prop('temp_disable')) $(this).addClass('btn-primary');
+            		}, function() {
+            			$(this).removeClass('btn-primary');
+            		}
+            	);
+
+            	$("button").click(function(evt) {
+            	  if (evt.shiftKey || evt.altKey || evt.metaKey) {
+            	  	if($(this).prop('temp_disable')) {
+            				$(this).prop("temp_disable", false);
+            				$(this).css("opacity", 1)
+            				$(this).css("background-color", "rgb(192, 192, 192)")
+            			}
+            			else {
+            				$(this).prop("temp_disable", true);
+            				$(this).css("opacity", 0.7)
+            				$(this).css("background-color", "RosyBrown")
+            				$(this).removeClass("btn-primary")
+            			}
+            		}
+            	  else {
+            			if(!$(this).prop('temp_disable')) eval($(this).attr('func_to_do'))
+            		}
+            	});
             })
+
+
           </script>
 
 
