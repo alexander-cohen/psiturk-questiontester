@@ -616,7 +616,7 @@ var display_object_options = function(options, ids, rows, cols, func_name) {
 		document.getElementById('options-table').appendChild(row);
 	}
 	$("button").hover(function(){
-		if(!$(this).prop('temp_disable')) $(this).addClass('btn-primary');
+			if(!$(this).prop('temp_disable')) $(this).addClass('btn-primary');
 		}, function() {
 			$(this).removeClass('btn-primary');
 		}
@@ -627,7 +627,8 @@ var display_object_options = function(options, ids, rows, cols, func_name) {
 	  	if($(this).prop('temp_disable')) {
 				$(this).prop("temp_disable", false);
 				$(this).css("opacity", 1)
-				$(this).css("background-color", "rgb(192, 192, 192)")
+				$(this).css("background-color", "")
+				$(this).addClass("btn-primary")
 			}
 			else {
 				$(this).prop("temp_disable", true);
