@@ -27,6 +27,7 @@ var pages = [
 	"instructions/instruct_20q-9.html",
 	"instructions/instruct_20q-10.html",
 	"instructions/instruct_20q-11.html",
+	"instructions/instruct_20q-12.html",
 
 	"instructions/instruct_20q-objectquiz.html",
 
@@ -396,7 +397,7 @@ var option_clicked_oneshot = function(item_chosen, index) {
 		make_alert("Sorry, you were incorrect. The correct object was <strong>"+the_item+"</strong>. You will now complete the same task with a new game:",
 			show_questions);
 	}
-	
+
 }
 
 var do_quiz = function() {
@@ -408,7 +409,7 @@ var do_quiz = function() {
 
 	if (quizquestions.length == 0) quizquestions = shuffle(question_answer_pairs.slice());
 	psiTurk.showPage('quiz.html');
-	
+
 	$('#question-label').html(features[quizquestions[0][0]]);
 	$('#question-on').html('Question on: ' + (quiz_question_itr+1) + '/' + 	QUIZ_QUESTIONS);
 	load_quizresps(quizquestions[0][1]);
@@ -439,7 +440,7 @@ function load_quizresps(correct_val) {
 		div.appendChild(link);
 		document.getElementById("options").appendChild(div);
 	}
-}	
+}
 
 var newquiz_complete = function(resp,  correct) {
 	log_data('quiz_response', [quizquestion_on.toString(), quiz_question_itr,
@@ -450,8 +451,8 @@ var newquiz_complete = function(resp,  correct) {
 	quizquestions = removeArrValue(quizquestions, 0);
 
 	if(!correct && quizquestions_incorrect >= max_quizquestions) {
-		make_alert("You have now answered " + quizquestions_incorrect.toString() + 
-					" questions incorrectly. You may proceed with the task, but your " + 
+		make_alert("You have now answered " + quizquestions_incorrect.toString() +
+					" questions incorrectly. You may proceed with the task, but your " +
 					"performance will be monitored to make sure you are taking the task seriously", get_data);
 	}
 	else if(!correct) {
@@ -481,8 +482,8 @@ var quizcomplete = function(resp) {
 	quizquestions = removeArrValue(quizquestions, 0);
 
 	if(!correct && quizquestions_incorrect >= max_quizquestions) {
-		make_alert("You have now answered " + quizquestions_incorrect.toString() + 
-					" questions incorrectly. You may proceed with the task, but your " + 
+		make_alert("You have now answered " + quizquestions_incorrect.toString() +
+					" questions incorrectly. You may proceed with the task, but your " +
 					"performance will be monitored to make sure you are taking the task seriously", get_data);
 	}
 	else if(!correct) {
@@ -549,7 +550,7 @@ var decrement_20q_instructions = function() {
 }
 
 var progress_20q_instructs = function() {
-	if(fullgame_instruct_on >= 12) {
+	if(fullgame_instruct_on >= 13) {
 		start_20q_game();
 		return;
 	}
@@ -582,7 +583,7 @@ var objectquiz_submitted = function() {
 	}
 	else {
 		make_alert("Unfortunately, you got <strong>" + amount_incorrect +
-			"</strong> incorrect. Please take another look at the object list and try again.", 
+			"</strong> incorrect. Please take another look at the object list and try again.",
 				function() {
 					fullgame_instruct_on = 3;
 					psiTurk.showPage('instructions/instruct_20q-2.html');

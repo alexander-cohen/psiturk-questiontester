@@ -26,19 +26,19 @@
 			  		<label for="answers" id="question-label">
 			  			<h2 style="margin-top:5px; float:left">Pick your favorite question</h2>
 
-			  			<!-- <a href="#" id="animal-popover" class="btn"
-			  				rel="popover" data-placement="right" data-original-title="Animal List">
+			  			<a href="#" id="help-popover" class="btn"
+			  				rel="popover" data-placement="right" data-original-title="Help List">
 			  					<span class="glyphicon glyphicon-info-sign" style="float:left"></span>
-			  			</a> -->
+			  			</a>
 
 			  			<script>
 							$(document).ready(function(){
 
-							   $("#animal-popover").popover({
+							   $("#help-popover").popover({
 									trigger: "hover",
 									html: true,
 									content: function() {
-										return $("#animal-list").html();
+										return $("#help").html();
 									}
 							   });
 							});
@@ -46,7 +46,7 @@
 
 			  		</label>
 					<ul class="answers" id="answers">
-			      		
+
 			      	</ul>
 					<br><br>
 				</form>
@@ -69,7 +69,7 @@
 				</script>
 
 		  	</div>
-
+			<!--
 			<form id="guess-form">
 				Guess: <input type="text" name="guess" id="guess-box"
 					onkeydown = "check_correct_color();" onkeyup = "check_correct_color();">
@@ -78,37 +78,23 @@
 				<br><br>
 				Keep in mind, you only get 1 guess! Try to use it wisely!
 			</form>
-
-			<button id='end-button' type='submit' onclick='end_pressed()' class='btn btn-success' style='margin-top:20px'>
-				End
-			</button>
-
 			<script>
 					$('#guess-form').submit(function(event) {
 					  event.preventDefault();
 					  if($("#guess-box").val() != '') guess_submitted();
 				  });
 			</script>
+			-->
+			<button id='end-button' type='submit' onclick='end_pressed()' class='btn btn-success' style='margin-top:20px'>
+				End
+			</button>
 
-			<div id="animal-list" style='opacity: 0'>
-				<table style="border-collapse: separate; border-spacing: 10px">
-					<tr>
-						<td>
-							<li>Dress</li>
-			                <li>Dress</li>
-			                <li>Computer</li>
-			                <li>Ant</li>
-			                <li>Train</li>
-						</td>
-						<td>
-						 	<li>Car</li>
-			                <li>Dog</li>
-			                <li>Bear</li>
-			                <li>Lettuce</li>
-			                <li>Tomato</li>
-						</td>
-					</tr>
-				</table>
+
+
+			<div id="help" style='opacity: 0'>
+				<p>First line of help text goes here</p>
+				<br>
+				<p>Second line of help text goes here</p>
 			</div>
 		</div>
 		<div id="prev-questions" style="margin-left:0px; margin-top:150px; margin-right:-1000px; margin-bottom:200px; float: left; ">

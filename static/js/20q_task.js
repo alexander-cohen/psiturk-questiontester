@@ -64,10 +64,10 @@ var pre_20q = function() {
 	psiTurk.showPage("full_game_eig.html");
 	for(var i = 0; i < options_show; i++) {
 		$("#answers").append(
-				'<div class="radio-question">' + 
+				'<div class="radio-question">' +
 			      		'<input type="radio" name="q1" value="b" id="q' + i.toString() + '">' +
 			      			'<label style="margin:0.5em" for="q' + i.toString() + '"></label>' +
-			      		'</div>' 
+			      		'</div>'
 			);
 	}
 
@@ -77,9 +77,9 @@ var pre_20q = function() {
 		$("#question-number").html("You have used up all your questions,<br>now you must guess an object");
 		$("#questions").html("<br><br>");
 	}
- 
+
 	else {
-		$("#question-number").html("Question number: " + iterations.toString() + "/" + max_iterations.toString());
+		$("#question-number").html("Question number: " + (iterations+1).toString() + "/" + max_iterations.toString());
 		if(game_on > 0) $("#bonus").html("Bonus: $" + bonus().toFixed(2));
 		$("#submit-button").html(' <span class="glyphicon glyphicon-refresh spinning"></span> Loading...    ');
 		$("#submit-button").attr('disabled')
@@ -176,12 +176,12 @@ var choicecomplete_20q = function() {
 					$("#prev-questions").prepend($("#answer"));
 
 					$("#answer").fadeTo('slow', 1.0);
-					
+
 					$("#prev-questions").prepend($("#submit-button"));
 					$("#submit-button").html("Next");
 					$("#submit-button").removeClass('btn-success');
 					$("#submit-button").addClass("btn-primary");
-					//$("#question-form").html("<h3 style='margin-bottom: 40px'>"+choice+"</h3>");
+					$("#question-form").html("<h3 style='margin-bottom: 40px'>"+choice+"</h3>");
 					show_info_gain();
 				}
 			})
