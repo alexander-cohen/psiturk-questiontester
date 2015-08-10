@@ -593,7 +593,30 @@ var objectquiz_submitted = function() {
 
 }
 
-var display_object_options = function(options, ids, rows, cols, func_name) {
+var item_option_chosen = function(funcname, name, id) {
+	$("<p>Are you sure?</p>").dialog(
+	    {
+				  dialogClass: 'no-close',
+	        modal: true, //Not necessary but dims the page background
+	        width: 400,
+	        buttons:{
+	            'Close': function() {
+									$(this).parent().remove();
+								},
+							 'Confirm': function() {
+								 eval(funcname + '("' + name + '", "' + id + '")')
+							 }
+
+	        },
+	        close: function(event, ui) {
+	        	event.preventDefault();
+
+	        }
+	    }
+	);
+}
+
+var display_object_options = function(options, ids, rows, cols, func) {
 	psiTurk.showPage("game_end.html");
 
 	for(var i = 0; i < rows; i++) {
@@ -608,7 +631,7 @@ var display_object_options = function(options, ids, rows, cols, func_name) {
 			$(btn).html(name);
 			$(btn).css('width', '100%');
 			$(btn).css('height', '150%');
-			$(btn).attr('func_to_do', func_name + '("' + name + '",' + id + ')');
+			$(btn).attr('func_to_do', 'item_option_chosen("' + func + '", "' + name + '",' + id + ')');
 
 			col.appendChild(btn);
 			row.appendChild(col);
@@ -621,6 +644,33 @@ var display_object_options = function(options, ids, rows, cols, func_name) {
 			$(this).removeClass('btn-primary');
 		}
 	);
+
+	$('button').mousedown(function(event) {
+    switch (event.which) {
+        case 1:
+            //alert('Left Mouse button pressed.');
+            break;
+        case 2:
+            //alert('Middle Mouse button pressed.');
+            break;
+        case 3:
+						if($(this).prop('temp_disable')) {
+							$(this).prop("temp_disable", false);
+							$(this).css("opacity", 1)
+							$(this).css("background-color", "")
+							$(this).addClass("btn-primary")
+						}
+						else {
+							$(this).prop("temp_disable", true);
+							$(this).css("opacity", 0.7)
+							$(this).css("background-color", "RosyBrown")
+							$(this).removeClass("btn-primary")
+						}
+            break;
+        default:
+            //alert('You have a strange Mouse!');
+    }
+	});
 
 	$("button").click(function(evt) {
 	  if (evt.shiftKey || evt.altKey || evt.metaKey) {
@@ -641,6 +691,27 @@ var display_object_options = function(options, ids, rows, cols, func_name) {
 			if(!$(this).prop('temp_disable')) eval($(this).attr('func_to_do'))
 		}
 	});
+
+	document.onkeydown = keyboardDown;
+	document.onkeyup = keyboardUp;
+	document.oncontextmenu = function(e){
+	 var evt = new Object({keyCode:93});
+	 stopEvent(e);
+	 keyboardUp(evt);
+	}
+	function stopEvent(event){
+	 if(event.preventDefault != undefined)
+	  event.preventDefault();
+	 if(event.stopPropagation != undefined)
+	  event.stopPropagation();
+	}
+	function keyboardDown(e){
+
+	}
+	function keyboardUp(e){
+
+	}
+
 }
 
 
