@@ -10,19 +10,114 @@
             At the end of the game, you will choose one object from a table of _ random options.
             You may end the game at any time you wish, and you will then be forced to choose
             your object. The object list will look like this:
-
-            RUN AND COPY PASTE TABLE BUT REPLACE NAMES WITH ITEM1, ITEM2, ETC
-
           </p>
           <style>
             th, td { padding: 5px; }
           </style>
-          <table>
-          </table>
+          <table id="options-table">
+        <tr>
+            <td><button class="btn" nonsenseattr=
+            "option_clicked_20q(&quot;village&quot;,896)" style=
+            "width: 100%; height: 150%;">item 1</button></td>
+
+            <td><button class="btn" nonsenseattr=
+            "option_clicked_20q(&quot;mirror&quot;,804)" style=
+            "width: 100%; height: 150%;">item 2</button></td>
+
+            <td><button class="btn" nonsenseattr=
+            "option_clicked_20q(&quot;vulture&quot;,803)" style=
+            "width: 100%; height: 150%;">item 3</button></td>
+
+            <td><button class="btn" nonsenseattr=
+            "option_clicked_20q(&quot;cement&quot;,373)" style=
+            "width: 100%; height: 150%;">item 4</button></td>
+        </tr>
+
+        <tr>
+            <td><button class="btn" nonsenseattr=
+            "option_clicked_20q(&quot;maple&quot;,303)" style=
+            "width: 100%; height: 150%;">item 5</button></td>
+
+            <td><button class="btn" nonsenseattr=
+            "option_clicked_20q(&quot;ceiling&quot;,802)" style=
+            "width: 100%; height: 150%;">item 6</button></td>
+
+            <td><button class="btn" nonsenseattr=
+            "option_clicked_20q(&quot;restaurant&quot;,609)" style=
+            "width: 100%; height: 150%;">item 7</button></td>
+
+            <td><button class="btn" nonsenseattr=
+            "option_clicked_20q(&quot;vest&quot;,419)" style=
+            "width: 100%; height: 150%;">item 8</button></td>
+        </tr>
+
+        <tr>
+            <td><button class="btn" nonsenseattr=
+            "option_clicked_20q(&quot;shop&quot;,789)" style=
+            "width: 100%; height: 150%;">item 9</button></td>
+
+            <td><button class="btn" nonsenseattr=
+            "option_clicked_20q(&quot;hall&quot;,666)" style=
+            "width: 100%; height: 150%;">item 10</button></td>
+
+            <td><button class="btn" nonsenseattr=
+            "option_clicked_20q(&quot;cigar&quot;,589)" style=
+            "width: 100%; height: 150%;">item 11</button></td>
+
+            <td><button class="btn" nonsenseattr=
+            "option_clicked_20q(&quot;ink&quot;,949)" style=
+            "width: 100%; height: 150%;">item 12</button></td>
+        </tr>
+
+        <tr>
+            <td><button class="btn" nonsenseattr=
+            "option_clicked_20q(&quot;burner&quot;,440)" style=
+            "width: 100%; height: 150%;">item 13</button></td>
+
+            <td><button class="btn" nonsenseattr=
+            "option_clicked_20q(&quot;stool&quot;,503)" style=
+            "width: 100%; height: 150%;">item 14</button></td>
+
+            <td><button class="btn" nonsenseattr=
+            "option_clicked_20q(&quot;saxophone&quot;,469)" style=
+            "width: 100%; height: 150%;">item 15</button></td>
+
+            <td><button class="btn" nonsenseattr=
+            "option_clicked_20q(&quot;supper&quot;,531)" style=
+            "width: 100%; height: 150%;">item 16</button></td>
+        </tr>
+
+        <tr>
+            <td><button class="btn" nonsenseattr=
+            "option_clicked_20q(&quot;sand&quot;,313)" style=
+            "width: 100%; height: 150%;">item 17</button></td>
+
+            <td><button class="btn" nonsenseattr=
+            "option_clicked_20q(&quot;jersey&quot;,564)" style=
+            "width: 100%; height: 150%;">item 18</button></td>
+
+            <td><button class="btn" nonsenseattr=
+            "option_clicked_20q(&quot;bear&quot;,0)" style=
+            "width: 100%; height: 150%;">item 19</button></td>
+
+            <td><button class="btn" nonsenseattr=
+            "option_clicked_20q(&quot;peach&quot;,457)" style=
+            "width: 100%; height: 150%;">item 20</button></td>
+        </tr>
+    </table>
 
           <script type="text/javascript">
-          //console.log(psiTurk.getInstructionIndicator())
+            $(document).ready(function() {
+              $("button").hover(function(){
+                $(this).addClass('btn-primary');
+              }, function() {
+                $(this).removeClass('btn-primary');
+              });
+            })
           </script>
+
+
+      <p>You will now proceed to the task. You will play exactly _ games</p>
 
       </div>
 

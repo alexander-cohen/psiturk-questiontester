@@ -181,7 +181,8 @@ var choicecomplete_20q = function() {
 					$("#submit-button").html("Next");
 					$("#submit-button").removeClass('btn-success');
 					$("#submit-button").addClass("btn-primary");
-					$("#question-form").html("<h3 style='margin-bottom: 40px'>"+choice+"</h3>");
+					//$("#question-form").html("<h3 style='margin-bottom: 40px'>"+choice+"</h3>");
+					$("#question-form").html("<h3 style='margin-bottom: 40px'></h3>");
 					show_info_gain();
 				}
 			})
