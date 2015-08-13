@@ -483,14 +483,14 @@ var option_clicked_oneshot = function(item_chosen, index) {
 	save_data("oneshot_data", oneshot_data)
 	var correct = item_chosen == the_item;
 	if(correct) {
-		if(trial_num >= tasks.length) {
+		if(trial_num+1 >= tasks.length) {
 			make_alert("You were correct! That was the last trial. We will now ask to fill out a questionnaire about the experiment.", show_questions);
 		}
 		make_alert("Thank you! You were correct. You will now complete the same task with a new game:",
 			show_questions);
 	}
 	else {
-		if(trial_num >= tasks.length) {
+		if(trial_num+1 >= tasks.length) {
 			make_alert("That was the last trial. You were incorrect, the correct object was <strong>"+the_item+"</strong>. We will now ask to fill out a questionnaire about the experiment.", show_questions);
 		}
 		make_alert("Sorry, you were incorrect. The correct object was <strong>"+the_item+"</strong>. You will now complete the same task with a new game",

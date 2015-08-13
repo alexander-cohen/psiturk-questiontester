@@ -249,17 +249,17 @@ var guess_submitted = function() {
 					$("<p>Incorrect, I am sorry but you do not recieve a bonus. The object is <strong>" + item + "</strong>. Go to next game. If you think you got it right and would like to contest this, your complaint will be recorded and your response will be reviewed. If it is deemed correct, you will recieve your bonus.</p>").dialog(
 					    {
 					    	dialogClass: "no-close",
-					        modal:true, //Not necessary but dims the page background
+					        modal: true, //Not necessary but dims the page background
 					        width: 400,
-					        buttons:{
-					            'Complain':function() {
-												log_data("complaint", [game_on, correct, choice, item], game_data);
-					             	finish_guess_submitted();
-											},
-											'Continue':function() {
-						             	finish_guess_submitted();
-						             },
-
+					        buttons: {
+										"Complain":function() {
+											console.log("in complain");
+											log_data("complaint", [game_on, correct, choice, item], game_data);
+											finish_guess_submitted();
+										},
+										'Continue':function() {
+												finish_guess_submitted();
+											 }
 					        },
 					        close: function(event, ui) {
 					        	finish_guess_submitted();
@@ -299,7 +299,7 @@ var option_clicked_20q = function(item_chosen, indx) {
 										finish_guess_submitted();
 									 },
 									'Complain':function() {
-											psiTurk.recordUnstructuredData("complaint", $("#guess-box").val().toUpperCase() + ":" + item.toUpperCase());
+											psiTurk.recordUnstructuredData("complaint", $("#guess-box").val() + ":" + item;
 										finish_guess_submitted();
 									 }
 
