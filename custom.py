@@ -24,7 +24,7 @@ from random import randint
 from random import sample
 from random import choice
 from random import shuffle
-
+import cPickle as pickle
 
 # load the configuration options
 config = PsiturkConfig()
@@ -35,6 +35,8 @@ myauth = PsiTurkAuthorization(config)  # if you want to add a password protect r
 custom_code = Blueprint('custom_code', __name__, template_folder='templates', static_folder='static')
 
 
+with open("pickled_data/tasks.pickle", 'r') as f:
+    tasks = pickle.load(f)
 
 ###########################################################
 #  serving warm, fresh, & sweet custom, user-provided routes
@@ -182,4 +184,26 @@ def get_rand_objects_without():
         return ':'.join([items[i] for i in item_choices]) + ',' + ':'.join([str(i) for i in item_choices])
 
     except TemplateNotFound:
+        abort(404)
+
+@custom_code.route('/get_questions_for_task', methods=['GET'])
+def get_questions_for_task():
+    try:
+        task_indx = int(str(request.args['task_indx']))
+        question_str = ':'.join([','.join([';'.join([repr(elem) for elem in q]) for q in questions]) for questions in tasks[task_indx][2]])
+        return question_str + '/' + str(tasks[task_indx][1])
+
+    except:
+        abort(404)
+
+
+@custom_code.route('/get_item_for_task', methods=['GET'])
+def get_item_for_task():
+    return "test passed"
+    try:
+        task_indx = int(str(request.args['task_indx']))
+        task = tasks[task_indx]
+        return str(task[1])
+
+    except:
         abort(404)
