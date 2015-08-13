@@ -38,7 +38,8 @@ var shape_imgs = [];
 var shape_choice = '';
 var knowledge_arr = [];
 var question_on = 0;
-var game_on = 0;
+var shapegame_on = 0;
+var shape_data = []
 
 
 function base2str(num) {
@@ -78,6 +79,7 @@ function add_option(q_num, q) {
 }
 
 function start_shapegame() {
+  shapegame_on++;
   good_questions = shuffle(good_questions_full);
   shape_imgs = load_img_names();
   shape_choice = base2str(rand_num_incl(0, 15));
@@ -106,7 +108,11 @@ function shape_chosen(obj) {
   make_alert((correct ?
               'Correct! Great Job! Now move on to Part II of this HIT' :
               'Incorrect, sorry. You must now redo the task. A different shape will be chosen for you to guess'), function(){
-                                    if(correct) show_fullgame_instructs();
+                                    if(correct) {
+                                      log_data("shape_itrs", shapegame_on+1, shape_data);
+                                      save_data("shapes", shape_data);
+                                      show_fullgame_instructs();
+                                    }
                                     else start_shapegame();
                                   });
 }

@@ -22,14 +22,18 @@ var max_iterations = 30;
 var num_games = 2;
 var game_on = 0;
 var options_show = 4;
+var questions_to_ask = []
 
 var questions_shown = [];
+
+var game_data = [];
 
 var bonus = function() {
 	return 1.0 - (iterations) * 0.05;
 }
 
 var start_20q_game = function() {
+	game_data = []
 	psiTurk.showPage("full_game_eig.html");
 	iterations = 0;
 	questions_shown = [];
@@ -39,7 +43,7 @@ var start_20q_game = function() {
 		type: "GET",
 		success: function(data) {
 			item = data;
-			log_data("20q_game_start", [item, game_on]);
+			log_data("20q_game_start", [item, game_on], game_data);
 			pre_20q();
 		}
 	})
@@ -100,7 +104,7 @@ var pre_20q = function() {
 					var start = 2;
 					var end = 218 - iterations;
 					var jump = Math.floor((end - start) / options_show);
-					var questions_to_ask = [];
+					questions_to_ask = [];
 
 					for(var i = start, j = 0; j < options_show; i += jump, j++) {
 						console.log(i);
@@ -108,7 +112,7 @@ var pre_20q = function() {
 						questions_shown.push(new_questions[i]);
 					}
 
-					var questions_to_ask = shuffle(questions_to_ask);
+					questions_to_ask = shuffle(questions_to_ask);
 					for(var i = 0; i < options_show ; i++) {
 						$('#q'+ i.toString()).next('label').html('<span class="question-text">' + questions_to_ask[i][0] + '</span>');
 						$('#q'+ i.toString()).next('label').attr("info-gain", questions_to_ask[i][1]);
@@ -164,8 +168,8 @@ var choicecomplete_20q = function() {
 				data: {'question': choice, 'item': item},
 				success: function(data) {
 					console.log(data);
-
-					log_data('20q_choice', [game_on, item, iterations, choice, data, info_gain, questions_to_ask]);
+					console.log("Questions_to_ask: " + questions_to_ask);
+					log_data('20q_choice', [game_on, item, iterations, choice, data, info_gain, questions_to_ask], game_data);
 
 					if(knowledge == "") knowledge += choice + ":" + data;
 					else knowledge += "," + choice + ":" + data;
@@ -226,11 +230,13 @@ var guess_submitted = function() {
 				correct = true;
 			}
 
-			log_data("20q_item_chosen", [game_on, correct, choice, item]);
+			log_data("20q_item_chosen", [game_on, correct, choice, item], game_data);
 
 			if(correct) {
 				if(game_on == 0) make_alert("Correct! Good job!", finish_guess_submitted);
 				else {
+					total_bonus += bonus();
+					log_data("bonus", bonus(), game_data);
 					make_alert("Correct! Good guess! You will recieve a bonus of $" + bonus().toFixed(2), finish_guess_submitted);
 				}
 			}
@@ -247,7 +253,7 @@ var guess_submitted = function() {
 					        width: 400,
 					        buttons:{
 					            'Complain':function() {
-												log_data("complaint", [game_on, correct, choice, item]);
+												log_data("complaint", [game_on, correct, choice, item], game_data);
 					             	finish_guess_submitted();
 											},
 											'Continue':function() {
@@ -272,7 +278,9 @@ var option_clicked_20q = function(item_chosen, indx) {
 	if(correct) {
 		if(game_on == 0) make_alert("Correct! Good job!", finish_guess_submitted);
 		else {
-			make_alert("Correct! Good guess! You will recieve a bonus of $" + bonus().toFixed(2), finish_guess_submitted);
+			total_bonus += bonus();
+			log_data("bonus", bonus(), game_data);
+			make_alert("Correct! Good guess! You will recieve a bonus of $" + bonus().toFixed(2), finish_guess_submitted)
 		}
 	}
 	else {
@@ -325,6 +333,8 @@ var end_pressed = function() {
 }
 
 var finish_guess_submitted = function() {
+	save_data("20q", game_data);
+
 	if(game_on == 0) {
 		make_alert("Now you will do the same thing, but if you do well, you will recieve a bonus." +
 					"You start with $1 of bonus, and after each question it goes down by $.05. " +
@@ -334,8 +344,6 @@ var finish_guess_submitted = function() {
 							start_20q_game();
 						});
 	}
-
-	log_data("bonus", bonus());
 
 	else if(game_on >= num_games) {
 		make_alert("That was the final game, you will now move onto part 2 of this HIT", show_questions_instructs);

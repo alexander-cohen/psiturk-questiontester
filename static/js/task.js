@@ -104,7 +104,10 @@ var tasks =  [0, 1, 2, 3, 4, 5];
 var depths = [0, 2, 4, 6, 8, 10]
 var tasks = [0, 1];
 
-var to_log = [];
+var oneshot_data = [];
+var objectquiz_data = [];
+
+var total_bonus = 0;
 
 /********************
 * HTML manipulation
@@ -147,9 +150,14 @@ function pad(num, size) {
   return s;
 }
 
-function log_data(name, dat) {
-	to_log.push([name, dat]);
+function log_data(name, dat, datlist) {
+	datlist.push([name, dat]);
 }
+var save_data = function(name, data) {
+	psiTurk.recordTrialData([name, data]);
+	psiTurk.saveData();
+}
+
 
 function rand_num_incl(min, max) {
   return parseInt((Math.random() * (max - min + 1)), 10) + min;
@@ -164,13 +172,13 @@ function removeArrValue(arr,index) {
 
 function removeArrByValue(arr, val) {
 
-		var new_arr = [arr.length-1]
-		var j = 0
+		var new_arr = [arr.length-1];
+		var j = 0;
 		for(var i = 0; i < arr.length-1; i++) {
 			new_arr[i] = arr[j];
-			j += (arr[i+1] == val ? 1 : 2)
+			j += (arr[i+1] == val ? 1 : 2);
 		}
-		console.log("Before: " + arr + "\nAfter: " + new_arr)
+		console.log("Before: " + arr + "\nAfter: " + new_arr);
     return new_arr;
 }
 
@@ -221,17 +229,16 @@ function pageScroll(times, max) {
 
 var show_questions = function(first_time) {
 	quiz_question_itr = 0;
-
 	first_time = typeof first_time !== 'undefined' ? first_time : true;
 
-
 	if(first_time) {
+		oneshot_data = [];
 		trial_num++;
 		quizquestion_on = 0;
 		quizquestions_incorrect = 0;
 
 
-		if(trial_num == tasks.length) complete();
+		if(trial_num >= tasks.length) complete();
 
 		var depth = depths[trial_num];
 		curdepth = depth;
@@ -269,8 +276,8 @@ var show_questions = function(first_time) {
 				console.log(questions_to_rank);
 
 				console.log(question_answer_pairs)
-				log_data('question_answer_pairs', [trial_num, question_answer_pairs]);
-				log_data('questions_to_rank', [trial_num, questions_to_rank]);
+				log_data('question_answer_pairs', [trial_num, question_answer_pairs.slice(0)], oneshot_data);
+				log_data('questions_to_rank', [trial_num, questions_to_rank], oneshot_data);
 
 				if(curdepth == 0) {
 					get_data()
@@ -304,9 +311,6 @@ var show_questions = function(first_time) {
 		$("#next-button").css('opacity', 1.0);
 		$("#next").removeAttr('disabled');
 	}
-
-
-
 }
 
 var get_data = function() {
@@ -346,10 +350,9 @@ var freeform_resp_submitted = function() {
 		return;
 	}
 	else {
-		log_data('quest_freeform', [trial_num, $("#quest-form").val()]);
+		log_data('quest_freeform', [trial_num, $("#quest-form").val()], oneshot_data);
 		get_data_ranked();
 	}
-
 }
 
 var get_data_ranked = function() {
@@ -395,7 +398,13 @@ var answer_chosen = function() {
 	else if($("#submit-button").hasClass('btn-success')){
 		var ordered_arr = [ ordered[0].charAt(1), ordered[1].charAt(1), ordered[2].charAt(1), ordered[3].charAt(1) ];
 		//alert(ordered + "\narr form: \n" + ordered_arr)
-		log_data('ranked_choices', [trial_num, ordered_arr]);
+
+		var ordered_feats = [];
+		for(var i = 0; i < 4; i++) {
+			ordered_feats[i] = questions_to_rank[parseInt(ordered_arr[i])][0]
+		}
+
+		log_data('ranked_choices', [trial_num, ordered_arr, ordered_feats], oneshot_data);
 		//psiTurk.recordTrialData(["Final choice", question_answer_pairs, ordered_arr]);
 		/*
 		make_alert("Thank you! You will now go back and do the exact same thing, "+
@@ -404,6 +413,9 @@ var answer_chosen = function() {
 		*/
 		var quest_name = $("#"+ordered[0]).find('p').html();
 		var data = questions_to_rank[parseInt(ordered[0].charAt(1))][1];
+
+		question_answer_pairs.push([ordered_feats[0], data])
+
 		$("#answers").css('opacity', 0);
 		$("#answers").css('margin-top', "30px");
 		$("#answers").css('margin-bottom', "30px");
@@ -467,14 +479,21 @@ var give_options_final = function() {
 
 var option_clicked_oneshot = function(item_chosen, index) {
 	var the_item = oneshot_itm;
-	log_data('oneshot_itm_chosen', [trial_num, the_item, item_chosen, the_item == item_chosen]);
+	log_data('oneshot_itm_chosen', [trial_num, the_item, item_chosen, the_item == item_chosen], oneshot_data);
+	save_data("oneshot_data", oneshot_data)
 	var correct = item_chosen == the_item;
 	if(correct) {
+		if(trial_num >= tasks.length) {
+			make_alert("You were correct! That was the last trial. We will now ask to fill out a questionnaire about the experiment.", show_questions);
+		}
 		make_alert("Thank you! You were correct. You will now complete the same task with a new game:",
 			show_questions);
 	}
 	else {
-		make_alert("Sorry, you were incorrect. The correct object was <strong>"+the_item+"</strong>. You will now complete the same task with a new game:",
+		if(trial_num >= tasks.length) {
+			make_alert("That was the last trial. You were incorrect, the correct object was <strong>"+the_item+"</strong>. We will now ask to fill out a questionnaire about the experiment.", show_questions);
+		}
+		make_alert("Sorry, you were incorrect. The correct object was <strong>"+the_item+"</strong>. You will now complete the same task with a new game",
 			show_questions);
 	}
 
@@ -524,7 +543,7 @@ function load_quizresps(correct_val) {
 
 var newquiz_complete = function(resp,  correct) {
 	log_data('quiz_response', [quizquestion_on.toString(), quiz_question_itr,
-		quizquestions[0][0], quizquestions[0][1], resp, correct]);
+		quizquestions[0][0], quizquestions[0][1], resp, correct], oneshot_data);
 
 	quizquestion_on++;
 
@@ -555,7 +574,7 @@ var quizcomplete = function(resp) {
 	var correct = parseInt(resp) == correct_resp;
 
 	log_data('quiz_response', [quizquestion_on.toString(), quiz_question_itr,
-		quizquestions[0][0], quizquestions[0][1], resp, correct]);
+		quizquestions[0][0], quizquestions[0][1], resp, correct], oneshot_data);
 
 	quizquestion_on++;
 
@@ -653,12 +672,18 @@ var objectquiz_submitted = function() {
 							 "Adjectives":false};
 
 	var amount_incorrect = 0;
+	var resps = [];
 	for(var name in correct_answers) {
+		resps.push([name, $("input[value='" + name + "']").is(':checked')]);
 		if(correct_answers[name] != $("input[value='" + name + "']").is(':checked'))
 			amount_incorrect++;
 	}
 
+	log_data("objectquiz_resps", [amount_incorrect == 0, amount_incorrect, resps], objectquiz_data);
+
 	if(amount_incorrect == 0) {
+		log_data("objectquiz_times", objectquiz_data.length, objectquiz_data);
+		save_data("objectquiz", objectquiz_data)
 		make_alert("Congratulations, you answered the quiz completely correctly!", progress_20q_instructs);
 	}
 	else {
@@ -717,6 +742,7 @@ var display_object_options = function(options, ids, rows, cols, func) {
 		}
 		document.getElementById('options-table').appendChild(row);
 	}
+
 	$("button").hover(function(){
 			if(!$(this).prop('temp_disable')) $(this).addClass('btn-primary');
 		}, function() {
@@ -795,10 +821,11 @@ var display_object_options = function(options, ids, rows, cols, func) {
 
 
 var complete = function() {
-  var comments = document.getElementById("comments").value;
+  //var comments = document.getElementById("comments").value;
+	var comments = "";
 	psiTurk.showPage('complete.html');
-  log_data('comments', comments);
-	psiTurk.recordTrialData(to_log);
+	psiTurk.recordUnstructuredData("comments", comments);
+	psiTurk.recordUnstructuredData("bonus", total_bonus);
   psiTurk.saveData();
 	psiTurk.completeHIT();
 }
