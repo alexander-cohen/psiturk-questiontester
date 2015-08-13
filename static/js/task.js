@@ -102,6 +102,7 @@ var oneshot_itm = "";
 
 var tasks =  [0, 1, 2, 3, 4, 5];
 var depths = [0, 2, 4, 6, 8, 10]
+var tasks = [0, 1];
 
 var to_log = [];
 
@@ -229,8 +230,12 @@ var show_questions = function(first_time) {
 		quizquestion_on = 0;
 		quizquestions_incorrect = 0;
 
-		depth = depths[trial_num];
-		task_indx = tasks[trial_num];
+
+		if(trial_num == tasks.length) complete();
+
+		var depth = depths[trial_num];
+		curdepth = depth;
+		var task_indx = tasks[trial_num];
 		//question_answer_pairs = question_answer_pairs_indx[rand_num_incl(0, question_answer_pairs_indx.length - 1)].slice(0, depth);
 		$.ajax({
 			url: "/get_questions_for_task",
@@ -264,15 +269,23 @@ var show_questions = function(first_time) {
 				console.log(questions_to_rank);
 
 				console.log(question_answer_pairs)
-				log_data('question_answer_pairs', question_answer_pairs);
-				psiTurk.showPage('setup.html');
+				log_data('question_answer_pairs', [trial_num, question_answer_pairs]);
+				log_data('questions_to_rank', [trial_num, questions_to_rank]);
 
-				for(var i = 0; i < 1; i++) {
-					$("#questions").append(get_quest_ans_pair((i+1), features[question_answer_pairs[i][0]]))
+				if(curdepth == 0) {
+					get_data()
+				}
+				else {
+					psiTurk.showPage('setup.html');
+
+					for(var i = 0; i < 1; i++) {
+						$("#questions").append(get_quest_ans_pair((i+1), features[question_answer_pairs[i][0]]))
+					}
+
+					$("#block1").css('opacity', '1.0');
+					quizquestions = shuffle(question_answer_pairs.slice());
 				}
 
-				$("#block1").css('opacity', '1.0');
-				quizquestions = shuffle(question_answer_pairs.slice());
 			}
 		});
 
@@ -333,7 +346,7 @@ var freeform_resp_submitted = function() {
 		return;
 	}
 	else {
-		log_data('quest_freeform', $("#quest-form").val());
+		log_data('quest_freeform', [trial_num, $("#quest-form").val()]);
 		get_data_ranked();
 	}
 
@@ -382,7 +395,7 @@ var answer_chosen = function() {
 	else if($("#submit-button").hasClass('btn-success')){
 		var ordered_arr = [ ordered[0].charAt(1), ordered[1].charAt(1), ordered[2].charAt(1), ordered[3].charAt(1) ];
 		//alert(ordered + "\narr form: \n" + ordered_arr)
-		log_data('ranked_choices', ordered_arr);
+		log_data('ranked_choices', [trial_num, ordered_arr]);
 		//psiTurk.recordTrialData(["Final choice", question_answer_pairs, ordered_arr]);
 		/*
 		make_alert("Thank you! You will now go back and do the exact same thing, "+
@@ -454,6 +467,7 @@ var give_options_final = function() {
 
 var option_clicked_oneshot = function(item_chosen, index) {
 	var the_item = oneshot_itm;
+	log_data('oneshot_itm_chosen', [trial_num, the_item, item_chosen, the_item == item_chosen]);
 	var correct = item_chosen == the_item;
 	if(correct) {
 		make_alert("Thank you! You were correct. You will now complete the same task with a new game:",

@@ -39,6 +39,7 @@ var start_20q_game = function() {
 		type: "GET",
 		success: function(data) {
 			item = data;
+			log_data("20q_game_start", [item, game_on]);
 			pre_20q();
 		}
 	})
@@ -154,7 +155,7 @@ var choicecomplete_20q = function() {
 			all_gains.push($(this).next('label').attr('info-gain'));
 		});
 
-		log_data('20q_choice', [iterations, choice, info_gain, all_gains]);
+
 
 		$.ajax({
 				//  send this user's unique id and get stimuli back
@@ -163,6 +164,9 @@ var choicecomplete_20q = function() {
 				data: {'question': choice, 'item': item},
 				success: function(data) {
 					console.log(data);
+
+					log_data('20q_choice', [game_on, item, iterations, choice, data, info_gain, questions_to_ask]);
+
 					if(knowledge == "") knowledge += choice + ":" + data;
 					else knowledge += "," + choice + ":" + data;
 					//$("#prev-questions").css("margin-left", "0px");
@@ -221,6 +225,9 @@ var guess_submitted = function() {
 			if(error <= 1) {
 				correct = true;
 			}
+
+			log_data("20q_item_chosen", [game_on, correct, choice, item]);
+
 			if(correct) {
 				if(game_on == 0) make_alert("Correct! Good job!", finish_guess_submitted);
 				else {
@@ -239,13 +246,13 @@ var guess_submitted = function() {
 					        modal:true, //Not necessary but dims the page background
 					        width: 400,
 					        buttons:{
-					        	'Continue':function() {
-					             	finish_guess_submitted();
-					             },
 					            'Complain':function() {
-					                psiTurk.recordUnstructuredData("complaint", $("#guess-box").val().toUpperCase() + ":" + item.toUpperCase());
+												log_data("complaint", [game_on, correct, choice, item]);
 					             	finish_guess_submitted();
-					             }
+											},
+											'Continue':function() {
+						             	finish_guess_submitted();
+						             },
 
 					        },
 					        close: function(event, ui) {
@@ -322,8 +329,13 @@ var finish_guess_submitted = function() {
 		make_alert("Now you will do the same thing, but if you do well, you will recieve a bonus." +
 					"You start with $1 of bonus, and after each question it goes down by $.05. " +
 					"If you guess the object correctly, you collect whatever the current bonus is. Good luck!",
-						function() {game_on++; start_20q_game();});
+						function() {
+							game_on++;
+							start_20q_game();
+						});
 	}
+
+	log_data("bonus", bonus());
 
 	else if(game_on >= num_games) {
 		make_alert("That was the final game, you will now move onto part 2 of this HIT", show_questions_instructs);
