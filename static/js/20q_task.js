@@ -101,7 +101,7 @@ var pre_20q = function() {
 					new_questions = data.split(',')[0].split(":");
 					info_gains = data.split(',')[1].split(":");
 					console.log(new_questions);
-					var start = 2;
+					var start = 0;
 					var end = 218 - iterations;
 					var jump = Math.floor((end - start) / options_show);
 					questions_to_ask = [];
