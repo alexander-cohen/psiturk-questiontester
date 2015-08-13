@@ -299,7 +299,7 @@ var option_clicked_20q = function(item_chosen, indx) {
 										finish_guess_submitted();
 									 },
 									'Complain':function() {
-											psiTurk.recordUnstructuredData("complaint", $("#guess-box").val() + ":" + item;
+											psiTurk.recordUnstructuredData("complaint", $("#guess-box").val() + ":" + item);
 										finish_guess_submitted();
 									 }
 

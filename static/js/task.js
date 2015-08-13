@@ -42,7 +42,10 @@ var pages = [
 	"setup.html",
 	"shape_game.html",
 	"shape_choice.html",
+
 	"postquestionnaire.html",
+	"comments.html",
+
 	"complete.html",
 	"full_game_eig.html",
 	"game_end.html"
@@ -108,6 +111,8 @@ var oneshot_data = [];
 var objectquiz_data = [];
 
 var total_bonus = 0;
+
+var correct_bonus = 1;
 
 /********************
 * HTML manipulation
@@ -238,7 +243,7 @@ var show_questions = function(first_time) {
 		quizquestions_incorrect = 0;
 
 
-		if(trial_num >= tasks.length) complete();
+		if(trial_num >= tasks.length) show_postquestionnaire();
 
 		var depth = depths[trial_num];
 		curdepth = depth;
@@ -483,20 +488,28 @@ var option_clicked_oneshot = function(item_chosen, index) {
 	save_data("oneshot_data", oneshot_data)
 	var correct = item_chosen == the_item;
 	if(correct) {
+		total_bonus += correct_bonus;
+		log_data("bonus", correct_bonus, oneshot_data);
 		if(trial_num+1 >= tasks.length) {
-			make_alert("You were correct! That was the last trial. We will now ask to fill out a questionnaire about the experiment.", show_questions);
-		}
-		make_alert("Thank you! You were correct. You will now complete the same task with a new game:",
+			make_alert("You were correct! You recieved a bonus of $" + correct_bonus + ". That was the last trial. We will now ask to fill out a questionnaire about the experiment.",
 			show_questions);
+		}
+		else {
+			make_alert("Thank you! You were correct. You recieved a bonus of $" + correct_bonus + ". You will now complete the same task with a new game:",
+				show_questions);
+		}
+
 	}
 	else {
 		if(trial_num+1 >= tasks.length) {
-			make_alert("That was the last trial. You were incorrect, the correct object was <strong>"+the_item+"</strong>. We will now ask to fill out a questionnaire about the experiment.", show_questions);
-		}
-		make_alert("Sorry, you were incorrect. The correct object was <strong>"+the_item+"</strong>. You will now complete the same task with a new game",
+			make_alert("That was the last trial. You were incorrect, the correct object was <strong>"+the_item+"</strong>. We will now ask to fill out a questionnaire about the experiment.",
 			show_questions);
+		}
+		else {
+			make_alert("Sorry, you were incorrect. The correct object was <strong>"+the_item+"</strong>. You will now complete the same task with a new game",
+			show_questions);
+		}
 	}
-
 }
 
 var do_quiz = function() {
@@ -819,10 +832,27 @@ var display_object_options = function(options, ids, rows, cols, func) {
 
 }
 
+var show_postquestionnaire = function() {
+	psiTurk.showPage("postquestionnaire.html");
+}
+
+var show_questionnaire2 = function() {
+	psiTurk.showPage("postquestionnaire2.html");
+}
+
+var show_generalcomments = function() {
+	//record questionnaire things
+	var played_before = $('input[name=prev-played]:checked').val();
+	console.log(played_before);
+	psiTurk.recordUnstructuredData("played_before", played_before)
+
+	psiTurk.showPage("comments.html");
+}
 
 var complete = function() {
-  //var comments = document.getElementById("comments").value;
-	var comments = "";
+	var comments_technical = document.getElementById("comments-technical").value;
+	var comments_easier = document.getElementById("comments_easier").value;
+  var comments_general = document.getElementById("comments").value;
 	psiTurk.showPage('complete.html');
 	psiTurk.recordUnstructuredData("comments", comments);
 	psiTurk.recordUnstructuredData("bonus", total_bonus);
@@ -871,6 +901,7 @@ $(window).load( function(){
     psiTurk.doInstructions(
     	instructionPages, // a list of pages you want to display in sequence
     	function() {
+				//show_postquestionnaire();
 				//progress_20q_instructs();
 				//give_options_final()
 
