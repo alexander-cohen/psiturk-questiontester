@@ -131,7 +131,7 @@ def get_good_questions_norepeat():
             parts = k.split(":")
             player.add_knowledge_name(parts[0], parts[1])
 
-        thresh = 2
+        thresh = 1
         to_remove = [s for s in list(set(shown)) if shown.count(s) >= thresh]
 
         for s in to_remove:
