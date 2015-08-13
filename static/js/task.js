@@ -851,10 +851,12 @@ var show_generalcomments = function() {
 
 var complete = function() {
 	var comments_technical = document.getElementById("comments-technical").value;
-	var comments_easier = document.getElementById("comments_easier").value;
-  var comments_general = document.getElementById("comments").value;
+	var comments_easier = document.getElementById("comments-easier").value;
+  var comments_general = document.getElementById("comments-general").value;
 	psiTurk.showPage('complete.html');
-	psiTurk.recordUnstructuredData("comments", comments);
+	psiTurk.recordUnstructuredData("comments-technical", comments_technical);
+	psiTurk.recordUnstructuredData("comments-easier", comments_easier);
+	psiTurk.recordUnstructuredData("comments-general", comments_general);
 	psiTurk.recordUnstructuredData("bonus", total_bonus);
   psiTurk.saveData();
 	psiTurk.completeHIT();
