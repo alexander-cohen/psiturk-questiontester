@@ -31,6 +31,7 @@ var pages = [
 	"instructions/instruct_20q-12.html",
 
 	"instructions/instruct_20q-objectquiz.html",
+	"instructions/pre_20q_quiz.html",
 
 	"instructions/instruct-1.html",
 	"instructions/instruct-2.html",
@@ -103,16 +104,21 @@ var question_answer_pairs_indx = [];
 var questions_to_rank = [];
 var oneshot_itm = "";
 
-var tasks =  [0, 1, 2, 3, 4, 5];
-var depths = [0, 2, 4, 6, 8, 10]
-var tasks = [0, 1];
+
+var depths = [10, 8, 6, 4, 2, 0];
+var tasks = [2, 4, 5, 6, 7, 8];
+
+var order = [0, 1, 2, 3, 4, 5];
+
 
 var oneshot_data = [];
 var objectquiz_data = [];
 
 var total_bonus = 0;
 
-var correct_bonus = 1;
+var correct_bonus = 0.10;
+
+var objects_at_end = [];
 
 /********************
 * HTML manipulation
@@ -148,6 +154,9 @@ function shuffle(o){
     for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
     return o;
 }
+
+order = shuffle(order);
+psiTurk.recordUnstructuredData("order", order);
 
 function pad(num, size) {
   var s = num+"";
@@ -232,6 +241,63 @@ function pageScroll(times, max) {
     scrolldelay = setTimeout(pageScroll(times+1, max),10);
 }
 
+var first_oneshot_ajax = function(depth, curdepth, task_indx) {
+	$.ajax({
+		url: "/get_questions_for_task",
+		type: "GET",
+		data: {"task_indx":task_indx.toString()},
+		success: function(data) {
+			console.log(data)
+			oneshot_itm = data.split("/")[1];
+			left = data.split("/")[0];
+			temp = left.split(':');
+			question_answer_pairs = [];
+			for(var i = 0; i < depth; i++) {
+				var questions_in = temp[i].split(',');
+				var questions_for_inner = questions_in[0].split(';')
+				/*
+				for(var j = 0; j < questions_in.length; j++) {
+					questions_for_inner[j] = questions_in[j].split(';')
+				}
+				*/
+				question_answer_pairs[i] = questions_for_inner
+			}
+
+			questions_to_rank = [];
+			var all8 = temp[depth].split(',');
+			questions_to_rank = [all8[0], all8[1], all8[2], all8[3], all8[4], all8[5]];
+			for(var i = 0; i < 6; i++) {
+				questions_to_rank[i] = questions_to_rank[i].split(';');
+			}
+
+			objects_at_end = data.split('/')[2].split(':');
+			objects_at_end[19] = oneshot_itm;
+			objects_at_end = shuffle(objects_at_end);
+
+			console.log(questions_to_rank);
+
+			console.log(question_answer_pairs)
+			log_data('question_answer_pairs', [trial_num, order[trial_num], question_answer_pairs.slice(0)], oneshot_data);
+			log_data('questions_to_rank', [trial_num, order[trial_num], questions_to_rank], oneshot_data);
+
+			if(curdepth == 0) {
+				get_data()
+			}
+			else {
+				psiTurk.showPage('setup.html');
+
+				for(var i = 0; i < 1; i++) {
+					$("#questions").append(get_quest_ans_pair((i+1), features[question_answer_pairs[i][0]]))
+				}
+
+				$("#block1").css('opacity', '1.0');
+				quizquestions = shuffle(question_answer_pairs.slice());
+			}
+
+		}
+	});
+}
+
 var show_questions = function(first_time) {
 	quiz_question_itr = 0;
 	first_time = typeof first_time !== 'undefined' ? first_time : true;
@@ -245,61 +311,21 @@ var show_questions = function(first_time) {
 
 		if(trial_num >= tasks.length) show_postquestionnaire();
 
-		var depth = depths[trial_num];
+		var depth = depths[order[trial_num]];
+
 		curdepth = depth;
-		var task_indx = tasks[trial_num];
+		var task_indx = tasks[order[trial_num]];
+
+		if(depth == 0) {
+			make_alert("This will be different from the other trials. This time, there is no background information. You will be asked to provide the first question in the game. When you are asked to type in a freeform question, please enter your favorite starting quesiton, and do a similar thing when ranking your optoins.",
+			function(){first_oneshot_ajax(depth, curdepth, task_indx)});
+		}
+		else {
+			first_oneshot_ajax(depth, curdepth, task_indx);
+		}
+
 		//question_answer_pairs = question_answer_pairs_indx[rand_num_incl(0, question_answer_pairs_indx.length - 1)].slice(0, depth);
-		$.ajax({
-			url: "/get_questions_for_task",
-			type: "GET",
-			data: {"task_indx":task_indx.toString()},
-			success: function(data) {
-				console.log(data)
-				oneshot_itm = data.split("/")[1];
-				left = data.split("/")[0];
-				temp = left.split(':');
-				question_answer_pairs = [];
-				for(var i = 0; i < depth; i++) {
-					questions_in = temp[i].split(',');
-					questions_for_inner = [questions_in.length];
-					questions_for_inner = questions_in[0].split(';')
-					/*
-					for(var j = 0; j < questions_in.length; j++) {
-						questions_for_inner[j] = questions_in[j].split(';')
-					}
-					*/
-					question_answer_pairs[i] = questions_for_inner
-				}
 
-				questions_to_rank = [];
-				var all8 = temp[depth].split(',');
-				questions_to_rank = [all8[0], all8[2], all8[4], all8[6]];
-				for(var i = 0; i < 4; i++) {
-					questions_to_rank[i] = questions_to_rank[i].split(';');
-				}
-
-				console.log(questions_to_rank);
-
-				console.log(question_answer_pairs)
-				log_data('question_answer_pairs', [trial_num, question_answer_pairs.slice(0)], oneshot_data);
-				log_data('questions_to_rank', [trial_num, questions_to_rank], oneshot_data);
-
-				if(curdepth == 0) {
-					get_data()
-				}
-				else {
-					psiTurk.showPage('setup.html');
-
-					for(var i = 0; i < 1; i++) {
-						$("#questions").append(get_quest_ans_pair((i+1), features[question_answer_pairs[i][0]]))
-					}
-
-					$("#block1").css('opacity', '1.0');
-					quizquestions = shuffle(question_answer_pairs.slice());
-				}
-
-			}
-		});
 
 	}
 
@@ -355,21 +381,15 @@ var freeform_resp_submitted = function() {
 		return;
 	}
 	else {
-		log_data('quest_freeform', [trial_num, $("#quest-form").val()], oneshot_data);
+		log_data('quest_freeform', [trial_num, order[trial_num], $("#quest-form").val()], oneshot_data);
 		get_data_ranked();
 	}
 }
 
 var get_data_ranked = function() {
 	psiTurk.showPage('stage.html');
-
-	var question_options = ['Question1',
-							'Question2',
-							'Question3',
-							'Question4'];
-
-
-	for(var i = 0; i < 4; i++) {
+	var question_options = [];
+	for(var i = 0; i < 6; i++) {
 		question_options[i] = features[questions_to_rank[i][0]];
 	}
 
@@ -388,8 +408,11 @@ var get_data_ranked = function() {
 	$("#prev-questions").css("margin-left", "50px");
 	$("#prev-questions").find( $("div") ).css("margin-right", -103);
 
-	for(var i = 0; i < 4; i++) {
-		$("#q"+i).find('p').html(question_options[i]);
+	var shuffled_indx = [0, 1, 2, 3, 4];
+	shuffled_indx = shuffle(shuffled_indx);
+
+	for(var i = 0; i < 6; i++) {
+		$("#q"+i).find('p').html(question_options[shuffled_indx[i]]);
 	}
 }
 
@@ -397,19 +420,19 @@ var answer_chosen = function() {
 	var ordered = $("#ranked").sortable("toArray");
 
 
-	if(ordered.length < 4 && $("#submit-button").hasClass('btn-success')) make_alert("Please rank every question", function(){});
+	if(ordered.length < 6 && $("#submit-button").hasClass('btn-success')) make_alert("Please rank every question", function(){});
 
 
 	else if($("#submit-button").hasClass('btn-success')){
-		var ordered_arr = [ ordered[0].charAt(1), ordered[1].charAt(1), ordered[2].charAt(1), ordered[3].charAt(1) ];
+		var ordered_arr = [ ordered[0].charAt(1), ordered[1].charAt(1), ordered[2].charAt(1), ordered[3].charAt(1), ordered[4].charAt(1) ];
 		//alert(ordered + "\narr form: \n" + ordered_arr)
 
 		var ordered_feats = [];
-		for(var i = 0; i < 4; i++) {
+		for(var i = 0; i < 6; i++) {
 			ordered_feats[i] = questions_to_rank[parseInt(ordered_arr[i])][0]
 		}
 
-		log_data('ranked_choices', [trial_num, ordered_arr, ordered_feats], oneshot_data);
+		log_data('ranked_choices', [trial_num, order[trial_num], ordered_arr, ordered_feats], oneshot_data);
 		//psiTurk.recordTrialData(["Final choice", question_answer_pairs, ordered_arr]);
 		/*
 		make_alert("Thank you! You will now go back and do the exact same thing, "+
@@ -467,24 +490,15 @@ var load_oneshot_knowledge = function() {
 }
 
 var give_options_final = function() {
-	var the_item = oneshot_itm;
-	$.ajax({
-		url: "/get_rand_objects_without",
-		type: "GET",
-		data: {"object":the_item, amount:'20'},
-		success: function(data) {
-			var split = data.split(',');
-			var options = split[0].split(':');
-			var indexes = split[1].split(':');
-			display_object_options(options, indexes, 5, 4, 'option_clicked_oneshot');
-			load_oneshot_knowledge();
-		}
-	});
+	var indexes = [];
+
+	display_object_options(objects_at_end, indexes, 5, 4, 'option_clicked_oneshot');
+	load_oneshot_knowledge();
 }
 
 var option_clicked_oneshot = function(item_chosen, index) {
 	var the_item = oneshot_itm;
-	log_data('oneshot_itm_chosen', [trial_num, the_item, item_chosen, the_item == item_chosen], oneshot_data);
+	log_data('oneshot_itm_chosen', [trial_num, order[trial_num], the_item, item_chosen, the_item == item_chosen], oneshot_data);
 	save_data("oneshot_data", oneshot_data)
 	var correct = item_chosen == the_item;
 	if(correct) {
@@ -495,7 +509,7 @@ var option_clicked_oneshot = function(item_chosen, index) {
 			show_questions);
 		}
 		else {
-			make_alert("Thank you! You were correct. You recieved a bonus of $" + correct_bonus + ". You will now complete the same task with a new game:",
+			make_alert("Thank you! You were correct. You recieved a bonus of $" + correct_bonus + ". You will now complete the same task with a new game, and a completely different object.",
 				show_questions);
 		}
 
@@ -506,7 +520,7 @@ var option_clicked_oneshot = function(item_chosen, index) {
 			show_questions);
 		}
 		else {
-			make_alert("Sorry, you were incorrect. The correct object was <strong>"+the_item+"</strong>. You will now complete the same task with a new game",
+			make_alert("Sorry, you were incorrect. The correct object was <strong>"+the_item+"</strong>. You will now complete the same task with a new game, and a completely different object.",
 			show_questions);
 		}
 	}
@@ -568,6 +582,7 @@ var newquiz_complete = function(resp,  correct) {
 					"performance will be monitored to make sure you are taking the task seriously", get_data);
 	}
 	else if(!correct) {
+		quizquestions_incorrect++;
 		make_alert("Incorrect, please go back and try again. Really pay attention this time!",
 			function(){
 				show_questions(false);
@@ -662,12 +677,40 @@ var decrement_20q_instructions = function() {
 }
 
 var progress_20q_instructs = function() {
-	if(fullgame_instruct_on >= 13) {
+	if(fullgame_instruct_on >= 10) {
 		start_20q_game();
 		return;
 	}
 	psiTurk.showPage('instructions/instruct_20q-' + fullgame_instruct_on.toString() + '.html');
 	fullgame_instruct_on++;
+}
+
+var pre_20q_quiz = function() {
+	psiTurk.showPage("instructions/pre_20q_quiz.html");
+}
+
+var pre20q_quiz_completed = function() {
+	var correct = true;
+
+	if($("input[name=intermediate]:checked").val() != "No") {
+		correct = false;
+	}
+	if($("input[name=numchosen]:checked").val() != "20") {
+		correct = false;
+	}
+	if(!correct) {
+		make_alert("You answered a quiz question incorrectly. Please re-read this part of the instructions.",
+								function() {
+									fullgame_instruct_on = 7;
+									progress_20q_instructs();
+								})
+	}
+	else {
+		make_alert("You answered all questions correctly! Please proceed to the game:",
+								start_20q_game);
+	}
+
+
 }
 
 var do_objectquiz = function() {
@@ -711,7 +754,7 @@ var objectquiz_submitted = function() {
 }
 
 var item_option_chosen = function(funcname, name, id) {
-	$("<p>Are you sure?</p>").dialog(
+	$("<p>You selected <strong>" + name + "</strong>. Please confirm your choice:</p>").dialog(
 	    {
 				  dialogClass: 'no-close',
 	        modal: true, //Not necessary but dims the page background

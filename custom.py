@@ -191,7 +191,7 @@ def get_questions_for_task():
     try:
         task_indx = int(str(request.args['task_indx']))
         question_str = ':'.join([','.join([';'.join([repr(elem) for elem in q]) for q in questions]) for questions in tasks[task_indx][2]])
-        return question_str + '/' + str(tasks[task_indx][1])
+        return question_str + '/' + str(tasks[task_indx][1]) + '/' + ':'.join([items[item] for item in tasks[task_indx][3]])
 
     except:
         abort(404)

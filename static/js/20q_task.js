@@ -18,19 +18,23 @@
 var knowledge = "";
 var item = "computer";
 var iterations = 1;
-var max_iterations = 30;
+
 var num_games = 2;
 var game_on = 0;
-var options_show = 4;
+var options_show = 6;
 var questions_to_ask = []
 
 var questions_shown = [];
 
 var game_data = [];
+var bonus_start = 0.75;
+var bonus_decrement = 0.05;
 
 var bonus = function() {
-	return 1.0 - (iterations) * 0.05;
+	return bonus_start - (iterations) * bonus_decrement;
 }
+
+var max_iterations = (bonus_start - 0.05) / bonus_decrement;
 
 var start_20q_game = function() {
 	game_data = []
@@ -77,15 +81,15 @@ var pre_20q = function() {
 	}
 
 	load_knowledge();
-	$("#game-on").html("Game on: " + game_on.toString() + " / " + num_games.toString());
+	$("#game-on").html("Game on: " + (game_on == 0 ? "Practice (No Bonus)" : game_on.toString()) + " / " + num_games.toString());
 	if(iterations >= max_iterations) {
 		$("#question-number").html("You have used up all your questions,<br>now you must guess an object");
 		$("#questions").html("<br><br>");
 	}
 
 	else {
-		$("#question-number").html("Question number: " + (iterations+1).toString() + "/" + max_iterations.toString());
-		if(game_on > 0) $("#bonus").html("Bonus: $" + bonus().toFixed(2));
+		$("#question-number").html("Question number: " + (iterations+1).toString());
+		if(game_on > 0) $("#bonus").html("Potential Bonus: $" + bonus().toFixed(2));
 		$("#submit-button").html(' <span class="glyphicon glyphicon-refresh spinning"></span> Loading...    ');
 		$("#submit-button").attr('disabled')
 		$("#answers").css('opacity', 0);

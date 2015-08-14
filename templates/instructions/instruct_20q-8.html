@@ -1,4 +1,4 @@
-<div id="container-instructions" instruct_num = '2'>
+<div instruct_num = '2' style='margin:50px'>
 
       <h1>Instructions</h1>
 
@@ -6,9 +6,43 @@
 
       <div class="instructions well">
 
-        <p>
-          <strong>Ideas</strong> and <strong>thoughts</strong> are <strong>not</strong> possible choices
-        </p>
+          <p>
+            When you select a question, answers are given on a 5 point scale from
+            "Definitely Not" to "Definitely Yes." We use this scale because sometimes questions are ambiguous or unclear regarding whether they apply to a certain object. All of the knowledge in our database is the result of human ratings, so it's possible that someone made a mistake or has a different opinion than you.
+
+            <br><br>
+            Here are a few examples relating to the object <b>EARPHONES</b>
+            <br><br>
+            <h4>Question: IS IT WHITE?</h4>
+
+            <br>
+            <div style="margin-left:-109px"><img src="/static/images/slider_u.png"  alt="Unknown/Not applicable" width=650></div>
+            Earphones can be white (but don't have to be), so this person responded in the middle of the scale.
+            <hr>
+
+            <h4>Question: IS IT CLOTHING?</h4>
+            <br>
+            <div style="margin-left:-109px"><img src="/static/images/slider_pn.png"  alt="Unknown/Not applicable" width=650></div>
+            It is somewhat ambiguous whether or not earphones are clothing.
+            <hr>
+
+            <h4>Question: IS IT ALIVE?</h4>
+
+            <br>
+            <div style="margin-left:-109px"><img src="/static/images/slider_n.png"  alt="Unknown/Not applicable" width=650></div>
+            Earphones are definitely not alive, so the person answered "definitely not."
+            <hr>
+
+            As you can see, uncertain responses can be interpreted in a variety of ways. 
+            Maybe it's because the answer can be "yes" but doesn't have to be. It's also possible that the question is ambiguous or inapplicable.
+
+            <br><br>
+            It's now time to proceed to the task. You will play exactly __ games. Good luck!
+          </p>
+
+          <script type="text/javascript">
+          //console.log(psiTurk.getInstructionIndicator())
+          </script>
 
       </div>
 
@@ -39,7 +73,7 @@
             <div class="col-xs-8">
             </div>
             <div class="col-xs-2">
-                <button type="button" id="next" value="next" class="btn btn-primary btn-lg continue"  onclick="progress_20q_instructs()" disabled>
+                <button type="button" id="next" value="next" class="btn btn-primary btn-lg continue" onclick="progress_20q_instructs()" disabled>
                 Next <span class="glyphicon glyphicon-arrow-right"></span>
                 </button>
             </div>
