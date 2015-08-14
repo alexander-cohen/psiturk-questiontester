@@ -416,6 +416,7 @@ var get_data_ranked = function() {
 
 	for(var i = 0; i < 6; i++) {
 		$("#q"+i).find('p').html(question_options[shuffled_indx[i]]);
+		$("#q"+i).attr("ranked-indx", shuffled_indx[i].toString());
 	}
 }
 
@@ -427,7 +428,11 @@ var answer_chosen = function() {
 
 
 	else if($("#submit-button").hasClass('btn-success')){
-		var ordered_arr = [ ordered[0].charAt(1), ordered[1].charAt(1), ordered[2].charAt(1), ordered[3].charAt(1), ordered[4].charAt(1), ordered[5].charAt(1)];
+		var ordered_arr = [];
+		for(var i = 0; i < 6; i++) {
+			ordered_arr[i] = $("#q" + ordered[i].charAt(1)).attr('ranked-indx');
+		}
+
 		//alert(ordered + "\narr form: \n" + ordered_arr)
 
 		var ordered_feats = [];
@@ -443,9 +448,10 @@ var answer_chosen = function() {
 								"starting completely fresh!", show_questions);
 		*/
 		var quest_name = $("#"+ordered[0]).find('p').html();
-		var data = questions_to_rank[parseInt(ordered[0].charAt(1))][1];
+		var data = questions_to_rank[parseInt(ordered_arr[0])][1];
 
-		question_answer_pairs.push([ordered_feats[0], data])
+		question_answer_pairs.push([ordered_feats[0], data]);
+		console.log(question_answer_pairs);
 
 		$("#answers").css('opacity', 0);
 		$("#answers").css('margin-top', "30px");
@@ -536,7 +542,7 @@ var do_quiz = function() {
 		return;
 	}
 
-	if (quizquestions.length == 0) quizquestions = shuffle(question_answer_pairs.slice());
+	if (quizquestions.length == 0) quizquestions = shuffle(question_answer_pairs.slice(0));
 	psiTurk.showPage('quiz.html');
 
 	$('#question-label').html(features[quizquestions[0][0]]);
