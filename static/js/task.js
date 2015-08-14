@@ -951,11 +951,11 @@ $(window).load( function(){
     psiTurk.doInstructions(
     	instructionPages, // a list of pages you want to display in sequence
     	function() {
-				show_postquestionnaire();
+				//show_postquestionnaire();
 				//progress_20q_instructs();
 				//give_options_final()
 
-				//currentview = start_shapegame();
+				currentview = start_shapegame();
 				//get_data()
 				//currentview = disp_stuff();
 				//currentview = start_20q_game();
