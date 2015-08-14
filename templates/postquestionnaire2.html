@@ -1,0 +1,39 @@
+<div class="form-group" style="margin-left:50px; margin-top:50px; margin-right:500px; margin-bottom:200px">
+    <div>
+		<h1>Please answer the followingn questions</h1>
+		<h1 id="time"></h1>
+  	</div>
+    <style>
+      input[type=checkbox], input[type=radio] {
+        margin-left: 20px;
+
+      }
+    </style>
+
+    <form action="" id='theform'>
+      <h3>Please enter your age:</h3>
+      <input type="text" name="age" id="age"><br><br>
+
+      <h3>Have you played 20 questions before? If so, how often?</h3>
+      <input type="text" name="prev-played" id="prev-played"><br><br>
+
+
+      <h3>Did this HIT remind you of 20 questions (if you have played it)?</h3>
+      <input type="radio" name="remind" value="Yes" id="Yes">
+      <label style="margin:0.5em" for="Yes">Yes</label><br>
+
+      <input type="radio" name="remind" value="No" id="No">
+      <label style="margin:0.5em" for="No">No</label><br>
+
+      <script>
+					$('#theform').submit(function(event) {
+					  event.preventDefault();
+				  });
+			</script>
+
+    </form>
+
+
+
+	<button onclick="show_generalcomments();" type="button" class="btn btn-success" style='margin-top:20px;'>Submit</button>
+</div>
