@@ -45,6 +45,7 @@ var pages = [
 	"shape_choice.html",
 
 	"postquestionnaire.html",
+	"postquestionnaire2.html",
 	"comments.html",
 
 	"complete.html",
@@ -252,7 +253,9 @@ var first_oneshot_ajax = function(depth, curdepth, task_indx) {
 			left = data.split("/")[0];
 			temp = left.split(':');
 			question_answer_pairs = [];
+			console.log(temp);
 			for(var i = 0; i < depth; i++) {
+				console.log(temp[i]);
 				var questions_in = temp[i].split(',');
 				var questions_for_inner = questions_in[0].split(';')
 				/*
@@ -408,7 +411,7 @@ var get_data_ranked = function() {
 	$("#prev-questions").css("margin-left", "50px");
 	$("#prev-questions").find( $("div") ).css("margin-right", -103);
 
-	var shuffled_indx = [0, 1, 2, 3, 4];
+	var shuffled_indx = [0, 1, 2, 3, 4, 5];
 	shuffled_indx = shuffle(shuffled_indx);
 
 	for(var i = 0; i < 6; i++) {
@@ -424,7 +427,7 @@ var answer_chosen = function() {
 
 
 	else if($("#submit-button").hasClass('btn-success')){
-		var ordered_arr = [ ordered[0].charAt(1), ordered[1].charAt(1), ordered[2].charAt(1), ordered[3].charAt(1), ordered[4].charAt(1) ];
+		var ordered_arr = [ ordered[0].charAt(1), ordered[1].charAt(1), ordered[2].charAt(1), ordered[3].charAt(1), ordered[4].charAt(1), ordered[5].charAt(1)];
 		//alert(ordered + "\narr form: \n" + ordered_arr)
 
 		var ordered_feats = [];
@@ -880,14 +883,16 @@ var show_postquestionnaire = function() {
 }
 
 var show_questionnaire2 = function() {
+	psiTurk.recordUnstructuredData("game_remind", $("#prev-played").val());
 	psiTurk.showPage("postquestionnaire2.html");
 }
 
 var show_generalcomments = function() {
 	//record questionnaire things
-	var played_before = $('input[name=prev-played]:checked').val();
-	console.log(played_before);
-	psiTurk.recordUnstructuredData("played_before", played_before)
+
+	psiTurk.recordUnstructuredData("age", $("#age").val());
+	psiTurk.recordUnstructuredData("howmuch_20q", $("#prev-played").val());
+	psiTurk.recordUnstructuredData("remind_20q", $("input[name=remind]:checked").val());
 
 	psiTurk.showPage("comments.html");
 }
@@ -946,11 +951,11 @@ $(window).load( function(){
     psiTurk.doInstructions(
     	instructionPages, // a list of pages you want to display in sequence
     	function() {
-				//show_postquestionnaire();
+				show_postquestionnaire();
 				//progress_20q_instructs();
 				//give_options_final()
 
-				currentview = start_shapegame();
+				//currentview = start_shapegame();
 				//get_data()
 				//currentview = disp_stuff();
 				//currentview = start_20q_game();

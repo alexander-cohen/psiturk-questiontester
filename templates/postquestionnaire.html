@@ -10,18 +10,20 @@
       }
     </style>
 
-    <form action="">
-      <h3>Does this remind you of a game you know?</h3>
-      <input type="radio" name="prev-played" value="Yes" id="Yes">
-      <label style="margin:0.5em" for="Yes">Yes</label>
+    <form action="" id="prev-played-form">
+      <h3>Does this remind you of a game you know? If so, what?</h3>
+      <input type="text" name="prev-played" id="prev-played">
 
-      <br>
-      <input type="radio" name="prev-played" value="No" id="No">
-      <label style="margin:0.5em" for="No">No</label>
+      <script>
+					$('#prev-played-form').submit(function(event) {
+					  event.preventDefault();
+					  show_questionnaire2();
+				  });
+			</script>
 
     </form>
 
 
 
-	<button onclick="show_generalcomments();" type="button" class="btn btn-success" style='margin-top:20px;'>Submit</button>
+	<button onclick="show_questionnaire2();" type="button" class="btn btn-success" style='margin-top:20px;'>Submit</button>
 </div>
