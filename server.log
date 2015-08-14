@@ -44867,3 +44867,2649 @@ Traceback (most recent call last):
   File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
     raise TemplateNotFound(template)
 TemplateNotFound: instructions/instruct_20q-12.html
+2015-08-14 13:43:11,650 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:43:12,960 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:43:12,977 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:43:13,007 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:43:13,130 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:43:13,150 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:43:13,201 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:43:13,341 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:43:13,345 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:43:46,555 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:43:47,146 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:43:47,188 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:43:47,361 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:43:47,504 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:43:47,517 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:43:47,522 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:43:47,551 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:43:47,576 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:49:21,411 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:49:22,722 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:49:22,876 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:49:22,984 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:49:23,087 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:49:23,088 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:49:23,105 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:49:23,126 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:49:23,135 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-08-14 13:49:52 -0400] [4726] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:49:52 -0400] [4727] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:49:52 -0400] [4728] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:49:52 -0400] [4729] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:49:52 -0400] [4730] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:49:52 -0400] [4731] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:49:52 -0400] [4732] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:49:52 -0400] [4733] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:49:52 -0400] [4734] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:50:09 -0400] [4759] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:50:09 -0400] [4760] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:50:09 -0400] [4761] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:50:09 -0400] [4762] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:50:09 -0400] [4763] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:50:09 -0400] [4765] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:50:09 -0400] [4764] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:50:09 -0400] [4766] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:50:09 -0400] [4767] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:50:17 -0400] [4802] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:50:17 -0400] [4803] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:50:17 -0400] [4804] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:50:18 -0400] [4805] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:50:18 -0400] [4806] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:50:18 -0400] [4807] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:50:18 -0400] [4808] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:50:18 -0400] [4809] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:50:18 -0400] [4810] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:51:04 -0400] [4830] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:51:04 -0400] [4831] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:51:04 -0400] [4832] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:51:04 -0400] [4833] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:51:04 -0400] [4834] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:51:04 -0400] [4835] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:51:04 -0400] [4836] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:51:04 -0400] [4837] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:51:04 -0400] [4838] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:51:10 -0400] [4863] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:51:11 -0400] [4864] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:51:11 -0400] [4865] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:51:11 -0400] [4866] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:51:11 -0400] [4867] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:51:11 -0400] [4868] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:51:11 -0400] [4869] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:51:11 -0400] [4870] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:51:11 -0400] [4871] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+2015-08-14 13:52:06,711 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:52:08,004 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:52:07,995 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:52:08,204 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:52:08,328 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:52:08,335 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:52:08,337 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:52:08,411 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:52:08,481 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-08-14 13:52:18 -0400] [5230] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:52:18 -0400] [5231] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:52:18 -0400] [5232] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:52:18 -0400] [5235] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:52:18 -0400] [5234] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:52:18 -0400] [5233] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:52:18 -0400] [5236] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:52:18 -0400] [5238] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+[2015-08-14 13:52:18 -0400] [5237] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment_server.py", line 49, in load
+    return util.import_app("psiturk.experiment:app")
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 25, in <module>
+    from db import db_session, init_db
+  File "/usr/local/lib/python2.7/site-packages/psiturk/db.py", line 13, in <module>
+    engine = create_engine(DATABASE, echo=False)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/__init__.py", line 386, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 74, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 92, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+2015-08-14 13:55:15,832 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:55:17,169 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:55:17,213 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:55:17,215 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:55:17,231 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:55:17,275 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:55:17,281 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:55:17,283 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:55:17,293 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 13:59:00,841 Exception on /instructions/instruct_20q-10.html [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 667, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 830, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 791, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 765, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: instructions/instruct_20q-10.html
+2015-08-14 13:59:00,871 Exception on /instructions/instruct_20q-11.html [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 667, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 830, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 791, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 765, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: instructions/instruct_20q-11.html
+2015-08-14 13:59:00,886 Exception on /instructions/instruct_20q-12.html [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 667, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 830, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 791, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 765, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: instructions/instruct_20q-12.html
+2015-08-14 14:08:58,320 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 14:09:00,231 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 14:09:00,305 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 14:09:00,328 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 14:09:00,437 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 14:09:00,438 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 14:09:00,495 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 14:09:00,515 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 14:09:00,530 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-08-14 14:09:04,300 Exception on /instructions/instruct_20q-10.html [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 667, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 830, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 791, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 765, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: instructions/instruct_20q-10.html
+2015-08-14 14:09:04,321 Exception on /instructions/instruct_20q-11.html [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 667, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 830, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 791, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 765, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: instructions/instruct_20q-11.html
+2015-08-14 14:09:04,332 Exception on /instructions/instruct_20q-12.html [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/site-packages/psiturk/experiment.py", line 667, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 830, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 791, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 765, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: instructions/instruct_20q-12.html
