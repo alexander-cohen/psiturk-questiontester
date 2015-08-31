@@ -106,10 +106,10 @@ var questions_to_rank = [];
 var oneshot_itm = "";
 
 
-var depths = [10, 8, 6, 4, 2, 0];
-var tasks = [2, 4, 5, 6, 7, 8];
+var depths = [8, 6, 4, 2, 0, 8, 6, 4, 2, 0, 8, 6, 4, 2, 0];
+var tasks =  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
 
-var order = [0, 1, 2, 3, 4, 5];
+var order = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
 
 
 var oneshot_data = [];
@@ -323,6 +323,7 @@ var show_questions = function(first_time) {
 			make_alert("This will be different from the other trials. This time, there is no background information. You will be asked to provide the first question in the game. When you are asked to type in a freeform question, please enter your favorite starting quesiton, and do a similar thing when ranking your optoins.",
 			function(){first_oneshot_ajax(depth, curdepth, task_indx)});
 		}
+
 		else {
 			first_oneshot_ajax(depth, curdepth, task_indx);
 		}
@@ -331,7 +332,7 @@ var show_questions = function(first_time) {
 
 
 	}
-
+	
 	else {
 		psiTurk.showPage('setup.html');
 		$("#questions").html("");
@@ -708,7 +709,7 @@ var pre20q_quiz_completed = function() {
 		correct = false;
 	}
 	if(!correct) {
-		make_alert("You answered a quiz question incorrectly. Please re-read this part of the instructions.",
+		make_alert("You answered a question incorrectly. Please re-read this part of the instructions.",
 								function() {
 									fullgame_instruct_on = 7;
 									progress_20q_instructs();

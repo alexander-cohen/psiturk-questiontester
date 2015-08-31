@@ -1,27 +1,27 @@
 [HIT Configuration]
-title = Example Title
-description = Example Description 
-amt_keywords = Psychology, feature ratings
+title = Playing a question asking game
+description = Ask questions to try and guess an object
+amt_keywords = Categorization, Psychology, Pictures
 lifetime = 24
 us_only = true
 approve_requirement = 95
-contact_email_on_error = lakelabcogsci@gmail.com
-ad_group = 20 questions
-psiturk_keywords = feature ratings
+contact_email_on_error = brenden@nyu.edu
+ad_group = Question Answering
+psiturk_keywords = typicality, ImageNet
 organization_name = New York University
-browser_exclude_rule = MSIE, mobile, tablet
+browser_exclude_rule = MSIE, mobile, tablet, bot
 
 [Database Parameters]
-database_url = sqlite:///participants.db
-table_name = 20q-model-tester
+database_url = mysql://lab:fishneversink@gureckislab.org/mt_experiments
+table_name = 20q_model_tester
 
 [Server Parameters]
 host = 0.0.0.0
 port = 22362
-cutoff_time = 30
+cutoff_time = 45
 logfile = server.log
 loglevel = 2
-debug = true
+debug = false
 login_username = examplename
 login_pw = examplepassword
 threads = auto
