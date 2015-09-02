@@ -27,7 +27,7 @@ var questions_to_ask = []
 var questions_shown = [];
 
 var game_data = [];
-var bonus_start = 0.75;
+var bonus_start = 0.50;
 var bonus_decrement = 0.05;
 
 var bonus = function() {
@@ -100,7 +100,7 @@ var pre_20q = function() {
 			data: {"knowledge":knowledge, "shown":questions_shown.join()},
 			success: function(data) {
 					console.log(data);
-					$("#submit-button").html('Submit');
+					$("#submit-button").html('Submit Question');
 					$("#submit-button").removeAttr('disabled');
 					new_questions = data.split(',')[0].split(":");
 					info_gains = data.split(',')[1].split(":");
@@ -155,7 +155,7 @@ var show_info_gain = function() {
 
 var choicecomplete_20q = function() {
 	if($("#submit-button").hasClass("spinning")) return;
-	if($("#submit-button").html() == "Submit") {
+	if($("#submit-button").html() == "Submit Question") {
 		var choice = $("input[name=q1]:checked").next('label').find('.question-text').html();
 		var info_gain = $("input[name=q1]:checked").next('label').attr("info-gain");
 		var all_gains = [];

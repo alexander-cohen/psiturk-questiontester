@@ -1,4 +1,12 @@
-<div id="container-exp">
+<h3 style="position:relative; top:20px; right:-100px;" id="trialnum"></h3>
+
+<script>
+  $(document).ready(function(){
+    $("#trialnum").html("Trial number: " + (trial_num+1).toString() + "/10");
+  });
+</script>
+
+<div>
   <div id='sortable-lists' style='margin-left: 100px; margin-top: 50px'>
     <style>
       #options, #ranked {

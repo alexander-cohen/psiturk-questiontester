@@ -106,10 +106,10 @@ var questions_to_rank = [];
 var oneshot_itm = "";
 
 
-var depths = [8, 6, 4, 2, 0, 8, 6, 4, 2, 0, 8, 6, 4, 2, 0];
-var tasks =  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+var depths = [0, 6, 4, 2, 6, 4, 2, 6, 4, 2];
+var tasks =  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-var order = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+var order = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 
 var oneshot_data = [];

@@ -1,4 +1,12 @@
-<div class="form-group" style="margin-left:50px; margin-top:50px; margin-right:500px; margin-bottom:200px">
+<h3 style="position:relative; top:20px; right:-100px;" id="trialnum"></h3>
+
+<script>
+  $(document).ready(function(){
+    $("#trialnum").html("Trial number: " + (trial_num+1).toString() + "/10");
+  });
+</script>
+
+<div class="form-group" style="margin-left:100px; margin-top:50px; margin-right:500px; margin-bottom:200px">
   	<!--
     <form>
   	<label for="answers" id="question-label"><h2>Is it mechanical?</h2></label>

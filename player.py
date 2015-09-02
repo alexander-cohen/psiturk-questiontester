@@ -16,7 +16,6 @@ with open("data/intel_items.txt", "r") as items:
     items = [l[:-2] for l in items]
 
 num_items_tot = len(items)
-
 feature_blacklist = []
 
 

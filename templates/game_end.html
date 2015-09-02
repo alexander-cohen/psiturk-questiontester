@@ -1,5 +1,16 @@
-<div id="container-exp">
-  <div id='left' style='margin-left:30px; margin-top: 30px; float: left; width: 500px'>
+<h3 style="position:relative; top:20px; right:-100px;" id="trialnum"></h3>
+
+<script>
+  $(document).ready(function(){
+    if(trial_num > -1) {
+      $("#trialnum").html("Trial number: " + (trial_num+1).toString() + "/10");  
+    }
+    
+  });
+</script>
+
+<div>
+  <div id='left' style='margin-left:100px; margin-top: 30px; float: left; width: 500px'>
     <div id='instructs'>
       <h3>Please choose the object you think it is. Right-click an object to disable it,
         this can help you visually narrow down your choices.</h3>
