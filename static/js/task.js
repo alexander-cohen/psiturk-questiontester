@@ -215,7 +215,7 @@ var block_clicked = function(blocknum) {
 					pageScroll(0, 1000);
 					$("#block" + (blocknum+1).toString()).fadeTo('slow', 1.0);
 				}
-
+				
 			}, 1000);
 		});
 	}
