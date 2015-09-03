@@ -133,6 +133,15 @@ var objects_at_end = [];
 
 
 $(document).ready(function() {
+	if($(window).width() < 1200) {
+			$("button:contains('Close')").removeAttr('disabled');
+			$("button:contains('Close')").removeAttr('hidden');
+			$("button:contains('Close')").click()
+			make_alert("Please make your window bigger", function(){})
+			$("button:contains('Close')").prop('disabled', true);
+			$("button:contains('Close')").prop('hidden', true);
+			$(".ui-dialog-buttonpane").css("border", "0px");
+		}
 	$(window).resize(function() {
 		if($(window).width() < 1200) {
 			$("button:contains('Close')").removeAttr('disabled');
