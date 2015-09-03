@@ -341,7 +341,7 @@ var finish_guess_submitted = function() {
 
 	if(game_on == 0) {
 		make_alert("Now you will do the same thing, but if you do well, you will recieve a bonus." +
-					"You start with $0.75 of bonus, and after each question it goes down by $.05. " +
+					"You start with $0.50 of bonus, and after each question it goes down by $0.05. " +
 					"If you guess the object correctly, you collect whatever the current bonus is. Good luck!",
 						function() {
 							game_on++;
