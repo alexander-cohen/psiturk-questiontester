@@ -4526,3 +4526,12 @@ Traceback (most recent call last):
   File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
     raise TemplateNotFound(template)
 TemplateNotFound: instructions/instruct_20q-12.html
+2015-09-03 14:01:43,050 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-09-03 14:01:44,652 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-09-03 14:01:44,747 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-09-03 14:01:45,040 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-09-03 14:01:45,065 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-09-03 14:01:45,114 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-09-03 14:01:45,114 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-09-03 14:01:45,143 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-09-03 14:01:45,148 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
