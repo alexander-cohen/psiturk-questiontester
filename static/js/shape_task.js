@@ -156,7 +156,7 @@ var choicecomplete_shape = function() {
 	if($("#submit-button").html() == "Submit") {
 		var choice = $("input[name=q1]:checked").next('label').html();
     var knowledge_val = $("input[name=q1]:checked").next('label').attr('knowledge_val').split(',');
-
+    log_data("shape_question_choice", choice, shape_data)
     var q_indx = parseInt($("input[name=q1]:checked").attr('id').charAt(1));
 
     //removeArrValue(good_questions, q_indx);

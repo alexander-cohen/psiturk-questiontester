@@ -169,6 +169,7 @@ function log_data(name, dat, datlist) {
 	datlist.push([name, dat]);
 }
 var save_data = function(name, data) {
+	console.log("Saving:\n" + name + "\n" + data);
 	psiTurk.recordTrialData([name, data]);
 	psiTurk.saveData();
 }
