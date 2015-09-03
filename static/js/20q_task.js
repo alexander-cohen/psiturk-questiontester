@@ -219,7 +219,7 @@ function check_correct_color() {
 		$("#submit-button-guess").addClass('btn-primary');
 	}
 }
-
+/*
 var guess_submitted = function() {
 	knowledge = ""
 	var choice = $("#guess-box").val().toUpperCase();
@@ -276,9 +276,10 @@ var guess_submitted = function() {
 	})
 
 }
-
+*/
 var option_clicked_20q = function(item_chosen, indx) {
 	var correct = item_chosen == item;
+	log_data("20q_item_chosen", [game_on, correct, item_chosen, item], game_data);
 	if(correct) {
 		if(game_on == 0) make_alert("Correct! Good job!", finish_guess_submitted);
 		else {
@@ -303,7 +304,7 @@ var option_clicked_20q = function(item_chosen, indx) {
 										finish_guess_submitted();
 									 },
 									'Complain':function() {
-											psiTurk.recordUnstructuredData("complaint", $("#guess-box").val() + ":" + item);
+											psiTurk.recordUnstructuredData("complaint", game_on + ":" + item_chosen + ":" + item);
 										finish_guess_submitted();
 									 }
 
