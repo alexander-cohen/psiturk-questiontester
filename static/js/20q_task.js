@@ -377,7 +377,7 @@ var finish_guess_submitted = function() {
 	}
 
 	else if(game_on >= num_games) {
-		make_alert("That was the final game, you will now move onto part 2 of this HIT", show_questions_instructs);
+		make_alert("That was the final game, you will now move onto part 3 of this HIT", show_questions_instructs);
 	}
 
 	else {
