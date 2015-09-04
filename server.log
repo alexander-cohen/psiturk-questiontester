@@ -215,3 +215,12 @@
 [09/04/15 16:22:27] [DEBG] [ctl:13f201e1] Reading message with length: 28
 [09/04/15 16:22:27] [DEBG] [ctl:13f201e1] Read message {"Type":"Pong","Payload":{}}
 [09/04/15 16:22:27] [DEBG] [ctl:13f201e1] Waiting to read message
+2015-09-04 16:42:45,456 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-09-04 16:42:46,513 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-09-04 16:42:46,544 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-09-04 16:42:46,553 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-09-04 16:42:46,626 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-09-04 16:42:46,635 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-09-04 16:42:46,692 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-09-04 16:42:46,702 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-09-04 16:42:46,737 /usr/local/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
