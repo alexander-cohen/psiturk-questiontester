@@ -18,7 +18,7 @@ from json import dumps, loads
 from player import Player, items, data_matrix, features
 from similarities import *
 
-import editdistance
+#import editdistance
 
 from random import randint
 from random import sample
@@ -152,8 +152,8 @@ def get_similarity():
     try:
         obj = str(request.args['object'])
         the_item = str(request.args['item'])
-        return str( editdistance.eval(obj, the_item) )
-
+        #return str( editdistance.eval(obj, the_item) )
+        return 0 if obj == the_item else 1
     except TemplateNotFound:
         abort(404)
 
