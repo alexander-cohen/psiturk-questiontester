@@ -300,11 +300,11 @@ var option_clicked_20q = function(item_chosen, indx) {
 							modal:true, //Not necessary but dims the page background
 							width: 400,
 							buttons:{
-								'Continue':function() {
+								'Complain':function() {
+										psiTurk.recordUnstructuredData("complaint", game_on + ":" + item_chosen + ":" + item);
 										finish_guess_submitted();
 									 },
-									'Complain':function() {
-											psiTurk.recordUnstructuredData("complaint", game_on + ":" + item_chosen + ":" + item);
+									'Continue':function() {
 										finish_guess_submitted();
 									 }
 
@@ -318,9 +318,7 @@ var option_clicked_20q = function(item_chosen, indx) {
 	}
 }
 
-
-var end_pressed = function() {
-
+var end_confirmed = function() {
 	$.ajax({
 		url: "/get_rand_objects_without",
 		type: "GET",
@@ -333,6 +331,33 @@ var end_pressed = function() {
 			load_knowledge();
 		}
 	})
+}
+
+var end_pressed = function() {
+
+
+	$("<p>Are you sure you would like to end the game?</p>").dialog(
+					{
+						dialogClass: "no-close",
+							modal:true, //Not necessary but dims the page background
+							width: 400,
+							buttons:{
+								'Close':function() {
+										$(this).parent().remove();
+									 },
+									'Continue':function() {
+											end_confirmed();
+									 }
+
+							},
+							close: function(event, ui) {
+								
+							}
+					}
+			);
+		
+
+	
 
 
 }
