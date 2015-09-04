@@ -1,19 +1,19 @@
 [HIT Configuration]
-title = Playing a question asking game
-description = Ask questions to try and guess an object
+title = Rating pictures for typicality
+description = Rate how well a picture fits your idea or image of a category
 amt_keywords = Categorization, Psychology, Pictures
 lifetime = 24
 us_only = true
 approve_requirement = 95
 contact_email_on_error = brenden@nyu.edu
-ad_group = Question Answering
+ad_group = Typicality ratings
 psiturk_keywords = typicality, ImageNet
 organization_name = New York University
 browser_exclude_rule = MSIE, mobile, tablet, bot
 
 [Database Parameters]
 database_url = mysql://lab:fishneversink@gureckislab.org/mt_experiments
-table_name = 20q_model_tester
+table_name = deep_learning_typicality
 
 [Server Parameters]
 host = 0.0.0.0
