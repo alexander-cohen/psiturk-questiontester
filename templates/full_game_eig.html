@@ -2,7 +2,7 @@
 
 <script>
   $(document).ready(function(){
-    $("#totalbonus").html("Total bonus: " + (total_bonus).toFixed(2)());
+    $("#totalbonus").html("Total bonus: " + (total_bonus).toFixed(2));
   });
 </script>
 
@@ -24,7 +24,7 @@
 		    to { -webkit-transform: rotate(360deg);}
 			}
 		</style>
-		<div class="form-group" style="margin-left:25px; margin-top:50px; margin-right:0px; margin-bottom:200px; width: 500px; float: left">
+		<div class="form-group" style="margin-left:25px; margin-top:50px; margin-right:0px; position: relative; margin-bottom:200px; width: 500px; height: 500px;  float: left">
 			<h3 id="game-on"></h3>
 			<h3 id="bonus"></h3>
 			<h4 id="question-number" style="margin-bottom:15px"></h4>
@@ -94,7 +94,7 @@
 				  });
 			</script>
 			-->
-			<button id='end-button' type='submit' onclick='end_pressed()' class='btn btn-primary' style='margin-top:20px; float:right; position:relative; z-index:100'>
+			<button id='end-button' type='submit' onclick='end_pressed()' class='btn btn-primary' style='margin-top:20px; float:right; position:absolute; bottom: 0px; right: 0px; z-index:100'>
 				End Game
 			</button>
 
