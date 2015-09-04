@@ -302,6 +302,7 @@ var option_clicked_20q = function(item_chosen, indx) {
 							buttons:{
 								'Complain':function() {
 										psiTurk.recordUnstructuredData("complaint", game_on + ":" + item_chosen + ":" + item);
+										psiTurk.saveData();
 										finish_guess_submitted();
 									 },
 									'Continue':function() {

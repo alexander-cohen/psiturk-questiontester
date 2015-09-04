@@ -167,7 +167,7 @@ function shuffle(o){
 
 order = shuffle(order);
 psiTurk.recordUnstructuredData("order", order);
-
+psiTurk.saveData();
 function pad(num, size) {
   var s = num+"";
   while (s.length < size) s = "0" + s;
@@ -546,6 +546,7 @@ var option_clicked_oneshot = function(item_chosen, index) {
 							buttons:{
 								'Complain':function() {
 										psiTurk.recordUnstructuredData("complaint_oneshot", trial_num + ":" + item_chosen + ":" + the_item);
+										psiTurk.saveData();
 										show_questions();
 									 },
 									'Continue':function() {
@@ -583,7 +584,7 @@ var option_clicked_oneshot = function(item_chosen, index) {
 							}
 					}
 			);
-`			/*
+			/*
 			make_alert("Sorry, you were incorrect. The correct object was <strong>"+the_item+"</strong>. You will now complete the same task with a new game, and a completely different object.",
 			show_questions);*/
 		}
@@ -945,6 +946,7 @@ var show_postquestionnaire = function() {
 
 var show_questionnaire2 = function() {
 	psiTurk.recordUnstructuredData("game_remind", $("#prev-played").val());
+	psiTurk.saveData();
 	psiTurk.showPage("postquestionnaire2.html");
 }
 
@@ -954,20 +956,20 @@ var show_generalcomments = function() {
 	psiTurk.recordUnstructuredData("age", $("#age").val());
 	psiTurk.recordUnstructuredData("howmuch_20q", $("#prev-played").val());
 	psiTurk.recordUnstructuredData("remind_20q", $("input[name=remind]:checked").val());
-
+	psiTurk.saveData();
 	psiTurk.showPage("comments.html");
 }
 
 var complete = function() {
 	var comments_technical = document.getElementById("comments-technical").value;
 	var comments_easier = document.getElementById("comments-easier").value;
-  var comments_general = document.getElementById("comments-general").value;
+  	var comments_general = document.getElementById("comments-general").value;
 	psiTurk.showPage('complete.html');
 	psiTurk.recordUnstructuredData("comments-technical", comments_technical);
 	psiTurk.recordUnstructuredData("comments-easier", comments_easier);
 	psiTurk.recordUnstructuredData("comments-general", comments_general);
 	psiTurk.recordUnstructuredData("total-bonus", total_bonus);
-  psiTurk.saveData();
+  	psiTurk.saveData();
 	psiTurk.completeHIT();
 }
 
