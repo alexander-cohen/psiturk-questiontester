@@ -117,7 +117,7 @@ var objectquiz_data = [];
 
 var total_bonus = 0;
 
-var correct_bonus = 0.10;
+var correct_bonus = 0.20;
 
 var objects_at_end = [];
 
@@ -535,13 +535,57 @@ var option_clicked_oneshot = function(item_chosen, index) {
 
 	}
 	else {
+
+
 		if(trial_num+1 >= tasks.length) {
-			make_alert("That was the last trial. You were incorrect, the correct object was <strong>"+the_item+"</strong>. We will now ask to fill out a questionnaire about the experiment.",
-			show_questions);
+			$("<p>That was the last trial. You were incorrect, you do not recieve a bonus. The object was <strong>" + the_item + "</strong>. You will now be asked to fill out a questionnaire on the experiment. If you think you got the object correct and would like to contest this, your complaint will be recorded and your response will be reviewed. If it is deemed correct, you will recieve the bonus.</p>").dialog(
+					{
+						dialogClass: "no-close",
+							modal:true, //Not necessary but dims the page background
+							width: 400,
+							buttons:{
+								'Complain':function() {
+										psiTurk.recordUnstructuredData("complaint_oneshot", trial_num + ":" + item_chosen + ":" + the_item);
+										show_questions();
+									 },
+									'Continue':function() {
+										show_questions();
+									 }
+
+							},
+							close: function(event, ui) {
+								show_questions();
+							}
+					}
+			);
+			/*make_alert("That was the last trial. You were incorrect, the correct object was <strong>"+the_item+"</strong>. We will now ask to fill out a questionnaire about the experiment.",
+			show_questions);*/
 		}
 		else {
+
+			$("<p>You were incorrect, you do not recieve a bonus. The object was <strong>" + the_item + "</strong>. Go to next trial. If you think you got it right and would like to contest this, your complaint will be recorded and your response will be reviewed. If it is deemed correct, you will recieve the bonus.</p>").dialog(
+					{
+						dialogClass: "no-close",
+							modal:true, //Not necessary but dims the page background
+							width: 400,
+							buttons:{
+								'Complain':function() {
+										psiTurk.recordUnstructuredData("complaint_oneshot", trial_num + ":" + item_chosen + ":" + the_item);
+										show_questions();
+									 },
+									'Continue':function() {
+										show_questions();
+									 }
+
+							},
+							close: function(event, ui) {
+								show_questions();
+							}
+					}
+			);
+`			/*
 			make_alert("Sorry, you were incorrect. The correct object was <strong>"+the_item+"</strong>. You will now complete the same task with a new game, and a completely different object.",
-			show_questions);
+			show_questions);*/
 		}
 	}
 }
@@ -922,7 +966,7 @@ var complete = function() {
 	psiTurk.recordUnstructuredData("comments-technical", comments_technical);
 	psiTurk.recordUnstructuredData("comments-easier", comments_easier);
 	psiTurk.recordUnstructuredData("comments-general", comments_general);
-	psiTurk.recordUnstructuredData("bonus", total_bonus);
+	psiTurk.recordUnstructuredData("total-bonus", total_bonus);
   psiTurk.saveData();
 	psiTurk.completeHIT();
 }

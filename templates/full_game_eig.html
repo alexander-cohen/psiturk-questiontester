@@ -1,3 +1,11 @@
+<h3 style="position:relative; top:20px; right:-50px;" id="totalbonus"></h3>
+
+<script>
+  $(document).ready(function(){
+    $("#totalbonus").html("Total bonus: " + (total_bonus).toString());
+  });
+</script>
+
 <div>
 	<div id="question-chooser">
 		<style>
@@ -53,10 +61,11 @@
 				<div id="answer" style="opacity:0"></div>
 				<button onclick="choicecomplete_20q();" type="button" class="btn btn-success" id="submit-button" style="margin-top:15px">Submit Question</button>
 				<br><br><br>
-
+				<!--
 				<input type="checkbox" name="infogain-checkbox" id="infogain-checkbox" uncheked>
 				<label for="infogain-checkbox">  Show Info Gain</label>
 				<br><br>
+				-->
 				<script>
 					$('#infogain-checkbox').change(function() {
 				        if($(this).is(":checked")) {

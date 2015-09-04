@@ -1,3 +1,11 @@
+<h3 style="position:relative; top:20px; right:-50px; margin-bottom:30px" id="totalbonus"></h3>
+
+<script>
+  $(document).ready(function(){
+    $("#totalbonus").html("Total bonus: " + (total_bonus).toString());
+  });
+</script>
+
 <h3 style="position:relative; top:20px; right:-100px;" id="trialnum"></h3>
 
 <script>
@@ -9,7 +17,7 @@
 
 <div>
   	<div style="margin-left:100px; margin-top:50px; margin-right:0px; margin-bottom:200px; float: left">
-      <form class='form-group' id='freeform-form'>
+      <form class='form-group' id='freeform-form' style="width:500px">
         <label for='quest-form'>If you could ask any <strong>new</strong> question at this point, what would it be? (NOTE: This question will not be answered):</label>
         <input type="text" name="question" class='form-control' id='quest-form' onkeydown = "check_correct_color_freeform();" onkeyup = "check_correct_color_freeform();">
         <br><br>

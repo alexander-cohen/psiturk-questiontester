@@ -19,7 +19,7 @@ var knowledge = "";
 var item = "computer";
 var iterations = 1;
 
-var num_games = 2;
+var num_games = 3;
 var game_on = 0;
 var options_show = 6;
 var questions_to_ask = []
