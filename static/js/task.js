@@ -121,6 +121,7 @@ var correct_bonus = 0.20;
 
 var objects_at_end = [];
 
+
 /********************
 * HTML manipulation
 *
@@ -290,6 +291,7 @@ var first_oneshot_ajax = function(depth, curdepth, task_indx) {
 			console.log(questions_to_rank);
 
 			console.log(question_answer_pairs)
+			log_data('oneshot_trialnum', trial_num, oneshot_data)
 			log_data('question_answer_pairs', [trial_num, order[trial_num], question_answer_pairs.slice(0)], oneshot_data);
 			log_data('questions_to_rank', [trial_num, order[trial_num], questions_to_rank], oneshot_data);
 
@@ -545,8 +547,9 @@ var option_clicked_oneshot = function(item_chosen, index) {
 							width: 400,
 							buttons:{
 								'Complain':function() {
-										psiTurk.recordUnstructuredData("complaint_oneshot", trial_num + ":" + item_chosen + ":" + the_item);
-										psiTurk.saveData();
+										//psiTurk.recordUnstructuredData("complaint_oneshot", trial_num + ":" + item_chosen + ":" + the_item);
+										save_data("complaint_oneshot", [trial_num, item_chosen, the_item, correct_bonus]);
+										//psiTurk.saveData();
 										show_questions();
 									 },
 									'Continue':function() {
@@ -571,8 +574,9 @@ var option_clicked_oneshot = function(item_chosen, index) {
 							width: 400,
 							buttons:{
 								'Complain':function() {
-										psiTurk.recordUnstructuredData("complaint_oneshot", trial_num + ":" + item_chosen + ":" + the_item);
-										psiTurk.saveData();
+										//psiTurk.recordUnstructuredData("complaint_oneshot", trial_num + ":" + item_chosen + ":" + the_item);
+										save_data("complaint_oneshot", [trial_num, item_chosen, the_item, correct_bonus]);
+										//psiTurk.saveData();
 										show_questions();
 									 },
 									'Continue':function() {
@@ -804,10 +808,23 @@ var objectquiz_submitted = function() {
 	log_data("objectquiz_resps", [amount_incorrect == 0, amount_incorrect, resps], objectquiz_data);
 
 	if(amount_incorrect == 0) {
-		log_data("objectquiz_times", objectquiz_data.length, objectquiz_data);
+		log_data("objectquiz_times", [false, objectquiz_data.length], objectquiz_data);
 		save_data("objectquiz", objectquiz_data)
 		make_alert("Congratulations, you answered the quiz completely correctly!", progress_20q_instructs);
 	}
+
+	else if(objectquiz_data.length >= 4) {
+		log_data("objectquiz_times", [true, objectquiz_data.length], objectquiz_data);
+		save_data("objectquiz", objectquiz_data)
+		make_alert("Unfortunately, you got <strong>" + amount_incorrect +
+			"</strong> incorrect. This is your 4th time answering the quiz incorrectly, you will be asked to proceed, 
+			however your responses will be monitored more carefully.",
+				function() {
+					fullgame_instruct_on = 3;
+					psiTurk.showPage('instructions/instruct_20q-2.html');
+				});
+	}
+
 	else {
 		make_alert("Unfortunately, you got <strong>" + amount_incorrect +
 			"</strong> incorrect. Please take another look at the object list and try again.",
@@ -965,11 +982,12 @@ var complete = function() {
 	var comments_technical = document.getElementById("comments-technical").value;
 	var comments_easier = document.getElementById("comments-easier").value;
   	var comments_general = document.getElementById("comments-general").value;
-	psiTurk.showPage('complete.html');
-	psiTurk.recordUnstructuredData("comments-technical", comments_technical);
+  	psiTurk.recordUnstructuredData("comments-technical", comments_technical);
 	psiTurk.recordUnstructuredData("comments-easier", comments_easier);
 	psiTurk.recordUnstructuredData("comments-general", comments_general);
 	psiTurk.recordUnstructuredData("total-bonus", total_bonus);
+	psiTurk.showPage('complete.html');
+	
   	psiTurk.saveData();
 	psiTurk.completeHIT();
 }

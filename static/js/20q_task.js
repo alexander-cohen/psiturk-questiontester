@@ -301,8 +301,8 @@ var option_clicked_20q = function(item_chosen, indx) {
 							width: 400,
 							buttons:{
 								'Complain':function() {
-										psiTurk.recordUnstructuredData("complaint", game_on + ":" + item_chosen + ":" + item);
-										psiTurk.saveData();
+										//psiTurk.recordUnstructuredData("complaint", game_on + ":" + item_chosen + ":" + item + ":" + bonus());
+										save_data("complaint_fullgame", [game_on, item_chosen, item, bonus()]);
 										finish_guess_submitted();
 									 },
 									'Continue':function() {
