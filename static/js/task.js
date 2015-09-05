@@ -813,15 +813,13 @@ var objectquiz_submitted = function() {
 		make_alert("Congratulations, you answered the quiz completely correctly!", progress_20q_instructs);
 	}
 
-	else if(objectquiz_data.length >= 4) {
+	else if(objectquiz_data.length >= 5) {
 		log_data("objectquiz_times", [true, objectquiz_data.length], objectquiz_data);
 		save_data("objectquiz", objectquiz_data)
-		make_alert("Unfortunately, you got <strong>" + amount_incorrect +
-			"</strong> incorrect. This is your 4th time answering the quiz incorrectly, you will be asked to proceed, 
-			however your responses will be monitored more carefully.",
+		make_alert("You answered the quiz incorrectly. This is your 5th time answering the quiz incorrectly, you will be asked to proceed, " +
+			"however your responses will be monitored more carefully.",
 				function() {
-					fullgame_instruct_on = 3;
-					psiTurk.showPage('instructions/instruct_20q-2.html');
+					progress_20q_instructs();
 				});
 	}
 
