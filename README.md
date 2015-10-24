@@ -4,4 +4,4 @@ Web link to the model equations:
 https://www.overleaf.com/3044605wkvpcg
 
 Github link to the model equations:
-https://www.overleaf.com/3044605wkvpcg
+https://git.overleaf.com/3044605wkvpcg
