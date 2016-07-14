@@ -10,7 +10,7 @@ var psiTurk = new PsiTurk(uniqueId, adServerLoc, mode);
 var mycondition = condition;  // these two variables are passed by the psiturk server process
 var mycounterbalance = counterbalance;  // they tell you which condition you have been assigned to
 // they are not used in the stroop code but may be useful to you
-var no_skip_buttons = true;
+var no_skip_buttons = false;
 // All pages to be loaded
 var pages = [
 	"instructions/instruct_oneshot-1.html",
@@ -105,11 +105,17 @@ var question_answer_pairs_indx = [];
 var questions_to_rank = [];
 var oneshot_itm = "";
 
-
+//experiment 1
+/*
 var depths = [0, 6, 4, 2, 6, 4, 2, 6, 4, 2];
 var tasks =  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-
 var order = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+*/
+
+//experiment 2
+var depths = [0, 0, 2, 2, 2, 2, 4, 4, 4, 4,  6,  6,  6,  6]
+var tasks =  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+var order =  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 
 
 var oneshot_data = [];
@@ -226,7 +232,7 @@ var block_clicked = function(blocknum) {
 					pageScroll(0, 1000);
 					$("#block" + (blocknum+1).toString()).fadeTo('slow', 1.0);
 				}
-				
+
 			}, 1000);
 		});
 	}
@@ -252,8 +258,8 @@ function pageScroll(times, max) {
     window.scrollBy(0,1);
     scrolldelay = setTimeout(pageScroll(times+1, max),10);
 }
-
-var first_oneshot_ajax = function(depth, curdepth, task_indx) {
+/*
+var first_oneshot_ajax_old = function(depth, curdepth, task_indx) {
 	$.ajax({
 		url: "/get_questions_for_task",
 		type: "GET",
@@ -269,11 +275,7 @@ var first_oneshot_ajax = function(depth, curdepth, task_indx) {
 				console.log(temp[i]);
 				var questions_in = temp[i].split(',');
 				var questions_for_inner = questions_in[0].split(';')
-				/*
-				for(var j = 0; j < questions_in.length; j++) {
-					questions_for_inner[j] = questions_in[j].split(';')
-				}
-				*/
+				
 				question_answer_pairs[i] = questions_for_inner
 			}
 
@@ -312,6 +314,59 @@ var first_oneshot_ajax = function(depth, curdepth, task_indx) {
 		}
 	});
 }
+*/
+
+var first_oneshot_ajax = function(depth, curdepth, task_indx) {
+	$.ajax({
+		url: "/get_questions_for_task_experiment2",
+		type: "GET",
+		data: {"task_indx":task_indx.toString()},
+		success: function(data) {
+			console.log(data);
+			oneshot_itm = data.split("/")[1];
+			var left = data.split("/")[0];
+			var qa_pairs = left.split(',');
+			question_answer_pairs = [];
+			console.log(qa_pairs);
+			for(var i = 0; i < depth; i++) {
+				console.log(qa_pairs[i]);
+				var qa_vals = qa_pairs[i].split(':');
+				question_answer_pairs[i] = qa_vals;
+			}
+
+			questions_to_rank = [];
+			var all6 = data.split("/")[3].split(',');
+			questions_to_rank = all6
+			for(var i = 0; i < 6; i++) {
+				questions_to_rank[i] = questions_to_rank[i].split(':');
+			}
+
+			objects_at_end = data.split('/')[2].split(':');
+			objects_at_end = shuffle(objects_at_end);
+
+			console.log(questions_to_rank);
+
+			console.log(question_answer_pairs)
+			log_data('oneshot_trialnum', trial_num, oneshot_data)
+			log_data('question_answer_pairs', [trial_num, order[trial_num], question_answer_pairs.slice(0)], oneshot_data);
+			log_data('questions_to_rank', [trial_num, order[trial_num], questions_to_rank], oneshot_data);
+
+			if(curdepth == 0) {
+				get_data()
+			}
+			else {
+				psiTurk.showPage('setup.html');
+
+				for(var i = 0; i < 1; i++) {
+					$("#questions").append(get_quest_ans_pair((i+1), features[question_answer_pairs[i][0]]))
+				}
+
+				$("#block1").css('opacity', '1.0');
+				quizquestions = shuffle(question_answer_pairs.slice());
+			}
+		}
+	});
+}
 
 var show_questions = function(first_time) {
 	quiz_question_itr = 0;
@@ -332,7 +387,7 @@ var show_questions = function(first_time) {
 		var task_indx = tasks[order[trial_num]];
 
 		if(depth == 0) {
-			make_alert("This will be different from the other trials. This time, there is no background information. You will be asked to provide the first question in the game. When you are asked to type in a freeform question, please enter your favorite starting quesiton, and do a similar thing when ranking your optoins.",
+	 		make_alert("This will be different from the other trials. This time, there is no background information. You will be asked to provide the first question in the game. When you are asked to type in a freeform question, please enter your favorite starting quesiton, and do a similar thing when ranking your optoins.",
 			function(){first_oneshot_ajax(depth, curdepth, task_indx)});
 		}
 
@@ -344,7 +399,7 @@ var show_questions = function(first_time) {
 
 
 	}
-	
+
 	else {
 		psiTurk.showPage('setup.html');
 		$("#questions").html("");
@@ -368,7 +423,7 @@ var get_data = function() {
 
 	for(var k = 0; k < knowledge_arr.length; k++) {
 	  var knowledge_piece = knowledge_arr[k]
-	  $("#prev-questions").prepend("<h4>" + features[knowledge_piece[0]] + "</h4>" +
+	  $("#prev-questions").append("<h4>" + features[knowledge_piece[0]] + "</h4>" +
 	                images[knowledge_piece[1]] + "<hr>");
 	}
 
@@ -415,7 +470,7 @@ var get_data_ranked = function() {
 
 	for(var k = 0; k < knowledge_arr.length; k++) {
 	  var knowledge_piece = knowledge_arr[k]
-	  $("#prev-questions").prepend("<h4>" + features[knowledge_piece[0]] + "</h4>" +
+	  $("#prev-questions").append("<h4>" + features[knowledge_piece[0]] + "</h4>" +
 	                images[knowledge_piece[1]] + "<hr>");
 	}
 
@@ -501,7 +556,7 @@ var answer_chosen = function() {
 var load_oneshot_knowledge = function() {
 	for(var k = 0; k < question_answer_pairs.length; k++) {
 			var knowledge_piece = question_answer_pairs[k]
-			$("#prev-questions").prepend("<h4>" + features[knowledge_piece[0]] + "</h4>" +
+			$("#prev-questions").append("<h4>" + features[knowledge_piece[0]] + "</h4>" +
 										images[knowledge_piece[1]] + "<hr>");
 	}
 	for(var k = 0; k < question_answer_pairs.length; k++) {
@@ -747,12 +802,16 @@ var decrement_20q_instructions = function() {
 }
 
 var progress_20q_instructs = function() {
+	next_section(3);
+	//for experiment 2, no fullgame
+	/*
 	if(fullgame_instruct_on >= 10) {
 		start_20q_game();
 		return;
 	}
 	psiTurk.showPage('instructions/instruct_20q-' + fullgame_instruct_on.toString() + '.html');
-	fullgame_instruct_on++;
+	fullgame_instruct_on++;*/
+
 }
 
 var pre_20q_quiz = function() {
@@ -985,7 +1044,7 @@ var complete = function() {
 	psiTurk.recordUnstructuredData("comments-general", comments_general);
 	psiTurk.recordUnstructuredData("total-bonus", total_bonus);
 	psiTurk.showPage('complete.html');
-	
+
   	psiTurk.saveData();
 	psiTurk.completeHIT();
 }

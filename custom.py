@@ -38,6 +38,9 @@ custom_code = Blueprint('custom_code', __name__, template_folder='templates', st
 with open("pickled_data/tasks.pickle", 'r') as f:
     tasks = pickle.load(f)
 
+with open("pickled_data/tasks_experiment2.pickle", 'r') as f:
+    tasks_experiment2 = pickle.load(f)
+
 ###########################################################
 #  serving warm, fresh, & sweet custom, user-provided routes
 #  add them here
@@ -207,3 +210,38 @@ def get_item_for_task():
 
     except:
         abort(404)
+
+
+@custom_code.route('/get_questions_for_task_experiment2', methods=['GET'])
+def get_questions_for_task_experiment2():
+    try:
+
+        task_indx = int(str(request.args['task_indx']))
+        task = tasks_experiment2[task_indx]
+        item = task["item"]
+        question_str = ','.join(["{}:{}".format(question[0], question[1]) for question in task["knowledge"]])
+        item_options = ":".join([items[o] for o in task["item_options"]])
+        to_rank = ",".join( [ "{}:{}".format(f, data_matrix[item, f]) for f in task["current_options"] ] )
+
+        return_str = question_str + "/"
+        return_str += items[task["item"]] + "/"
+        return_str += item_options + "/"
+        return_str += to_rank
+
+        return return_str
+
+    except:
+        abort(404)
+
+
+@custom_code.route('/get_item_for_task_experiment2', methods=['GET'])
+def get_item_for_task_experiment2():
+    return "test passed"
+    try:
+        task_indx = int(str(request.args['task_indx']))
+        task = tasks[task_indx]
+        return str(items[task["items"]])
+
+    except:
+        abort(404)
+
