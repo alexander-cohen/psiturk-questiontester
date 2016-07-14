@@ -802,15 +802,16 @@ var decrement_20q_instructions = function() {
 }
 
 var progress_20q_instructs = function() {
-	next_section(3);
+	//next_section(3);
 	//for experiment 2, no fullgame
-	/*
+	
 	if(fullgame_instruct_on >= 10) {
-		start_20q_game();
+		next_section(3);
+		//start_20q_game();
 		return;
 	}
 	psiTurk.showPage('instructions/instruct_20q-' + fullgame_instruct_on.toString() + '.html');
-	fullgame_instruct_on++;*/
+	fullgame_instruct_on++;
 
 }
 
@@ -835,8 +836,8 @@ var pre20q_quiz_completed = function() {
 								})
 	}
 	else {
-		make_alert("You answered all questions correctly! Please proceed to the game:",
-								start_20q_game);
+		make_alert("You answered all questions correctly! Please proceed to further instructions on the specific format of the game.",
+								function(){next_section(3)});
 	}
 
 
