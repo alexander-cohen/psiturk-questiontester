@@ -13,7 +13,7 @@ browser_exclude_rule = MSIE, mobile, tablet, bot
 
 [Database Parameters]
 database_url = mysql://lab:fishneversink@gureckislab.org/mt_experiments
-table_name = 20q_model_tester
+table_name = 20q_model_tester_exp2
 
 [Server Parameters]
 host = 0.0.0.0
