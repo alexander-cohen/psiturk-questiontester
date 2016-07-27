@@ -1,6 +1,6 @@
 # this file imports custom routes into the experiment server
 import sys
-sys.path.append("/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages")
+#sys.path.append("/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages")
 
 from flask import Blueprint, render_template, request, jsonify, Response, abort, current_app, session
 from jinja2 import TemplateNotFound
